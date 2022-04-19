@@ -1,7 +1,7 @@
-sentiWS = open("rawLexika//SentiWS.csv","r",encoding="UTF-8")
+sentiWS = open("lexicon//lexiconCreation//data//raw//SentiWS.csv","r",encoding="UTF-8")
 lines = sentiWS.readlines()
 
-sentiLex = open("rawLexika//senti.csv","w",encoding="UTF-8")
+sentiLex = open("lexicon//lexiconCreation//data//processed//senti.csv","w",encoding="UTF-8")
 sentiLex.write("wordStem,wordFunction,value,pos\n")
 
 for line in lines:

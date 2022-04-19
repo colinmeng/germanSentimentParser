@@ -1,10 +1,10 @@
 import spacy
 
-afinn = open("rawLexika//AFINN-deutsch-deepl.txt","r",encoding="UTF-8")
+afinn = open("lexicon//lexiconCreation//data//raw//AFINN-deutsch-deepl.txt","r",encoding="UTF-8")
 nlp = spacy.load("de_core_news_lg")
 lines = afinn.readlines()
 
-afinnLex = open("rawLexika//afinn_ger_deepl_auto.csv","w",encoding="UTF-8")
+afinnLex = open("lexicon//lexiconCreation//data//processed//afinn_ger_deepl_auto.csv","w",encoding="UTF-8")
 afinnLex.write("wordStem,wordFunction,value,pos\n")
 
 resultDict = {}

@@ -9,11 +9,11 @@ sentimentDictionary = {}
 
 #loading lexica
 
-polart = open("rawLexika//polart.csv","r", encoding="UTF-8")
-afinn = open("rawLexika//afinn_ger_deepl_man.csv","r", encoding="UTF-8")
-bawlr = open("rawLexika//bawlr.csv","r",encoding="UTF-8")
-sentiws = open("rawLexika//senti.csv","r",encoding="UTF-8")
-shifters = open("rawLexika//shifters.csv","r",encoding="UTF-8")
+polart = open("lexicon//lexiconCreation//data//processed//polart.csv","r", encoding="UTF-8")
+afinn = open("lexicon//lexiconCreation//data//processed//afinn_ger_deepl_man.csv","r", encoding="UTF-8")
+bawlr = open("lexicon//lexiconCreation//data//processed//bawlr.csv","r",encoding="UTF-8")
+sentiws = open("lexicon//lexiconCreation//data//processed//senti.csv","r",encoding="UTF-8")
+shifters = open("lexicon//lexiconCreation//data//processed//shifters.csv","r",encoding="UTF-8")
 
 lexica = [polart,afinn,bawlr,sentiws,shifters]
 
@@ -69,7 +69,7 @@ for lexicon in lexica:
         countEntrys += 1
 
     # add ordinalWörter as INT
-    oW = open("rawLexika//ordinalWörter.txt","r",encoding="UTF-8")
+    oW = open("lexicon//lexiconCreation//data//raw//ordinalWörter.txt","r",encoding="UTF-8")
     lines = oW.readlines()
 
     for line in lines:
@@ -84,7 +84,7 @@ for lexicon in lexica:
             
 
 
-with open('sentimentLexicon.json', "w", encoding="UTF-8") as file:
+with open('lexicon//sentimentLexicon.json', "w", encoding="UTF-8") as file:
     json.dump(sentimentDictionary,file,ensure_ascii=False)        
 
 print(f"{countEntrys} entrys created!") 

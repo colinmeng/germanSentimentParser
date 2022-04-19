@@ -1,5 +1,5 @@
-polArtLexicon = open("rawLexika//polart.csv","w",encoding="UTF-8")
-polArtFile = open("rawLexika//polartlexicon.txt","r",encoding="UTF-8")
+polArtLexicon = open("lexicon//lexiconCreation//data//processed//polart.csv","w",encoding="UTF-8")
+polArtFile = open("lexicon//lexiconCreation//data//raw//polartlexicon.txt","r",encoding="UTF-8")
 lines = polArtFile.readlines()
 
 polArtLexicon.write("wordStem,wordFunction,value,pos\n")
@@ -28,6 +28,7 @@ for line in lines:
     value = float(wordFunctionAndValue[1])
     pos = parts[2].strip("\n")
 
+    #
     if pos == "verben":
         pos = "VERB"
         countVerb += 1
@@ -76,12 +77,7 @@ for line in lines:
         value = 0
         countSHI += 1
         
-
-
     #make pos tags spaCy conform
-
-
-
     if wordFunction == "VAL":
         sumVal += value
         countVal += 1

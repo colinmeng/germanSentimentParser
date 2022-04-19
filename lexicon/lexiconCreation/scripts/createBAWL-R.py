@@ -1,7 +1,7 @@
-bawlr = open("rawLexika//bawl-r.csv","r",encoding="UTF-8")
+bawlr = open("lexicon//lexiconCreation//data//raw//bawl-r.csv","r",encoding="UTF-8")
 lines = bawlr.readlines()
 
-bawlrLexicon = open("rawLexika//bawlr.csv","w",encoding="UTF-8")
+bawlrLexicon = open("lexicon//lexiconCreation//data//processed//bawlr.csv","w",encoding="UTF-8")
 bawlrLexicon.write("wordStem,wordFunction,value,pos\n")
 
 for line in lines:
@@ -16,6 +16,7 @@ for line in lines:
     normalizedValue = originalValue / 3
     normalizedValue = float("{:.4f}".format(normalizedValue))
 
+    # POS-Token parsed to spacy default
     if pos == "N":
         pos = "NOUN"
     elif pos == "A":
