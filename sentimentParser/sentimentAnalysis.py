@@ -1,60 +1,30 @@
 from statistics import mean
 
-#constants
+#   the threshold determines, when the verbs/nouns sentiment will be included in the overall sentiment
+# set this to a value greater 1, to exclude verbs/nouns completely from sentiment calculation
 NeutralVerbThreshold = 0.0
 NeutralNounThreshold = 0.0
 
-def calculateMods(mods,lex):
-    result = dict()
-    isShifted = False
-    intFactor = 1
-    modsMissing = []
-    typeOfLastMod = None
-
-    for mod in mods:
-        modResult = lex.lookUp(mod.text)
-
-        if not modResult:
-            modsMissing.append(mod)
-            continue
-
-        if modResult["wordFunction"] == "INT":
-
-            if not typeOfLastMod:
-                typeOfLastMod = "INT"
-            
-            # nicht(SHI) hoch(2.0)      ->  niedrig(0.5)
-            # nicht(SHI) niedrig(0.5)   ->  hoch(2.0)
-            if typeOfLastMod == "SHI":
-                intFactor *= 1 / modResult["value"]
-                typeOfLastMod = "INT"
-                isShifted = not isShifted
-
-            else:
-                intFactor *= modResult["value"]
-
-        if modResult["wordFunction"] == "SHI":
-            isShifted = not isShifted
-
-    if isShifted:
-        intFactor *= -1
-
-    result["factor"] = intFactor
-    result["missingWords"] = modsMissing
-    return result
+# if a word could not be found in the lexicon and has one of these POS-Tags, add it to the missing words list
+listOfPosToIncludeInMissingWordList = ["PART","VERB","ADV","ADJ","NOUN","AUX"]
 
 def lookUpWordAndLemmaInLexicon(token,lexicon):
+    """looks up the text and the lemma of a given token and returns a result dictionary"""
     result = dict()
     missingWords = []
     success = False
 
+    # firstly we look up the original text of the token
     tokenLookUpResult = lexicon.lookUp(token.text)
 
+    # if this is unsuccessfull, look up the lemma of the word
     if not tokenLookUpResult:
         tokenLookUpResult = lexicon.lookUp(token.lemma_)
 
+    # if this is also unsuccessfull, add word and it's lemma to missing words list ()
+    # the "data" will be the lexicon result if "success" is set to true, else it is the missing words list
     if not tokenLookUpResult:
-        if token.pos_ not in ["CCONJ","PUNCT"]:
+        if token.pos_ in listOfPosToIncludeInMissingWordList:
             missingWords.append(token.text)
             missingWords.append(token.lemma_)
         result["data"] = missingWords
@@ -68,6 +38,28 @@ def lookUpWordAndLemmaInLexicon(token,lexicon):
     return result
     
 def analyseAdjective(token, lexicon):
+    """
+    analyses a token and its child tokens and returns a result as dict
+
+    Parameters
+        ----------
+        token : token
+            a spacy token, should be a adjective
+
+        Returns
+        -------
+        dict
+            "type" - the type of the adjective
+                 VAL -> word is a regular sentiment word 
+                 INT -> word is an intensifier 
+                 UNC -> the word itself is not in lexicon
+            "value"
+                float, can be positive or negative for VAL, positive for INT
+            "missingWords"
+                list of words, that are uncovered by lexicon
+            
+    """
+
     adjType = "UNC" #UNC VAL or INT
     adjValue = 0
     adjIsShifted = False
@@ -89,15 +81,15 @@ def analyseAdjective(token, lexicon):
         return result
     
     
-
+    # inspect the direct children of the adjective and the second grade children
     adjChilds = token.children
     
     if adjChilds:
         
-
         for adjChild in adjChilds:
             adjChildLookUp = lookUpWordAndLemmaInLexicon(adjChild,lexicon)
 
+            # if child look up unsuccessfull, move to the next child
             if not adjChildLookUp["success"]:
                 for missingWord in adjChildLookUp["data"]:
                     missingWords.append(missingWord)
@@ -108,11 +100,13 @@ def analyseAdjective(token, lexicon):
             adjChildType = adjChildLookUp["data"]["wordFunction"]
             adjChildValue = adjChildLookUp["data"]["value"]
 
-            # possible childrens
+            # childs of Intensifier are either intensifier (INT) themselfes, or negations (SHI)
+            # look through the Intensifiers childs and modify the adjectives value
             if adjChildType == "INT":
 
                 adjChildChildren = adjChild.children
 
+                # the child has no more childs, nothing to do here
                 if not adjChildChildren:
                     continue
                 
@@ -123,49 +117,63 @@ def analyseAdjective(token, lexicon):
                         for missingWord in childLookUp["data"]:
                             missingWords.append(missingWord)
                             continue
-
+                            
+                    # child is found
                     else: 
                         childType = childLookUp["data"]["wordFunction"]
-
+                        
+                        # INTs multiply each other
                         if childLookUp["data"]["wordFunction"] == "INT":
                             adjValue *= childLookUp["data"]["value"]
                             continue
-
+                        
+                        # Negations (SHI), that belong to INTs make it "less intense" 
+                        # sehr(3) -> nicht sehr (1/3)
                         if childType == "SHI":
                             adjChildValue = 1 / adjChildValue
-                    
+                
+                # first grad child is INT -> intensify the underlaying adjectives value (no matter if it is VAL- or INT-type)
                 adjValue *= adjChildValue
 
+            # SHI negate (* -1) VAL, and weaken (1/Value) INTs
             if adjChildType == "SHI":
                 if adjType == "INT":
                     adjValue = 1 / adjValue
                 else:
                     adjValue *= -1
 
-            # with comma conjuncted adjectives 
+            # if first level child of an adjective is VAL, it is probably a comma conjucted one (enumeration)
+            # well written german sentences use enumeration (as attributes or adverbs) in the following way
+            # "..."((adj),(adj))^n "und" (adj) -> e. g. "Das Essen ist schmackhaft, warm und gesund."
             if adjChildType == "VAL":
 
-                conjAdjResult = getNextConjuctedAdjectiveResult(adjChilds,lexicon)
+                # indirect recursion: getNextConjuctedAdjectiveResult calls this function itself on the next adjective that is following a conjuction
+                conjAdjResult = getNextConjuctedAdjectiveResult(adjChild,lexicon)
                 if conjAdjResult != -1:
 
                     if conjAdjResult["result"]["type"] == "VAL":
-
+                        
+                        # we add up conjucted VAL adjectives 
                         adjValue += conjAdjResult["result"]["value"]
 
+                # to get even to the deepest level, call the function again
                 analysisResult = analyseAdjective(adjChild,lexicon)
 
-                 # add sentiment of comma conjuncted adjectives
+                 # add up sentiment of comma conjuncted adjectives
                 if analysisResult["type"] == "VAL":
                     adjValue += analysisResult["value"] 
                     
     
-    # adverbs negation don't belong to the adverb, but to the verb, which is it's root
+
+    # negations are on the same level as the adjective in the parse tree and belong to the verb (that's why pos-tag = ADV)
+    # so it is neccessary to look up the verbs child and identify them as a Shifter
     if token.pos_ == "ADV":
         verbToken = token.head
 
         for child in verbToken.children:
             childLookUp = lookUpWordAndLemmaInLexicon(child,lexicon)
 
+            # if it is a negation change the shifter flag
             if childLookUp["success"]:
                 if childLookUp["data"]["wordFunction"] == "SHI":
                     adjIsShifted = not adjIsShifted
@@ -177,9 +185,11 @@ def analyseAdjective(token, lexicon):
     result = dict()
     result["type"] = adjType
 
+    # as before: shifted INTs are weakened
     if adjType == "INT" and adjIsShifted:
         result["value"] = 1 / adjValue
 
+    # normal use of shifter
     elif adjType == "VAL" and adjIsShifted:
         result["value"] = -1 * adjValue
 
@@ -188,6 +198,7 @@ def analyseAdjective(token, lexicon):
 
     # cleanUp missing words
     cleanedUpMissingWords = []
+
     for word in missingWords:
         if word not in cleanedUpMissingWords:
             cleanedUpMissingWords.append(word)
@@ -196,8 +207,37 @@ def analyseAdjective(token, lexicon):
 
     return result          
 
-def getNextConjuctedAdjectiveResult(childrens,lex):
-    adjectivesFound = False
+
+def getNextConjuctedAdjectiveResult(token,lex):
+    """
+    takes childrens, looks through them, if they are a conjuction and return result of the underlaying adjective.
+
+    Parameters
+        ----------
+        token : token
+            
+
+        Returns
+        -------
+        -1, if no childrens found or no conjucted adjectives found
+
+        dict
+            "result" : dict
+                "type" - the type of the adjective
+                    VAL -> word is a regular sentiment word 
+                    INT -> word is an intensifier 
+                    UNC -> the word itself is not in lexicon
+                "value"
+                    float, can be positive or negative for VAL, positive for INT
+                "missingWords"
+                    list of words, that are uncovered by lexicon
+            "token" : token
+                the child, that is an adjective and is conjuncted
+    """
+    childrens = token.children
+
+    if not childrens:
+        return -1
 
     for possibleConjToken in childrens:
         if possibleConjToken.pos_ == "CCONJ" or possibleConjToken.text in [",",";","/","|"]:
@@ -348,7 +388,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     result = 0
 
                     while result != -1:
-                        result = getNextConjuctedAdjectiveResult(conjChilds,lex)
+                        result = getNextConjuctedAdjectiveResult(awChild,lex)
                         
                         if result == -1:
                             break
@@ -415,7 +455,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     result = 0
 
                     while result != -1:
-                        result = getNextConjuctedAdjectiveResult(conjChilds,lex)
+                        result = getNextConjuctedAdjectiveResult(child,lex)
                         
                         if result == -1:
                             break
