@@ -1,0 +1,5 @@
+0.25=niedrig,gering,schwach,minder,kurz
+0.5=etwas,bisschen,beschränkt,
+1.0=mittel,durchschnittlich,normal,üblich,ordinär,gangbar
+1.25=hoch,heftig,groß,überhöht,haushoch,
+1.5=drakonisch,überhöht,maßlos,ellenlang,gewaltsam,riesig
