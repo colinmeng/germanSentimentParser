@@ -2,17 +2,25 @@ import json
 from statistics import median
 from statistics import mean
 from statistics import stdev
-from sentimentParser import lexicon
-from sentimentParser import calculateSentiment as sa
+import os
+import sys
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
+import sentimentParser.sentimentAnalysis as sa
+import sentimentParser.lexicon as lexicon
 import spacy
 
 
 SAMPLE_SIZE = 0
 LEXICON_MODE = "no neutral"
-LEXICON_PATH = "sentimentLexicon.json"
+LEXICON_PATH = "lexicon//sentimentLexicon.json"
 SPACY_MODEL = "de_core_news_lg"
 
+TEST_DATA_PATH = "test//testData//hcTunesia//balancedDataSets"
 TEST_DATASET= "balancedHolidayCheck200.tsv"
+LOGS_PATH = "test//logs//documentLevel"
 
 #decides if the sentiment is per aspect or per sentence
 PER_SENTENCE = False
@@ -21,11 +29,13 @@ PER_SENTENCE = False
 nlp = spacy.load(SPACY_MODEL)
 lex = lexicon.Lexicon(LEXICON_PATH,LEXICON_MODE)
 
-holidayCheckFile = open(f"balancedDataSets//{TEST_DATASET}","r",encoding="UTF-8")
+holidayCheckFile = open(f"{TEST_DATA_PATH}//{TEST_DATASET}","r",encoding="UTF-8")
 lines = holidayCheckFile.readlines()
 
 # error log
-errorLog = open("holidayCheckErrorLog.txt","w",encoding="UTF-8")
+errorLogName = TEST_DATASET.split(".")[0]
+
+errorLog = open(f"{LOGS_PATH}//{errorLogName}.txt","w",encoding="UTF-8")
 # create result container
 sentiments = []
 
@@ -91,9 +101,12 @@ data["invalidLinesCount"] = invalidLinesCount
 data["errorLinesCount"] = errorLinesCount
 
 #logFileName = TEST_DATASET.split(".")[0]
+
 logFileName = f"{totalLineCount}_{LEXICON_MODE}_result.json"
 
-file = open(logFileName,"w",encoding="UTF-8")
+fullLogFilePath = f"{LOGS_PATH}//{logFileName}"
+
+file = open(fullLogFilePath,"w",encoding="UTF-8")
 json.dump(data,file)
 
 file.close()

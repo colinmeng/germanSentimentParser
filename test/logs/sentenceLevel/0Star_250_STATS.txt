@@ -1,0 +1,4 @@
+files: 0Star_250_(POS.csv|NEG.csv|NEU.txt)
+POS	81(32%)	mean	0.42
+NEG	53(21%)	mean	-0.43
+NEU	81(47%)	mean	0.00

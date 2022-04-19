@@ -11,8 +11,8 @@ FIVE_STAR_WEIGHT = 2
 ENABLE_NEUTRAL = False
 ENABLE_WEIGHTS = False
 OPTIMIZE = "f1" #f1, precision, accuracy, recall
-
-PATH_TO_RESULT_JSON = "1200_no neutral_result.json."
+RESULTS_PATH = "test//analysisResults//"
+RESULT_JSON = "1200_no neutral_result.json"
 
 if ENABLE_NEUTRAL:
     ENABLE_WEIGHTS = True
@@ -66,7 +66,7 @@ def classify(sentiments,negativeThreshold,positiveThreshold):
 
 
 def logResult(classificationResult,log):
-    log.write(f"Einträge werden ab: {'{:.3f}'.format(classificationResult['positiveThreshold'])} als positiv und ab {'{:.3f}'.format(classificationResult['negativeThreshold'])} als negativ klassifiziert.\n\n")
+    log.write(f"Einträge werden ab: {'{:6.3f}'.format(classificationResult['positiveThreshold'])} als positiv und ab {'{:6.3f}'.format(classificationResult['negativeThreshold'])} als negativ klassifiziert.\n\n")
 
     for i in range(0,len(classificationResult["classification"])):
         pos = classificationResult["classification"][i]['positiv']
@@ -96,16 +96,16 @@ def logResult(classificationResult,log):
         log.write(f"{i} Sterne: {ges} Einträge \n\t{pos} positiv({posPer}%) \n\t{neg} negativ({negPer}%) \n\t{neu} neutral({neuPer}%)\n\n")
 
 
-path = PATH_TO_RESULT_JSON
-file = open(path,"r",encoding="UTF-8")
-resultData =  json.load(file)
+path = f"{RESULTS_PATH}{RESULT_JSON}"
+resultFile = open(path,"r",encoding="UTF-8")
+resultData =  json.load(resultFile)
 
 sentiments = resultData["sentiments"]
 invalidLinesCount = resultData["invalidLinesCount"]
 errorLinesCount = resultData["errorLinesCount"]
 lineCount = resultData["lineCount"]
 
-logName = PATH_TO_RESULT_JSON.split(".")[0]
+logName = RESULT_JSON.split(".")[0]
 if ENABLE_NEUTRAL:
     logName += "_tri"
 else:
@@ -127,7 +127,7 @@ else:
 
 
 
-logPath = f"TestLogs//{logName}.txt"
+logPath = f"test//logs//documentLevel//{logName}.txt"
 
 resultLog = open(logPath,"w",encoding="UTF-8")
 resultLog.write(f"Analysiertes Dokument: {path}\n")
@@ -241,12 +241,12 @@ if not ENABLE_NEUTRAL:
                 minErrorNegThresh = positiveThreshold
                 minErrorPosTresh = positiveThreshold
 
-                formattedZeroStarError = "{:.3f}".format(zeroStarError)
-                formattedFiveStarError = "{:.3f}".format(fiveStarError)
-                formattedWeightedError = "{:.3f}".format(weightedError)
-                formattedError = "{:.3f}".format((zeroStarError+fiveStarError)/2)
+                formattedZeroStarError = "{:6.3f}".format(zeroStarError)
+                formattedFiveStarError = "{:6.3f}".format(fiveStarError)
+                formattedWeightedError = "{:6.3f}".format(weightedError)
+                formattedError = "{:6.3f}".format((zeroStarError+fiveStarError)/2)
 
-                formattedThreshold = "{:.2f}".format(positiveThreshold)
+                formattedThreshold = "{:.3f}".format(positiveThreshold)
 
                 resultLog.write(f"FP\t{formattedZeroStarError}\tFN\t{formattedFiveStarError}\tError\t{formattedError}\tweightedError\t{formattedWeightedError}\tTresh\t{formattedThreshold}\n")    
         
@@ -299,6 +299,14 @@ if not ENABLE_NEUTRAL:
                 formattedThreshold = "{:.2f}".format(positiveThreshold)
                 minErrorNegThresh = positiveThreshold
                 minErrorPosTresh = positiveThreshold
+
+                #formatting makes it pretty
+                accuracy = "{:6.3f}".format(accuracy)
+                precision = "{:6.3f}".format(precision)
+                recall = "{:6.3f}".format(recall)
+                f1 = "{:6.3f}".format(f1)
+
+
                 resultLog.write(f"FP\t{FP}\tFN\t{FN}\tTP\t{TP}\tTN\t{TN}\taccuracy\t{accuracy}\tprecision\t{precision}\trecall\t{recall}\tf1\t{f1}\tTresh\t{formattedThreshold}\n") 
 
 

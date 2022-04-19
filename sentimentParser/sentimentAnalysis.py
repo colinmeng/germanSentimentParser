@@ -1,7 +1,5 @@
 from statistics import mean
 
-from pygments import lex
-
 #constants
 NeutralVerbThreshold = 0.0
 NeutralNounThreshold = 0.0

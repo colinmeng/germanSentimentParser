@@ -1,0 +1,414 @@
+0.2059	[] 
+Nachricht
+
+0.0	['akzeptor'] 
+Was ist ein Akzeptor?
+
+0.2167	['mir', 'sich', 'ist', 'sein'] 
+Erkläre mir bitte, was ein Akzeptor ist.
+
+0.18834354	['du'] 
+Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
+
+-0.33705	['akzeptoren', 'akzeptor'] 
+Ich verstehe Akzeptoren nicht.
+
+0.459325	[] 
+Ich brauche Hilfe bei einem Thema.
+
+-0.099875	[] 
+Ich verstehe diese Aufgabe nicht.
+
+0.3490333333333333	['was', 'rechtslinear'] 
+Was bedeutet rechtslinear?
+
+-0.0784	['informatik', 'theoretische'] 
+Wieso  braucht man theoretische Informatik?
+
+0.0	['ich', 'warum'] 
+Warum muss ich das wissen?
+
+0.0	['was', 'hier', 'überhaupt'] 
+Was bringt mir das hier überhaupt?
+
+0.0	['ich'] 
+Ich möchte endlich verstehen, was ein Akzeptor ist!
+
+0.07207223833333334	['ich', 'noch', 'du'] 
+Ich glaube ich verzweifle noch an dieser Aufgabe. Kannst du mir irgendwie helfen?
+
+0.004	['denn'] 
+Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
+
+0.0	['ich', 'wie'] 
+Wie soll ich mir das alles merken?
+
+-0.3692	['das', 'der', 'warum', 'denn', 'so'] 
+Warum ist das denn so kompliziert?
+
+0.0	['was', 'denn', 'damit'] 
+Was soll ich denn damit?
+
+0.0	['ich'] 
+Ich werde das niemals verstehen.
+
+-0.39753333333333335	['du', 'wirklich'] 
+Du bist wirklich nicht hilfreich.
+
+0.1016744975	['du', 'mir', 'sich'] 
+Du hilfst mir nicht weiter.
+
+-0.34082609	['du', 'warum', 'denn'] 
+Warum kannst du mir denn nicht helfen?
+
+0.5741562499999999	[] 
+Du bist keine große Hilfe.
+
+0.1339125	['ich'] 
+Ich brauche dringend Hilfe.
+
+0.0	['warum', 'denn'] 
+Warum kann mir denn niemand helfen?
+
+0.0	['ich', 'wie'] 
+Wie soll ich dass den je verstehen?
+
+0.0	[] 
+Was soll der Scheiß?
+
+0.0	['ich'] 
+Ich kann nichts.
+
+-0.6347	['du', 'genauso'] 
+Du bist genauso unverständlich wie unser Dozent.
+
+0.0	['informatik', 'theoretische', 'theoretisch'] 
+Theoretische Informatik ist nichts für mich.
+
+0.0	['ich'] 
+Ich mag thi nicht.
+
+0.0	['ich'] 
+Ich hasse thi.
+
+-0.1665092	['aufgabenstellung', 'zu', 'ich'] 
+Ich finde die Aufgabenstellung zu kompliziert.
+
+-0.7	['mich', 'sich', 'das', 'der'] 
+Mich belastet das extrem.
+
+0	[] 
+Warum ist thi so schwer?
+
+0.0	['ich'] 
+Ich würde am liebsten Aufgeben.
+
+0.02304	['ich', 'manchmal'] 
+Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
+
+0.0	['ich'] 
+Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
+
+-0.7384	['aufgabenstellung', 'zu'] 
+Die Aufgabenstellung ist viel zu kompliziert.
+
+0.0	['man', 'wie'] 
+Wie soll man denn da durchblicken?
+
+0.0	['du'] 
+Verstehst du das?
+
+0.85	['mehr'] 
+Ich habe keine Lust mehr.
+
+0.0	['ich'] 
+Ich möchte diese Sache hinter mich bringen.
+
+0.0	['es', 'ich', 'bald'] 
+Bald ist es geschafft.
+
+0.0	[] 
+Ich habe Angst durchzufallen.
+
+-0.6327	['ich'] 
+Ich befürchte die Prüfung wird unschaffbar.
+
+0.0	['ich'] 
+Ich bin letztes Semester durch die Prüfung gefallen.
+
+0.0	['es', 'ich', 'spät'] 
+Es ist zu spät das jetzt noch alles zu lernen.
+
+0.0	['aufwand', 'zu'] 
+Der Aufwand ist zu groß.
+
+0.0	['das', 'der', 'warum'] 
+Warum will das nicht in mein Gehirn gehen?
+
+-0.3762	['ich'] 
+Ich bin müde.
+
+0.1078	['mich', 'sich', 'thi', 'auf'] 
+Thi regt mich extrem auf.
+
+-0.6411	['ich'] 
+Ich bin wütend.
+
+0.0196	[] 
+Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
+
+0.0	['wer'] 
+Wer hat sich diesen Dreck denn ausgedacht?
+
+0.0	['was'] 
+Was bringt mir das alles?
+
+0.6572	['alles', 'alle', 'zu'] 
+Und zu was ist das alles gut?
+
+0.0196	[] 
+Unser Professor ist ein Sadist.
+
+-0.6526000000000001	['pure', 'pur'] 
+Thi ist die pure Hölle für mich.
+
+0.0	['ich', 'da'] 
+Ich versuche mich da durch zu quälen.
+
+0.0	['ich', 'morgen', 'schon'] 
+Morgen schaff ich das schon.
+
+-0.63505	['wann'] 
+Wann hat diese Qual ein Ende?
+
+0.0	['sie', 'ich', 'wieso'] 
+Wieso tun Sie mir das an?
+
+0.0	['bot', 'da', 'auch', 'mehr'] 
+Da kann mir auch kein Bot mehr helfen.
+
+0.0	['ich'] 
+Ich bin aufgeschmissen!
+
+0.0	['was', 'hier', 'eigentlich', 'noch'] 
+Was mach ich hier eigentlich noch?
+
+0.33705	['nur'] 
+Ich verstehe nur Bahnhof.
+
+0.0	['das', 'der', 'spanisch'] 
+Das klingt alles spanisch.
+
+-0.041916666666666685	[] 
+Diese Antwort ist nicht hilfreich.
+
+0.1016744975	['das', 'der', 'auch', 'mir', 'sich'] 
+Das hilft mir auch nicht weiter.
+
+0.6154666666666666	['ich', 'jetzt', 'in'] 
+Ich wäre jetzt lieber in meinem Bett.
+
+0.5588	['du'] 
+Kannst du mir das noch mal erklären?
+
+-0.33705	['ich'] 
+Ich verstehe das nicht.
+
+0.004	['es', 'ich'] 
+Vergiss es einfach, du kannst mir nicht helfen.
+
+0.451	['lösungsansatz'] 
+Ich finde keinen Lösungsansatz.
+
+0.0	['das', 'der', 'doch'] 
+Das kann doch nicht dein Ernst sein?
+
+0.0	['wer'] 
+Wer hat dir ins Gehirn geschissen?
+
+-0.59085	['das', 'der', 'alles', 'alle'] 
+Das ist alles unlogisch.
+
+0.7	['mich', 'sich', 'thi', 'zur'] 
+Thi bringt mich regelmäßig zur Frustration.
+
+-0.33705	['ich'] 
+Ich verstehe es immer noch nicht.
+
+-0.21673769999999998	['es', 'ich', 'zum', 'wieder', 'raus'] 
+Zum einen Ohr geht es rein und zum anderen wieder raus. Es ist frustrierend.
+
+-0.588225	[] 
+Thi ist ein schreckliche Qual für jeden, den ich kenne.
+
+0	[] 
+Thi stinkt.
+
+0.0	[] 
+Niemand mag dich!
+
+0	[] 
+Geh dich vergraben.
+
+0	[] 
+Lösch dich!
+
+0	[] 
+Thi zu verstehen ist unmöglich.
+
+0.35835	[] 
+Ich habe keine weitere Chance. Entweder jetzt oder nie!
+
+-0.6	['ich'] 
+Ich bezweifle, dass ich das schaffen kann.
+
+0.30668557500000004	['ich'] 
+Ich fürchte, dass ich durch die Prüfung falle.
+
+0.0	['wars'] 
+Ich denke das wars für mich.
+
+-0.0008625000000000022	[] 
+Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
+
+0.0	['bot'] 
+Dieser Bot ist der letzte Dreck.
+
+0.8039000000000001	[] 
+Danke für die Antwort.
+
+0.367675	['ich'] 
+Ich glaube, das habe ich jetzt verstanden.
+
+-0.005628735	['ich', 'es'] 
+Langsam verstehe ich es.
+
+0.0	['das', 'der'] 
+Ja, das hat mir weiter geholfen.
+
+0	[] 
+Super, vielen Dank!
+
+0.0	['ok'] 
+Ok.
+
+0	[] 
+Perfekt.
+
+0	[] 
+Ja.
+
+0	[] 
+Ja, aber kannst du es mir nochmal erkl�ren?
+
+0.8039000000000001	[] 
+Vielen Dank für deine Antwort.
+
+0.68665	['ich'] 
+Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
+
+0.5832999999999999	['ich'] 
+Ich mag thi.
+
+0.6884	['ich'] 
+Ich liebe thi.
+
+0.0196	[] 
+Unser Professor ist ein guter Lehrer.
+
+0.32895	['bot'] 
+Dieser Bot ist einfach genial!
+
+0.366425	['wirklich'] 
+Es macht wirklich Spaß mit dir zu chatten.
+
+0.34082609	['du'] 
+Cool. Kannst du mir auch bei den Hausaufgaben helfen?
+
+-0.3905	[] 
+Wahnsinn, was du alles kannst.
+
+0.0	['beste'] 
+Du bist der Beste.
+
+0.6517	['ich', 'schon'] 
+Ich freue mich schon auf die Prüfung.
+
+0.0	[] 
+Deine Antworten sind echt erste Klasse!
+
+0.2963972	['erklärung', 'ich'] 
+Die Erklärung finde ich gut.
+
+0.40195000000000003	['das', 'der'] 
+Danke, aber das hat mir nicht geholfen.
+
+0.004	['das', 'der', 'eigentlich', 'ja', 'ganz'] 
+Eigentlich ist das ja ganz einfach.
+
+0.0	['es', 'ich'] 
+Irgendwie hat es jetzt bei mir klick gemacht.
+
+0.0	['erklärung'] 
+Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
+
+0.09023356	['mir', 'ich', 'es'] 
+Mir geht es gut, und dir?
+
+0.6517	['ich', 'mich', 'sich'] 
+Ich freue mich sehr!
+
+-0.0096	['ich', 'wegen'] 
+Ich bin extrem aufgeregt wegen der Prüfung.
+
+1.0	['mich', 'sich'] 
+Thi fasziniert mich.
+
+0.0	['es', 'ich'] 
+Es ist interessant zu sehen, wie ein Chatbot antwortet.
+
+-0.31770000000000004	[] 
+Ich habe Hunger.
+
+0.0	['gleich', 'gleichen'] 
+Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
+
+0.43155	[] 
+Das ist eine gute Nachricht.
+
+0.8039000000000001	[] 
+Tausend Dank.
+
+0.8039000000000001	[] 
+Vielen Dank.
+
+0.8039000000000001	['herzlichen', 'herzliche'] 
+Herzlichen Dank.
+
+0.0	['ich'] 
+Ohne dich hätte ich das niemals verstanden.
+
+0.5841	['ich', 'so'] 
+Ich bin so froh, dass es dich gibt!
+
+0.273526975	['du', 'zufällig'] 
+Danke, weißt du auch zufällig etwas über Akzeptoren?
+
+0.0	['wetter', 'wie', 'heute'] 
+Wie ist das Wetter heute?
+
+-0.9214	['es', 'ich', 'draußen'] 
+Draußen ist es sehr dunkel.
+
+0.004	[] 
+Meine Motivation ist gleich null.
+
+0.0	['ich', 'noch'] 
+So demotiviert war ich noch nie.
+
+0.0	['ich'] 
+Ich könnte heulen.
+
+0.0	['ich'] 
+Ich könnte weinen.
+

@@ -1,27 +1,45 @@
+
 import json
-from sentimentParser import lexicon
-from sentimentParser import calculateSentiment as sa
+import os
+import sys
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
+import sentimentParser.sentimentAnalysis as sa
+import sentimentParser.lexicon as lexicon
 import spacy
 
+# settings
 SAMPLE_SIZE = 250
-STARS_RATING = 1
+STARS_RATING = 1 # 1 to 6
 MIN_LETTERS_PER_SENTENCE = 15
+LEXICON_MODE = "no neutral"
 
-fileName = f"NewSLS_{STARS_RATING-1}Star_{SAMPLE_SIZE}"
+# paths
+LEXICON_PATH = "lexicon//sentimentLexicon.json"
+DATASET_PATH = "test//testData//hcTunesia//balancedDataSets"
+TEST_DATASET = "balancedHolidayCheck2k.tsv"
+LOG_PATH = "test//logs//sentenceLevel"
 
-lex = lexicon.Lexicon("sentimentLexicon.json","no neutral")
+
+
+fileName = f"{STARS_RATING-1}Star_{SAMPLE_SIZE}"
+
+lex = lexicon.Lexicon(LEXICON_PATH,LEXICON_MODE)
 nlp = spacy.load("de_core_news_lg")
 
 path = "balancedHolidayCheck2k.tsv"
-holidayCheckFile = open(f"balancedDataSets//{path}","r",encoding="UTF-8")
+holidayCheckFile = open(f"{DATASET_PATH}//{TEST_DATASET}","r",encoding="UTF-8")
+
 lines = holidayCheckFile.readlines()
 linesCount = len(lines)
 
-posLog = open(f"{fileName}_POS.csv","w",encoding="UTF-8")
-negLog = open(f"{fileName}_NEG.csv","w",encoding="UTF-8")
-neutralLog = open(f"{fileName}_NEU.txt","w",encoding="UTF-8")
+posLog = open(f"{LOG_PATH}//{fileName}_POS.csv","w",encoding="UTF-8")
+negLog = open(f"{LOG_PATH}//{fileName}_NEG.csv","w",encoding="UTF-8")
+neutralLog = open(f"{LOG_PATH}//{fileName}_NEU.txt","w",encoding="UTF-8")
 
-statsLog = open(f"{fileName}_STATS.txt","w",encoding="UTF-8")
+statsLog = open(f"{LOG_PATH}//{fileName}_STATS.txt","w",encoding="UTF-8")
 
 posLog.write("sentiment,sentence,missingWords,polarity\n")
 negLog.write("sentiment,sentence,missingWords,polarity\n")
@@ -99,4 +117,5 @@ statsLog.write(f"NEU\t{posCount}({'{:.0f}'.format(neuCount/dataPointsCollected*1
 posLog.close()
 neutralLog.close()
 negLog.close()
+statsLog.close()
 

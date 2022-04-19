@@ -1,13 +1,22 @@
-from sentimentParser import calculateSentiment as sa
-from sentimentParser import lexicon
+import sys
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
+import sentimentParser.sentimentAnalysis as sa
+import sentimentParser.lexicon as lexicon
+
 import spacy
 import time
 
 nlp = spacy.load("de_core_news_lg")
-lex = lexicon.Lexicon("sentimentLexicon.json","no neutral")
+
+lex = lexicon.Lexicon("lexicon//sentimentLexicon.json","no neutral")
 
 running = True
 while(running):
+    print("type 'q' to quit.\n\n")
 
     msg = input()
     if(msg == "q"):
@@ -22,25 +31,29 @@ while(running):
     sS = sa.getSentenceSentiments(msg,lex,nlp)
     dP = sa.getDocumentPolarity(msg,lex,nlp)
 
-    #measure time
+    #measures time for document level SA
     start = time.time()
     dS = sa.getDocumentSentiment(msg,lex,nlp)
     mW = sa.getMissingWords(msg,lex,nlp)
     end = time.time()
 
-    print("aP: ", aP,"\n")
-    print("aS: ", aS,"\n")
-    print("sP: ", sP,"\n")
-    print("sS: ", sS,"\n")
-    print("dP: ", dP,"\n")
-    print("dS: ", dS,"\n")
-    print("mWs: ", mW, "\n")
+    if not mW:
+        mW = " "
+
+    print("aspect Polarity:     ", aP)
+    print("aspect Sentiment:    ", aS)
+    print("sentence Polarity:   ", sP)
+    print("sentence Sentiment:  ", sS)
+    print("document Polarity:   ", dP,)
+    print("document Sentiment:  ", dS,)
+    print("missing Words:       ", mW,)
+    print(end - start,"s elapsed\n")
 
     doc = nlp(msg)
 
+    # some information about the token
     for token in doc:
-        print(token.text,token.pos_,token.lemma_, token.dep_, token.head)
+        print(f"{token.text}\t{token.pos_}\t{token.lemma_}\t{token.dep_}\t{token.head}")
 
     print(sa.getAspectSentimentDetails(msg,lex,nlp))
 
-    print(end - start,"s elapsed")
