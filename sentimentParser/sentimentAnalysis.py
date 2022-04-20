@@ -242,7 +242,8 @@ def getNextConjuctedAdjectiveResult(token,lex):
     for possibleConjToken in childrens:
         if possibleConjToken.pos_ == "CCONJ" or possibleConjToken.text in [",",";","/","|"]:
             possibleConjTokenChildren = possibleConjToken.children
-
+            
+            # look if the conjuction has a child with pos "ADV" or "ADJ" and get the analysis result of it
             if possibleConjTokenChildren:
                 for child in possibleConjTokenChildren:
                     if child.pos_ in ["ADJ","ADV"]:
@@ -256,18 +257,48 @@ def getNextConjuctedAdjectiveResult(token,lex):
 
 #we assume this function  only gets sentences (could also be very large one), so it's computing sentence sentiment
 def getAspectSentimentDetails(msg,lex,nlp):
-    noVerbRoot = False
+    """
+    Analyses a message, with the help of a sentiment lexicon and a spacy language model.
 
+    Parameters
+        ----------
+        msg : string
+            the message to analyse. (Should be a phrase or one)
+        lex : Lexicon
+            an instance of lexicon class
+        nlp : spacy.Language
+            an instance of a Language object
+
+        Returns
+        -------
+    
+        dict[aspect] -> dict(missingWords, sentimentDetails)
+            missingWords : list(string)
+                list of words, that are uncovered by lexicon
+
+            sentimentDetails : list of dict()
+                sentimentDetails["aspectWord"]  : float
+                    the sentiment of the aspect word itself, included direct negations of it
+                sentimentDetails["attr"]        : list(float)
+                    a list of all the attributes sentiment, that belong to the aspect word (conjuncted attributes form one value)
+                sentimentDetails["adv"]         : list(float)
+                    a list of all the adverbials sentiment, that belong to the root Verb (conjuncted adverbials form one value)
+                sentimentDetails["verb"]        : float
+                    product of the root verbs and its direct childrens sentiment, excluding adverbials
+                sentimentDetails["int"]         : float
+                    a factor that states, how much the aspect words sentiment is intensified
+    """
+    # creates the doc -> executes nlp pipeline
     doc = nlp(msg)
     rootToken = None
-    #get the root of the sentence
 
+    #get the root of the sentence
     for token in doc:
         if token.dep_ == "ROOT":
             rootToken = token
             break
 
-
+    # no root token -> something went wrong
     if not rootToken:
         return 0
 
@@ -277,10 +308,11 @@ def getAspectSentimentDetails(msg,lex,nlp):
         
     rootChildren = rootToken.children
 
-    # not a sentencegr
+    # not a sentence
     if not rootChildren:
         return 0
-        
+    
+    # find conjunctions of root token
     rootConjTokens = []
 
     for rootChild in rootChildren:
@@ -288,12 +320,12 @@ def getAspectSentimentDetails(msg,lex,nlp):
             rootConjTokens.append(rootChild)
 
     #get the root of each part of the sentence to begin parsing from there
-
     subSentenceRootTokens = []
 
     # first part always exist
     subSentenceRootTokens.append(rootToken)
 
+    # identify the tokens, that are root of a subsentence
     if rootConjTokens:
         for token in rootConjTokens:
             possibleRootTokens = token.children
@@ -303,42 +335,45 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     if possibleRootToken.pos_ in ["VERB","AUX",]:
                         subSentenceRootTokens.append(possibleRootToken)
     
+    # will be filled with aspect sentiment information for one aspect
     aspectSentimentDetails = dict()
 
+    # start parsing from each verb -> 1 sentence can have multiple aspects and different verbs
     for rootToken in subSentenceRootTokens:
         missingWords = []
         subSentenceAspectToken = None
 
         # get aspect word of subsentence (direct children)
-
         rootChildren = rootToken.children
 
         #gives back empty dict as result for the sentencePart -> no information can be extracted
         if not rootChildren:
             break
         
+        # obvious aspect word candidates are always nouns
         for rootChild in rootChildren:
             if rootChild.pos_ == "NOUN":
                 subSentenceAspectToken = rootChild
                 break
-
+        
+        # only if there are no nouns in first grade childrens of root verb, look if there is a pronome, that can be the aspect token 
         if not subSentenceAspectToken:
             for rootChild in rootToken.children:
                 if rootChild.pos_ == "PRON":
                     subSentenceAspectToken = rootChild
                     break
         
-        # sentence with NOUN as root ist not a sentence but can still contain a sentiment
+        # sentence with NOUN as root is not a sentence but can still contain a sentiment
         if rootToken.pos_ == "NOUN":
             subSentenceAspectToken = rootToken
 
         # no aspect found --> empty result for subsentence
         if not subSentenceAspectToken:
             break
-                
+            
         ###############################################################################################################
 
-        #get aspect word sentiment
+        #get aspect words sentiment
 
         aspectWordSentiment = 0
 
@@ -356,17 +391,16 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
         ###############################################################################################################
 
-        # get the attributes that belong to the aspect word
+        # get the attributes that belong to the aspect word and negations
         attributes = []
         aspectWordIntensifier = 1
-
         aspectWordChilds = subSentenceAspectToken.children
 
         if aspectWordChilds:
 
             for awChild in aspectWordChilds:
                 
-                #INT can be "ADV"
+                #INT can be "ADV", if it is a "real" adverb
                 if awChild.pos_ in ["ADJ","ADV"]:
                     attributeAnalyseResult = analyseAdjective(awChild, lex)
 
@@ -380,19 +414,20 @@ def getAspectSentimentDetails(msg,lex,nlp):
                         missingWords.append(missingWord)
 
                 # check for conjunctions and Commas (","), that chains multiple attributes
-
                 conjChilds = awChild.children
 
                 if conjChilds:
 
                     result = 0
 
+                    # traverse the parse tree, until you found every conjuncted adjective and calculate the base adjectives value
                     while result != -1:
                         result = getNextConjuctedAdjectiveResult(awChild,lex)
                         
+                        #no result
                         if result == -1:
                             break
-
+                        
                         if result["result"]["type"] == "INT":
                             aspectWordIntensifier *= result["result"]["value"]
 
@@ -408,8 +443,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
                         if not conjChilds:
                             result = -1
                             break
-
-                    #has it conjuncted parts?
 
                 # direct aspect word negation detection
                 elif awChild.pos_ in ["PART","DET"]:
@@ -430,10 +463,11 @@ def getAspectSentimentDetails(msg,lex,nlp):
         adverbials = []
         potentialAdverbs = None 
 
-        # case a NOUN is root -> no adverbials without verb
+        # case the root token equals aspect token -> no adverbials without a verb
         if rootToken != subSentenceAspectToken:
             potentialAdverbs = rootToken.children
 
+        # in case of above: this variable is not set, nothing to do then, else we look through the adverbs
         if potentialAdverbs:
             for child in potentialAdverbs:
                 if child.pos_ == "ADV":
@@ -446,8 +480,8 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     for missingWord in adverbialAnalysisResult["missingWords"]:
                         missingWords.append(missingWord)
 
-                # check for conjunctions and Commas (","), that chains multiple attributes
-
+                # check for conjunctions and Commas (","), that chains multiple adverbs 
+                # similar to attributes chaining
                 conjChilds = child.children
 
                 if conjChilds:
@@ -475,7 +509,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
         ###############################################################################################################
 
-        # get verbs sentiment
+        # get verbs sentiment including direct negations
         verbSentiment = 0
 
         if rootToken.pos_ == "VERB":
@@ -484,6 +518,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
             if verbLookUpResult["success"]:
                 verbType = verbLookUpResult["data"]["wordFunction"]
 
+                # Shifters have value of 0 in lexicon -> set it to -1, so it is inverting the sentiment
                 if verbType == "SHI":
                     verbSentiment = -1
                 
@@ -515,6 +550,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
                             elif verbType == "VAL":
                                 verbSentiment *= verbLookUpResult["data"]["value"]
 
+        # fill the dict, that holds information for one aspect 
         aspectDetails = dict()
         aspectDetails["aspectWord"] = aspectWordSentiment
         aspectDetails["attr"] = attributes
@@ -540,7 +576,22 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
 
 def calculateAspectSentiments(aspectSentimentDetails):
+    """
+    Takes an aspectSentimentDetails object and calculate each aspects sentiment.
 
+    Parameters
+        ----------
+        aspectSentimentDetails : dict
+            the result of getAspectSentimentDetails()
+
+        Returns
+        -------
+    
+        dict[aspect] -> aspects sentiment
+        or empty dict, if no aspects found
+    """
+
+    # nothing to do here
     if not aspectSentimentDetails:
         return {}
 
@@ -548,7 +599,7 @@ def calculateAspectSentiments(aspectSentimentDetails):
     # we don't care for missing words here
     aspectSentimentDetails = aspectSentimentDetails["sentimentDetails"]
 
-
+    # go through each aspect and calculate its sentiment
     for aspect in aspectSentimentDetails:    
         details = aspectSentimentDetails[aspect]
 
@@ -558,6 +609,9 @@ def calculateAspectSentiments(aspectSentimentDetails):
         verb = details["verb"]
         awInt = details["int"]
 
+        # sometimes we do not want to include the nouns or verbs Threshold, especially when they have only a low sentiment
+        # and the nouns sentiment is generally determined by the attribute and the verbs sentiment is multiplied by the adverbs mean sentiment
+        # even if the adverbs mean sentiment is high, when the verbs sentiment is low, the general sentiment value is low, because we use multiplication (you will see later)
         if abs(aw) < NeutralNounThreshold:
             aw = 0
 
@@ -606,10 +660,9 @@ def calculateAspectSentiments(aspectSentimentDetails):
 
         component1 = aw * awInt
         component2 = meanAttr
-
         component3 = 0
-        #special rules for third component
 
+        #special rules for third component, we don't want the product to be 0, just because one part is zero (not existent)
         if verb and meanAdv:
             component3 = verb * meanAdv
         
@@ -619,16 +672,14 @@ def calculateAspectSentiments(aspectSentimentDetails):
         elif not verb and meanAdv:
             component3 = meanAdv
 
-        # shifter is applied to aspectword
+        # shifter is applied to the aspect word
         # e.g. "Krieg beenden"
         if component3 == -1:
             component1 *= -1
 
             component3 = 0
 
-        
         # put the 3 components together for aspect sentiment calculation
-
         sentiment = 0
         countComponents = 0
 
@@ -644,6 +695,7 @@ def calculateAspectSentiments(aspectSentimentDetails):
             sentiment += component3
             countComponents += 1 
 
+        # trying to keep the sentiment values in a range between -1 and 1, so we divide here
         if countComponents:
             sentiment /= countComponents
 
@@ -653,6 +705,7 @@ def calculateAspectSentiments(aspectSentimentDetails):
     return aspectSentiments
 
 def getMissingWords(msg,lex,nlp):
+    """returns a list of no in the lexicon covered words for a given message"""
     missingWords = []
     doc = nlp(msg)
 
@@ -664,7 +717,7 @@ def getMissingWords(msg,lex,nlp):
         if aspectSentimentDetails:
             missingWordsInAspect = aspectSentimentDetails["missingWords"]
 
-        
+            # to prevent duplicates        
             for missingWord in missingWordsInAspect:
                 if str.lower(missingWord) not in missingWords:
                     missingWords.append(str.lower(missingWord))
@@ -673,6 +726,7 @@ def getMissingWords(msg,lex,nlp):
 
 
 def calcSenSentiment(aspectSentiments):
+    """Takes aspect Sentiments and calculate the sentence sentiment as the mean of aspect sentiments."""
     countAspects = 0
     aspectSum = 0
     for aspect in aspectSentiments:
@@ -686,10 +740,12 @@ def calcSenSentiment(aspectSentiments):
 
 
 def getAspectSentiments(msg,lex,nlp):
+    """Returns a list of aspect sentiments, as a float, for a given message, that can be any length."""
     doc = nlp(msg)
     
     aspectSents = []
 
+    # getAspectSentimentDetails can only take on sentence, so we use sentence splitting
     for sen in doc.sents:
         sen = nlp(sen.text)
         aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
@@ -703,10 +759,12 @@ def getAspectSentiments(msg,lex,nlp):
 
 
 def getAspectPolarities(msg,lex,nlp):
+    """returns a list of integers, -1 = negative, 0 = no sentiment, 1 = positive, representing the aspects polarities, for a given message."""
     doc = nlp(msg)
     
     aspectPolarities = []
 
+    # getAspectSentimentDetails can only take on sentence, so we use sentence splitting 
     for sen in doc.sents:
         sen = nlp(sen.text)
 
@@ -729,6 +787,8 @@ def getAspectPolarities(msg,lex,nlp):
 
 
 def getSentenceSentiments(msg,lex,nlp):
+    """Returns a list of sentence sentiments, as a float, for a given message, that can be any length."""
+    doc = nlp(msg)
     doc = nlp(msg)
     sentenceSentiments = []
 
@@ -743,6 +803,7 @@ def getSentenceSentiments(msg,lex,nlp):
 
 
 def getSentencePolarities(msg,lex,nlp):
+    """returns a list of integers, -1 = negative, 0 = no sentiment, 1 = positive, representing the sentences polarities, for a given message."""
     doc = nlp(msg)
     sentencePolarities = []
 
@@ -766,6 +827,23 @@ def getSentencePolarities(msg,lex,nlp):
 
 
 def getDocumentSentiment(msg,lex,nlp, perSentence = False):
+    """
+    Returns a float value, that is the documents sentiment.
+
+    Parameters
+        ----------
+        msg : string
+            the message to analyse
+
+        lex : Lexicon
+            the lexicon to use
+
+        nlp : spacy.Language
+            the language model to use
+
+        perSentence (optional): bool
+            calculate documents sentiment sentence-wise (if not the aspect-wise)
+    """
     doc = nlp(msg)
     countParts = 0
     sentimentSum = 0
@@ -792,6 +870,23 @@ def getDocumentSentiment(msg,lex,nlp, perSentence = False):
 
 
 def getDocumentPolarity(msg,lex,nlp, perSentence = False):
+    """
+    Returns a int value, that is the documents sentiment polarity (-1 = negative, 0 = no sentiment, 1 = positive).
+
+    Parameters
+        ----------
+        msg : string
+            the message to analyse
+
+        lex : Lexicon
+            the lexicon to use
+
+        nlp : spacy.Language
+            the language model to use
+
+        perSentence (optional): bool
+            calculate documents sentiment sentence-wise (if not the aspect-wise)
+    """
     docSentiment = getDocumentSentiment(msg,lex,nlp, perSentence) 
 
     if docSentiment > 0:
@@ -802,5 +897,3 @@ def getDocumentPolarity(msg,lex,nlp, perSentence = False):
 
     else:
         return 0
-
-
