@@ -1,4 +1,5 @@
-path = "H://Downloads//sentiment-data-reviews-and-neutral//holidaycheck//raw//holidaycheck.tunesien.tsv"
+# source data set at: https://github.com/oliverguhr/german-sentiment
+path = "path to your dataset"
 holidayCheckFile = open(path,"r",encoding="UTF-8")
 lines = holidayCheckFile.readlines()
 DATASET_SIZE = 20000 #for each rating
