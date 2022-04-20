@@ -1,28 +1,53 @@
+# this script is checking the results previosly calculated by documentLevelHolidayCheckTest.py
+# Takes the result and calculates a confusion matrix
+
 import json
 from statistics import mean
 from statistics import median
 from statistics import stdev
 
-STEP_SIZE = 0.01
-START_THRESHOLD = -0.2
+# the script calculates the confusion matrix based on a threshold
+# the more far away the best Threshold is from the intended Threshold of 0.0,
+# the less accurate is the dataset.
+
+STEP_SIZE = 0.01    # smaller step sizes, will make computation time longer
+START_THRESHOLD = -0.2  # the first threshold used (always keep it below 0)
+
+# if ZERO_STAR_WEIGHT is bigger, makes it more important to classify negative results.
+# Weight are only active if ENABLE_WEIGHTS is set to "True"
 ZERO_STAR_WEIGHT = 2
 TWO_STAR_WEIGHT = 1
 FIVE_STAR_WEIGHT = 2
+# enable Neutral is some kind of experimental -> no good results for non binary classifcation yet
+# if enabled: take 2 star-(or 3 Suns)reviews as neutral (hint: they are not neutral at all....)
 ENABLE_NEUTRAL = False
 ENABLE_WEIGHTS = False
+
+# the best Threshold is shown at the end, and it is where this value (OPTIMIZE) has its maximum
+# in scientific research we always want to maximum f1
 OPTIMIZE = "f1" #f1, precision, accuracy, recall
 RESULTS_PATH = "test//analysisResults//"
-RESULT_JSON = "1200_no neutral_result.json"
 
+#        CHANGE THIS
+############################################
+RESULT_JSON = "1200_no neutral_result.json"#
+############################################
+
+# non binary classification is always using weights
+# if no weights should be use, just set them to 1 (equal weights)
 if ENABLE_NEUTRAL:
-    ENABLE_WEIGHTS = True
-
-
-if ENABLE_NEUTRAL:
-    sumWeights = ZERO_STAR_WEIGHT + TWO_STAR_WEIGHT + FIVE_STAR_WEIGHT
-    TWO_STAR_WEIGHT = TWO_STAR_WEIGHT / sumWeights
-    ZERO_STAR_WEIGHT = ZERO_STAR_WEIGHT / sumWeights
-    FIVE_STAR_WEIGHT = FIVE_STAR_WEIGHT / sumWeights
+    if not ENABLE_WEIGHTS:
+        ZERO_STAR_WEIGHT = 1
+        TWO_STAR_WEIGHT = 1
+        FIVE_STAR_WEIGHT = 1
+        ENABLE_WEIGHTS = True
+    
+    # make it so the weights sum = 1
+    else:
+        sumWeights = ZERO_STAR_WEIGHT + TWO_STAR_WEIGHT + FIVE_STAR_WEIGHT
+        TWO_STAR_WEIGHT = TWO_STAR_WEIGHT / sumWeights
+        ZERO_STAR_WEIGHT = ZERO_STAR_WEIGHT / sumWeights
+        FIVE_STAR_WEIGHT = FIVE_STAR_WEIGHT / sumWeights
 else:
     # change weights:  exclude neutral case
     sumWeights = ZERO_STAR_WEIGHT + FIVE_STAR_WEIGHT
@@ -34,6 +59,7 @@ else:
 
 
 def classify(sentiments,negativeThreshold,positiveThreshold):
+    """classifies a list of sentiments from the result.json, depending on negative- and positive Threshold"""
     data = dict()
 
     result = []
@@ -66,6 +92,7 @@ def classify(sentiments,negativeThreshold,positiveThreshold):
 
 
 def logResult(classificationResult,log):
+    """logs the classificationResult"""
     log.write(f"Einträge werden ab: {'{:6.3f}'.format(classificationResult['positiveThreshold'])} als positiv und ab {'{:6.3f}'.format(classificationResult['negativeThreshold'])} als negativ klassifiziert.\n\n")
 
     for i in range(0,len(classificationResult["classification"])):
@@ -75,6 +102,7 @@ def logResult(classificationResult,log):
 
         ges = pos + neg + neu
 
+        # check if results with this polarity exist and format
         if pos:
             posPer = "{:.1f}".format(pos/ges*100)
         else:
@@ -166,7 +194,8 @@ minErrorNegThresh = START_THRESHOLD
 minErrorPosTresh = START_THRESHOLD
 comparisonValue = None
 
-
+# if neutral ENABLED: change min and max Threshold iterative, so we can find the best Thresholds
+# no further explanation here because it is not giving acceptable results anyway...
 while negativeThreshold >= minNegativeThreshold and ENABLE_NEUTRAL:
     negativeThreshold -= STEP_SIZE
     positiveThreshold = negativeThreshold
@@ -211,14 +240,19 @@ while negativeThreshold >= minNegativeThreshold and ENABLE_NEUTRAL:
 
             resultLog.write(f"FP\t{formattedZeroStarError}\FN\t{formattedTwoStarError}\t5Error\t{formattedFiveStarError}\tError\t{formattedError}\tweightedError\t{formattedWeightedError}\tnegThresh\t{formattedNegativeThreshold}\tposThresh\t{formattedPositiveThreshold}\n")            
 
+# this is for binary classification
 if not ENABLE_NEUTRAL:
     positiveThreshold = START_THRESHOLD
 
-
+    # every iteration positiveThreshold grows by STEP_SIZE until it reached the maximum positive Threshold
+    # the maxPositiveThreshold is the mean sentiment of the 5-Star review 
     while positiveThreshold <= maxPositiveThreshold:
 
+        # classify the sentiments according to threshold
         classificationResult = classify(sentiments,positiveThreshold,positiveThreshold)
 
+        # if we use weights.... but we don't usually
+        # this is also not so scientific and i don't want to dig to deep into unneccessary stuff
         if ENABLE_WEIGHTS:
             fiveStarPositiveCount = classificationResult["classification"][5]["positiv"]
             fiveStarTotalCount = classificationResult["classification"][5]["positiv"] + classificationResult["classification"][5]["negativ"]
@@ -250,22 +284,25 @@ if not ENABLE_NEUTRAL:
 
                 resultLog.write(f"FP\t{formattedZeroStarError}\tFN\t{formattedFiveStarError}\tError\t{formattedError}\tweightedError\t{formattedWeightedError}\tTresh\t{formattedThreshold}\n")    
         
+        # here we calculate the confusion matrix
         else:
             # calculate statistic values
             comparisonValue = None
 
+            # define the groups
             FP = classificationResult["classification"][0]["positiv"]
             TN = classificationResult["classification"][0]["negativ"]
 
             TP = classificationResult["classification"][5]["positiv"]
             FN = classificationResult["classification"][5]["negativ"]
 
+            # calculations 
             accuracy = (TN + TP) / (TN + FP + TP + FN)
             precision = TP / (TP + FP)
             recall = TP / (TP + FN)
             f1 = 2* ((precision * recall)/(precision + recall))
 
-            
+            # decide what to optimize
             if OPTIMIZE.lower() == "accuracy":
                 if not optimizingValue:
                     optimizingValue = accuracy
@@ -294,6 +331,8 @@ if not ENABLE_NEUTRAL:
             else:
                 raise Exception(f"can not optimize unknown value: {OPTIMIZE.lower()}")
 
+            # the comparisonValue is higher than the value in the best iteration before
+            # log the result
             if comparisonValue:
                 optimizingValue = comparisonValue
                 formattedThreshold = "{:.2f}".format(positiveThreshold)

@@ -1,7 +1,7 @@
+# Let's have a look how my sentiment analyser analyses some phrases that could be in a conversion with a chatbot
+
 import os
 import sys
-
-
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
@@ -11,7 +11,6 @@ import sentimentParser.lexicon as lexicon
 import spacy
 
 #paths
-
 LEXICON_PATH = "lexicon//sentimentLexicon.json"
 LEXICON_MODE = "no neutral"
 

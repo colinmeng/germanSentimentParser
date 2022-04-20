@@ -1,3 +1,6 @@
+# This script takes a subset of the holidayCheck dataset by Oliver Guhr
+# and runs a document level sentiment analysis
+
 import json
 from statistics import median
 from statistics import mean
@@ -76,7 +79,7 @@ for line in lines:
         
 
     
-
+    # do the sentiment analysis
     docSentiment = sa.getDocumentSentiment(message,lex,nlp,PER_SENTENCE)
     lineCount += 1
 
@@ -89,7 +92,6 @@ for line in lines:
         print(percentageDone)
 
     # stop if sample size reached
-
     if(lineCount + invalidLinesCount + errorLinesCount) >= totalLineCount:
         break
 
