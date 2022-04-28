@@ -1,3 +1,6 @@
+# this script can be used to quickly try out the sentiment analyser
+# it will call sentiment analysis an all levels and you will get some information about the dependency parsing
+
 import sys
 import os
 
@@ -10,7 +13,8 @@ import sentimentParser.lexicon as lexicon
 import spacy
 import time
 
-nlp = spacy.load("de_core_news_lg")
+nlp = spacy.load("de_core_news_lg", exclude=["attribute_ruler","ner"])
+print(nlp.pipe_names)
 
 lex = lexicon.Lexicon("lexicon//sentimentLexicon.json","no neutral")
 
