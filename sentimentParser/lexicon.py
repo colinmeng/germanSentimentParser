@@ -7,7 +7,7 @@ import statistics
 # max -> takes ONLY the highest value
 # mean -> takes the mean of ALL values
 # no neutral (suggested option) -> takes the mean of all values BUT neutral ones (neutral values contain no Information about the sentiment = bad for SA)
-lookUpModes = ["min","max","mean","no neutral"]
+lookUpModes = ["min","max","mean","no neutral","polarity"]
 
 class Lexicon:
     """
@@ -83,12 +83,40 @@ class Lexicon:
             entry = self.data[word]
 
             result["wordFunction"] = entry["wordFunction"]
+
+            # get the polarity
+            if statistics.mean(result["values"]) > 0:
+                resultPolarity = 1
+
+            elif statistics.mean(result["values"]) < 0:
+                resultPolarity = -1
+
+            else:
+                resultPolarity = 0
             
-            if self.mode == "min":
-                result["value"] = min(entry["values"])
+            if self.mode == "polarity":
+                result["value"] = resultPolarity
+
+            elif self.mode == "min":
+                if resultPolarity == 1:
+                    result["value"] = min(entry["values"])
+                
+                elif resultPolarity == -1:
+                    result["value"] = max(entry["values"])
+                
+                else:
+                    result["value"] = 0
+
 
             elif self.mode == "max":
-                result["value"] = max(entry["values"])
+                if resultPolarity == 1:
+                    result["value"] = max(entry["values"])
+                
+                elif resultPolarity == -1:
+                    result["value"] = min(entry["values"])
+                
+                else:
+                    result["value"] = 0
 
             elif self.mode == "mean":
                 result["value"] = statistics.mean(entry["values"])
@@ -107,7 +135,7 @@ class Lexicon:
                     result["value"] = statistics.mean(values)
             
             else:
-                raise Exception("should not happen!")
+                raise Exception("Wrong Mode")
 
             # pos identification only NOUNS identifiable
 
