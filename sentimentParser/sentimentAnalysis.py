@@ -290,41 +290,20 @@ def getAspectSentimentDetails(msg,lex,nlp):
     """
     # creates the doc -> executes nlp pipeline
     doc = nlp(msg)
-    rootToken = None
-
-    #get the root of the sentence
-    for token in doc:
-        if token.dep_ == "ROOT":
-            rootToken = token
-            break
-
-    # no root token -> something went wrong
-    if not rootToken:
-        return 0
-
-    # filter out some cases, that make no sense
-    if rootToken.pos_ not in ["VERB","AUX","NOUN"]:
-        return 0
-        
-    rootChildren = rootToken.children
-
-    # not a sentence
-    if not rootChildren:
-        return 0
     
-    # find conjunctions of root token
-    rootConjToken = None
-
     subSentenceRootTokens = []
 
     #get the tokens, that are a root of a sentence part
     for token in doc:
-        if token.dep_ == "ROOT" and token.pos_ in ["AUX","VERB"]:
+        if token.dep_ == "ROOT":
             subSentenceRootTokens.append(token)
 
         elif token.dep_ == "cj" and token.pos_ in ["AUX","VERB"]:
             subSentenceRootTokens.append(token)
-
+    
+    # no root -> no message -> nothing to analyse
+    if not subSentenceRootTokens:
+        return 0
     
     # will be filled with aspect sentiment information for one aspect
     aspectSentimentDetails = dict()
