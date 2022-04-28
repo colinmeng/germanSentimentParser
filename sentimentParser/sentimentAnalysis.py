@@ -408,7 +408,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
                             missingWords.append(result["token"].text)
                             missingWords.append(result["token"].lemma_)
                         
-                        conjChilds = result["token"].children
+                        awChild = result["token"]
 
                         if not conjChilds:
                             result = -1
@@ -471,7 +471,8 @@ def getAspectSentimentDetails(msg,lex,nlp):
                             missingWords.append(result["token"].text)
                             missingWords.append(result["token"].lemma_)
                         
-                        conjChilds = result["token"].children
+                        child = result["token"]
+
 
                         if not conjChilds:
                             result = -1
