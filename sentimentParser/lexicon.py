@@ -85,10 +85,10 @@ class Lexicon:
             result["wordFunction"] = entry["wordFunction"]
 
             # get the polarity
-            if statistics.mean(result["values"]) > 0:
+            if statistics.mean(entry["values"]) > 0:
                 resultPolarity = 1
 
-            elif statistics.mean(result["values"]) < 0:
+            elif statistics.mean(entry["values"]) < 0:
                 resultPolarity = -1
 
             else:
