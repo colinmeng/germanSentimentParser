@@ -313,27 +313,18 @@ def getAspectSentimentDetails(msg,lex,nlp):
         return 0
     
     # find conjunctions of root token
-    rootConjTokens = []
+    rootConjToken = None
 
-    for rootChild in rootChildren:
-        if rootChild.pos_ == "CCONJ":
-            rootConjTokens.append(rootChild)
-
-    #get the root of each part of the sentence to begin parsing from there
     subSentenceRootTokens = []
 
-    # first part always exist
-    subSentenceRootTokens.append(rootToken)
+    #get the tokens, that are a root of a sentence part
+    for token in doc:
+        if token.dep_ == "ROOT" and token.pos_ in ["AUX","VERB"]:
+            subSentenceRootTokens.append(token)
 
-    # identify the tokens, that are root of a subsentence
-    if rootConjTokens:
-        for token in rootConjTokens:
-            possibleRootTokens = token.children
+        elif token.dep_ == "cj" and token.pos_ in ["AUX","VERB"]:
+            subSentenceRootTokens.append(token)
 
-            if possibleRootTokens:
-                for possibleRootToken in possibleRootTokens:
-                    if possibleRootToken.pos_ in ["VERB","AUX",]:
-                        subSentenceRootTokens.append(possibleRootToken)
     
     # will be filled with aspect sentiment information for one aspect
     aspectSentimentDetails = dict()
