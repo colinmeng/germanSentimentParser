@@ -383,6 +383,18 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     for missingWord in attributeAnalyseResult["missingWords"]:
                         missingWords.append(missingWord)
 
+                # direct aspect word negation detection
+                elif awChild.pos_ in ["PART","DET"]:
+
+                    negLookUp = lookUpWordAndLemmaInLexicon(awChild,lex)
+
+                    if negLookUp["success"]:
+                        if negLookUp["data"]["wordFunction"] == "SHI":
+                            aspectWordIntensifier *= -1
+                    else:
+                        for missingWord in negLookUp["data"]:
+                            missingWords.append(missingWord)
+
                 # check for conjunctions and Commas (","), that chains multiple attributes
                 conjChilds = awChild.children
 
@@ -413,19 +425,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
                         if not conjChilds:
                             result = -1
                             break
-
-                # direct aspect word negation detection
-                elif awChild.pos_ in ["PART","DET"]:
-
-                    negLookUp = lookUpWordAndLemmaInLexicon(awChild,lex)
-
-                    if negLookUp["success"]:
-                        if negLookUp["data"]["wordFunction"] == "SHI":
-                            aspectWordIntensifier *= -1
-                    else:
-                        for missingWord in negLookUp["data"]:
-                            missingWords.append(missingWord)
-        
+ 
         ###############################################################################################################
 
         # get adverbials sentiments
@@ -591,8 +591,8 @@ def calculateAspectSentiments(aspectSentimentDetails):
             
         # the sentiment of an aspect is calculated by  3 individual components: 
         #   1. aspect Word and the product of its Intensifier
-        #   2. the mean value of the attributes
-        #   3. the verbs sentiment multiplied by the mean value of the adverbs
+        #   2. the summed up value of the attributes
+        #   3. the verbs sentiment multiplied by the sum of of the adverbs valences
         #
         #   the not neutral components will be counted (min 1, max 3) and the sentiment is divided by the number of used components
         #   under following conditions are components neutral:
@@ -602,12 +602,12 @@ def calculateAspectSentiments(aspectSentimentDetails):
         #
         #   2. attributes (attr):
         #       - no attributes exist (likely)
-        #       - mean of attributes == 0 (less likely)
+        #       - sum of attributes == 0 (less likely)
         #
         #   3. verb * mean of adverbials (verb * adv)
         #       - no verb(0) and no adverbials exist(0)
         #       - neutral verb(0) and no adverbials(0)
-        #       - neutral verb(0) and neutral mean of adverbials(0)
+        #       - neutral verb(0) and neutral sum of adverbials(0)
         #   
         #   to make sure the sentiment for adverbials or verb is included, even if one of these 2 factors equals zero,
         #   there will be a change in value after neutral case is checked
@@ -617,31 +617,31 @@ def calculateAspectSentiments(aspectSentimentDetails):
         #   in this case we ignore the non existant parameter
 
         # calculate means and check if empty
-        meanAttr = 0
-        meanAdv = 0
+        sumAttr = 0
+        sumAdv = 0
         
         if attr:
-            meanAttr = mean(attr)
+            sumAttr = sum(attr)
         
         if adv:
-            meanAdv = mean(adv)
+            sumAdv = sum(adv)
 
         if not aw:
             aw = 0
 
         component1 = aw * awInt
-        component2 = meanAttr
+        component2 = sumAttr
         component3 = 0
 
         #special rules for third component, we don't want the product to be 0, just because one part is zero (not existent)
-        if verb and meanAdv:
-            component3 = verb * meanAdv
+        if verb and sumAdv:
+            component3 = verb * sumAdv
         
-        elif verb and not meanAdv:
+        elif verb and not sumAdv:
             component3 = verb
 
-        elif not verb and meanAdv:
-            component3 = meanAdv
+        elif not verb and sumAdv:
+            component3 = sumAdv
 
         # shifter is applied to the aspect word
         # e.g. "Krieg beenden"
