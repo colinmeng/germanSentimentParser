@@ -11,7 +11,7 @@ listOfPosToIncludeInMissingWordList = ["PART","VERB","ADV","ADJ","NOUN","AUX"]
 def lookUpWordAndLemmaInLexicon(token,lexicon):
     """looks up the text and the lemma of a given token and returns a result dictionary"""
     result = dict()
-    missingWords = []
+    uncoveredWords = []
     success = False
 
     # firstly we look up the original text of the token
@@ -25,9 +25,9 @@ def lookUpWordAndLemmaInLexicon(token,lexicon):
     # the "data" will be the lexicon result if "success" is set to true, else it is the missing words list
     if not tokenLookUpResult:
         if token.pos_ in listOfPosToIncludeInMissingWordList:
-            missingWords.append(token.text)
-            missingWords.append(token.lemma_)
-        result["data"] = missingWords
+            uncoveredWords.append(token.text)
+            uncoveredWords.append(token.lemma_)
+        result["data"] = uncoveredWords
         
     else:
         success = True
@@ -292,6 +292,8 @@ def getAspectSentimentDetails(msg,lex,nlp):
     doc = nlp(msg)
     
     subSentenceRootTokens = []
+    cleanedUpMissingWords = []
+    missingWords = []
 
     #get the tokens, that are a root of a sentence part
     for token in doc:
@@ -310,7 +312,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
     # start parsing from each verb -> 1 sentence can have multiple aspects and different verbs
     for rootToken in subSentenceRootTokens:
-        missingWords = []
+        
         subSentenceAspectToken = None
 
         # get aspect word of subsentence (direct children)
@@ -535,8 +537,9 @@ def getAspectSentimentDetails(msg,lex,nlp):
     result["sentimentDetails"] = aspectSentimentDetails
 
         # cleanUp missing words
-    cleanedUpMissingWords = []
+
     for word in missingWords:
+        print(word)
         if word not in cleanedUpMissingWords:
             cleanedUpMissingWords.append(word)
 
