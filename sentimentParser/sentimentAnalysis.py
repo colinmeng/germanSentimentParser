@@ -393,6 +393,10 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     if negLookUp["success"]:
                         if negLookUp["data"]["wordFunction"] == "SHI":
                             aspectWordIntensifier *= -1
+
+                        if negLookUp["data"]["wordFunction"] == "INT":
+                            aspectWordIntensifier *= negLookUp["data"]["value"]
+
                     else:
                         for missingWord in negLookUp["data"]:
                             missingWords.append(missingWord)
@@ -646,18 +650,12 @@ def calculateAspectSentiments(aspectSentimentDetails):
         elif not verb and sumAdv:
             component3 = sumAdv
 
-        # shifter is applied to the aspect word
-        # e.g. "Krieg beenden"
-        if component3 == -1:
-            component1 *= -1
-
-            component3 = 0
-
         # put the 3 components together for aspect sentiment calculation
         sentiment = 0
         countComponents = 0
 
-        if component1:
+        # if there are no attributes or adverbials to further describe the aspect, than the aspect word itself has a valence
+        if component1 and not component2 and not component3:
             sentiment += component1
             countComponents += 1
 
@@ -666,14 +664,12 @@ def calculateAspectSentiments(aspectSentimentDetails):
             countComponents += 1
   
         if component3:
-            sentiment += component3
-            countComponents += 1 
-
-        # trying to keep the sentiment values in a range between -1 and 1, so we divide here
-        if countComponents:
-            sentiment /= countComponents
-
-                   
+            if verb == -1:
+                sentiment *= -1
+            else: 
+                sentiment += component3
+                countComponents += 1 
+         
         aspectSentiments[aspect] = sentiment
 
     return aspectSentiments
