@@ -443,9 +443,43 @@ def getAspectSentimentDetails(msg,lex,nlp):
         if rootToken != subSentenceAspectToken:
             potentialAdverbs = rootToken.children
 
+        if rootToken.pos_ == "AUX":
+            rootChildren = rootToken.children
+
+            if rootToken:
+                for child in rootChildren:
+                    if child.pos_ == "VERB":
+                        potentialAdverbs = child.children
+                        break
+
         # in case of above: this variable is not set, nothing to do then, else we look through the adverbs
         if potentialAdverbs:
             for child in potentialAdverbs:
+
+                # "X is a Y" equals "X is Y-ish"
+                if rootToken.pos_ == "AUX" and child.pos_ == "NOUN" and child != subSentenceAspectToken:
+                    nounLookUpResult = lookUpWordAndLemmaInLexicon(child,lex)
+                    nounSentiment = 0
+
+                    if nounLookUpResult["success"]:
+                        nounSentiment = nounLookUpResult["data"]["value"]
+
+                    nounChilds = child.children
+
+                    if nounChilds:
+                        for nounChild in nounChilds:
+                            if nounChild.pos_ == "ADJ":
+                                adjResult = analyseAdjective(nounChild,lex)
+                            
+                                if adjResult["type"] == "VAL":
+                                    nounSentiment = adjResult["value"]
+
+                                for missingWord in adjResult["missingWords"]:
+                                    missingWords.append(missingWord)
+                    
+                    if nounSentiment:
+                        adverbials.append(nounSentiment)
+
                 if child.pos_ == "ADV":
 
                     adverbialAnalysisResult = analyseAdjective(child,lex)
@@ -489,7 +523,18 @@ def getAspectSentimentDetails(msg,lex,nlp):
         # get verbs sentiment including direct negations
         verbSentiment = 0
 
-        if rootToken.pos_ == "VERB":
+        if rootToken.pos_ in ["VERB","AUX"]:
+
+            # AUX never has sentiment, find next verb that belongs to aux
+            if rootToken.pos_ == "AUX":
+                verbChildren = rootToken.children
+
+                if verbChildren:
+                    for child in verbChildren:
+                        if child.pos_ == "VERB":
+                            rootToken = child
+                            break
+                
             verbLookUpResult = lookUpWordAndLemmaInLexicon(rootToken,lex)
 
             if verbLookUpResult["success"]:
@@ -504,6 +549,11 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
                 else:
                     verbSentiment = 0
+                    
+                    
+            else:
+                for missingWord in verbLookUpResult["data"]:
+                        missingWords.append(missingWord)
 
             verbChildren = rootToken.children
 
@@ -515,7 +565,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
                         verbSentiment *= -1
                     
                     # "ich glaube(0.5) ich verzweifle(-0.5)..." --> -0.25
-                    if child.pos_ == "VERB":
+                    elif child.pos_ == "VERB":
                         verbLookUpResult = lookUpWordAndLemmaInLexicon(child,lex)
 
                         if verbLookUpResult["success"]:
@@ -526,6 +576,20 @@ def getAspectSentimentDetails(msg,lex,nlp):
                 
                             elif verbType == "VAL":
                                 verbSentiment *= verbLookUpResult["data"]["value"]
+
+                        else:
+                            for missingWord in verbLookUpResult["data"]:
+                                missingWords.append(missingWord)
+
+                    # SHI can also be Adverb or Pronome, than spacy will not list them as negation e. G. "niemals"
+                    else:
+                        adverbLookUpResult = lookUpWordAndLemmaInLexicon(child,lex)
+                        
+                        if adverbLookUpResult["success"]:
+                            if adverbLookUpResult["data"]["wordFunction"] == "SHI":
+                                verbSentiment *= -1
+
+                    
 
         # fill the dict, that holds information for one aspect 
         aspectDetails = dict()
@@ -543,7 +607,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
         # cleanUp missing words
 
     for word in missingWords:
-        print(word)
         if word not in cleanedUpMissingWords:
             cleanedUpMissingWords.append(word)
 
@@ -642,7 +705,7 @@ def calculateAspectSentiments(aspectSentimentDetails):
 
         #special rules for third component, we don't want the product to be 0, just because one part is zero (not existent)
         if verb and sumAdv:
-            component3 = verb * sumAdv
+            component3 = sumAdv
         
         elif verb and not sumAdv:
             component3 = verb
