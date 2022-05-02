@@ -1,138 +1,136 @@
-Nachricht
-Was ist ein Akzeptor?
-Erkläre mir bitte, was ein Akzeptor ist.
-Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
-Ich verstehe Akzeptoren nicht.
-Ich brauche Hilfe bei einem Thema.
-Ich verstehe diese Aufgabe nicht.
-Was bedeutet rechtslinear?
-Wieso  braucht man theoretische Informatik?
-Warum muss ich das wissen?
-Was bringt mir das hier überhaupt?
-Ich möchte endlich verstehen, was ein Akzeptor ist!
-Ich glaube ich verzweifle noch an dieser Aufgabe. Kannst du mir irgendwie helfen?
-Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
-Wie soll ich mir das alles merken?
-Warum ist das denn so kompliziert?
-Was soll ich denn damit?
-Ich werde das niemals verstehen.
-Du bist wirklich nicht hilfreich.
-Du hilfst mir nicht weiter.
-Warum kannst du mir denn nicht helfen?
-Du bist keine große Hilfe.
-Ich brauche dringend Hilfe.
-Warum kann mir denn niemand helfen?
-Wie soll ich dass den je verstehen?
-Was soll der Scheiß?
-Ich kann nichts.
-Du bist genauso unverständlich wie unser Dozent.
-Theoretische Informatik ist nichts für mich.
-Ich mag thi nicht.
-Ich hasse thi.
-Ich finde die Aufgabenstellung zu kompliziert.
-Mich belastet das extrem.
-Warum ist thi so schwer?
-Ich würde am liebsten Aufgeben.
-Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
-Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
-Die Aufgabenstellung ist viel zu kompliziert. 
-Wie soll man denn da durchblicken?
-Verstehst du das?
-Ich habe keine Lust mehr.
-Ich möchte diese Sache hinter mich bringen.
-Bald ist es geschafft.
-Ich habe Angst durchzufallen.
-Ich befürchte die Prüfung wird unschaffbar.
-Ich bin letztes Semester durch die Prüfung gefallen.
-Es ist zu spät das jetzt noch alles zu lernen.
-Der Aufwand ist zu groß.
-Warum will das nicht in mein Gehirn gehen?
-Ich bin müde.
-Thi regt mich extrem auf.
-Ich bin wütend.
-Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
-Wer hat sich diesen Dreck denn ausgedacht?
-Was bringt mir das alles?
-Und zu was ist das alles gut?
-Unser Professor ist ein Sadist.
-Thi ist die pure Hölle für mich.
-Ich versuche mich da durch zu quälen.
-Morgen schaff ich das schon.
-Wann hat diese Qual ein Ende?
-Wieso tun Sie mir das an?
-Da kann mir auch kein Bot mehr helfen.
-Ich bin aufgeschmissen!
-Was mach ich hier eigentlich noch?
-Ich verstehe nur Bahnhof.
-Das klingt alles spanisch.
-Diese Antwort ist nicht hilfreich.
-Das hilft mir auch nicht weiter.
-Ich wäre jetzt lieber in meinem Bett.
-Kannst du mir das noch mal erklären?
-Ich verstehe das nicht.
-Vergiss es einfach, du kannst mir nicht helfen.
-Ich finde keinen Lösungsansatz.
-Das kann doch nicht dein Ernst sein?
-Wer hat dir ins Gehirn geschissen?
-Das ist alles unlogisch.
-Thi bringt mich regelmäßig zur Frustration.
-Ich verstehe es immer noch nicht.
-Zum einen Ohr geht es rein und zum anderen wieder raus. Es ist frustrierend.
-Thi ist ein schreckliche Qual für jeden, den ich kenne.
-Thi stinkt.
-Niemand mag dich!
-Geh dich vergraben.
-Lösch dich!
-Thi zu verstehen ist unmöglich.
-Ich habe keine weitere Chance. Entweder jetzt oder nie!
-Ich bezweifle, dass ich das schaffen kann.
-Ich fürchte, dass ich durch die Prüfung falle.
-Ich denke das wars für mich.
-Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
-Dieser Bot ist der letzte Dreck.
-Danke für die Antwort.
-Ich glaube, das habe ich jetzt verstanden.
-Langsam verstehe ich es.
-Ja, das hat mir weiter geholfen.
-Super, vielen Dank!
-Ok.
-Perfekt.
-Ja.
-Ja, aber kannst du es mir nochmal erkl�ren?
-Vielen Dank für deine Antwort.
-Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
-Ich mag thi.
-Ich liebe thi.
-Unser Professor ist ein guter Lehrer.
-Dieser Bot ist einfach genial!
-Es macht wirklich Spaß mit dir zu chatten.
-Cool. Kannst du mir auch bei den Hausaufgaben helfen?
-Wahnsinn, was du alles kannst.
-Du bist der Beste.
-Ich freue mich schon auf die Prüfung.
-Deine Antworten sind echt erste Klasse!
-Die Erklärung finde ich gut.
-Danke, aber das hat mir nicht geholfen.
-Eigentlich ist das ja ganz einfach.
-Irgendwie hat es jetzt bei mir klick gemacht.
-Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
-Mir geht es gut, und dir?
-Ich freue mich sehr!
-Ich bin extrem aufgeregt wegen der Prüfung.
-Thi fasziniert mich.
-Es ist interessant zu sehen, wie ein Chatbot antwortet.
-Ich habe Hunger.
-Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
-Das ist eine gute Nachricht.
-Tausend Dank.
-Vielen Dank.
-Herzlichen Dank.
-Ohne dich hätte ich das niemals verstanden.
-Ich bin so froh, dass es dich gibt!
-Danke, weißt du auch zufällig etwas über Akzeptoren?
-Wie ist das Wetter heute?
-Draußen ist es sehr dunkel.
-Meine Motivation ist gleich null.
-So demotiviert war ich noch nie.
-Ich könnte heulen.
-Ich könnte weinen.
+Ich verstehe Akzeptoren nicht.	-1
+Ich verstehe diese Aufgabe nicht.	-1
+Was bringt mir das hier überhaupt?	-1
+Ich glaube ich verzweifle noch an dieser Aufgabe.	-1
+Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?	-1
+Wie soll ich mir das alles merken?	-1
+Warum ist das denn so kompliziert?	-1
+Was soll ich denn damit?	-1
+Ich werde das niemals verstehen.	-1
+Du bist wirklich nicht hilfreich.	-1
+Du hilfst mir nicht weiter.	-1
+Warum kannst du mir denn nicht helfen?	-1
+Du bist keine große Hilfe.	-1
+Ich brauche dringend Hilfe.	-1
+Warum kann mir denn niemand helfen?	-1
+Wie soll ich dass denn je verstehen?	-1
+Was soll der Scheiß?	-1
+Ich kann nichts.	-1
+Du bist genauso unverständlich wie unser Dozent.	-1
+Ich mag thi nicht.	-1
+Ich hasse thi.	-1
+Ich finde die Aufgabenstellung zu kompliziert.	-1
+Mich belastet das extrem.	-1
+Ich würde am liebsten Aufgeben.	-1
+Manchmal frage ich mich, warum ich überhaupt Informatik studiere.	-1
+Die Aufgabenstellung ist viel zu kompliziert. 	-1
+Wie soll man denn da durchblicken?	-1
+Ich habe keine Lust mehr.	-1
+Ich habe Angst durchzufallen.	-1
+Ich befürchte die Prüfung wird unschaffbar.	-1
+Es ist zu spät das jetzt noch alles zu lernen.	-1
+Der Aufwand ist zu groß.	-1
+Warum will das nicht in mein Gehirn gehen?	-1
+Ich bin müde.	-1
+Thi regt mich extrem auf.	-1
+Ich bin wütend.	-1
+Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.	-1
+Wer hat sich diesen Dreck denn ausgedacht?	-1
+Was bringt mir das alles?	-1
+Unser Professor ist ein Sadist.	-1
+Thi ist die pure Hölle für mich.	-1
+Ich versuche mich da durch zu quälen.	-1
+Wann hat diese Qual ein Ende?	-1
+Wieso tun Sie mir das an?	-1
+Da kann mir auch kein Bot mehr helfen.	-1
+Ich bin aufgeschmissen!	-1
+Was mach ich hier eigentlich noch?	-1
+Ich verstehe nur Bahnhof.	-1
+Das klingt alles spanisch.	-1
+Ich wäre jetzt lieber in meinem Bett.	-1
+Ich verstehe das nicht.	-1
+Vergiss es einfach, du kannst mir nicht helfen.	-1
+Das kann doch nicht dein Ernst sein?	-1
+Wer hat dir ins Gehirn geschissen?	-1
+Das ist alles unlogisch.	-1
+Thi bringt mich regelmäßig zur Frustration.	-1
+Ich verstehe es immer noch nicht.	-1
+Zum einen Ohr geht es rein und zum anderen wieder raus.	-1
+Thi ist ein schreckliche Qual für jeden, den ich kenne.	-1
+Thi stinkt.	-1
+Niemand mag dich!	-1
+Geh dich vergraben.	-1
+Lösch dich!	-1
+Thi zu verstehen, ist unmöglich.	-1
+Ich bezweifle, dass ich das schaffen kann.	-1
+Ich fürchte, dass ich durch die Prüfung falle.	-1
+Ich denke das war es für mich.	-1
+Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.	-1
+Dieser Bot ist der letzte Dreck.	-1
+Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.	-1
+Meine Motivation ist gleich null.	-1
+So demotiviert war ich noch nie.	-1
+Ich könnte heulen.	-1
+Ich habe Hunger.	-1
+Ich möchte endlich verstehen, was ein Akzeptor ist!	0
+Diese Antwort ist nicht hilfreich.	0
+Das hilft mir auch nicht weiter.	0
+Was ist ein Akzeptor?	0
+Erkläre mir bitte, was ein Akzeptor ist.	0
+Kannst du mir helfen zu verstehen, was ein Akzeptor ist?	0
+Ich brauche Hilfe bei einem Thema.	0
+Was bedeutet rechtslinear?	0
+Wieso  braucht man theoretische Informatik?	0
+Warum muss ich das wissen?	0
+Theoretische Informatik ist nichts für mich.	0
+Warum ist thi so schwer?	0
+Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.	0
+Verstehst du das?	0
+Ich möchte diese Sache hinter mich bringen.	0
+Ich bin letztes Semester durch die Prüfung gefallen.	0
+Und zu was ist das alles gut?	0
+Kannst du mir das noch mal erklären?	0
+Ich finde keinen Lösungsansatz.	0
+Ich habe keine weitere Chance. Entweder jetzt oder nie!	0
+Ok.	0
+Ja.	0
+Ja, aber kannst du es mir nochmal erklären?	0
+Danke, aber das hat mir nicht geholfen.	0
+Es ist interessant zu sehen, wie ein Chatbot antwortet.	0
+Danke, weißt du auch zufällig etwas über Akzeptoren?	0
+Wie ist das Wetter heute?	0
+Draußen ist es sehr dunkel.	0
+Vielen Dank für deine Antwort.	1
+Mir geht es gut, und dir?	1
+Das ist eine gute Nachricht.	1
+Bald ist es geschafft.	1
+Morgen schaff ich das schon.	1
+Danke für die Antwort.	1
+Ich glaube, das habe ich jetzt verstanden.	1
+Langsam verstehe ich es.	1
+Ja, das hat mir weiter geholfen.	1
+Super, vielen Dank!	1
+Perfekt.	1
+Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.	1
+Ich mag thi.	1
+Ich liebe thi.	1
+Unser Professor ist ein guter Lehrer.	1
+Dieser Bot ist einfach genial!	1
+Es macht wirklich Spaß mit dir zu chatten.	1
+Cool, kannst du mir auch bei den Hausaufgaben helfen?	1
+Wahnsinn, was du alles kannst.	1
+Du bist der Beste.	1
+Ich freue mich schon auf die Prüfung.	1
+Deine Antworten sind echt erste Klasse!	1
+Die Erklärung finde ich gut.	1
+Eigentlich ist das ja ganz einfach.	1
+Irgendwie hat es jetzt bei mir klick gemacht.	1
+Ok, die Erklärung hat mir auf jeden Fall besser geholfen.	1
+Ich freue mich sehr!	1
+Ich bin extrem aufgeregt wegen der Prüfung.	1
+Thi fasziniert mich.	1
+Tausend Dank.	1
+Vielen Dank.	1
+Herzlichen Dank.	1
+Ohne dich hätte ich das niemals verstanden.	1
+Ich bin so froh, dass es dich gibt!	1
