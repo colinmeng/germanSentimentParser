@@ -29,7 +29,7 @@ LOGS_PATH = "test//logs//documentLevel"
 PER_SENTENCE = False
 
 
-nlp = spacy.load(SPACY_MODEL)
+nlp = spacy.load(SPACY_MODEL, exclude=["attribute_ruler","ner"])
 lex = lexicon.Lexicon(LEXICON_PATH,LEXICON_MODE)
 
 holidayCheckFile = open(f"{TEST_DATA_PATH}//{TEST_DATASET}","r",encoding="UTF-8")
