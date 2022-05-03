@@ -27,6 +27,7 @@ for lexiconMode in LEXICON_MODES:
     resultLog.write(f"pol\tactual\t\tcorrect\tmissingWords\tmessage\n")
 
     correctClassifiedCount = 0
+    unknownSentiment = 0
     FP, TP, FN, TN = 0,0,0,0
     totalCount = len(lines)
 
@@ -45,16 +46,19 @@ for lexiconMode in LEXICON_MODES:
         if polarity == -1:  
             if docPolarity == -1:
                 TN += 1
-            else:
+            elif docPolarity == 1:
                 FP += 1
         
         elif polarity == 1:
             if docPolarity == 1:
                 TP += 1
-            else:
+            elif docPolarity == -1:
                 FN += 1
+        
+        if docPolarity == 0:
+            unknownSentiment += 1
             
-        resultLog.write(f"{docPolarity}\t{polarity}\t{docPolarity == polarity}\t{missingWords}\t{msg}\n")
+        resultLog.write(f"{docPolarity}\t{polarity}\t{docPolarity == polarity}\t{missingWords}\nNachricht: {msg}\n")
 
     resultLog.write(f"{correctClassifiedCount} von {totalCount} korrekt klassifiziert.\n\n")
         
@@ -63,8 +67,8 @@ for lexiconMode in LEXICON_MODES:
     recall = TP / (TP + FN)
     f1 = 2* ((precision * recall)/(precision + recall))
 
-    resultLog.write("Confusion Matrix\n_______________________________________________________\n")
-    resultLog.write(f"FP\t{FP}\tFN\t{FN}\tTP\t{TP}\tTN\t{TN}\taccuracy\t{accuracy}\tprecision\t{precision}\trecall\t{recall}\tf1\t{f1}") 
+    resultLog.write(f"Nicht analysierbare Nachrichten: {unknownSentiment}\n")
+    resultLog.write(f"FP\t{FP}\tFN\t{FN}\tTP\t{TP}\tTN\t{TN}\naccuracy\t{accuracy}\nprecision\t{precision}\nrecall\t{recall}\nf1\t{f1}") 
     resultLog.write("\n\n")
 
 
