@@ -55,15 +55,12 @@ def analyseAdjective(token, lexicon):
                  UNC -> the word itself is not in lexicon
             "value"
                 float, can be positive or negative for VAL, positive for INT
-            "missingWords"
-                list of words, that are uncovered by lexicon
             
     """
 
     adjType = "UNC" #UNC VAL or INT
     adjValue = 0
     adjIsShifted = False
-    missingWords = []
 
     adjLookUpResult = lookUpWordAndLemmaInLexicon(token,lexicon)
 
@@ -76,7 +73,6 @@ def analyseAdjective(token, lexicon):
         result = dict()
         result["type"] = adjType
         result["value"] = adjValue
-        result["missingWords"] = adjLookUpResult["data"]
 
         return result
     
@@ -91,9 +87,6 @@ def analyseAdjective(token, lexicon):
 
             # if child look up unsuccessfull, move to the next child
             if not adjChildLookUp["success"]:
-                for missingWord in adjChildLookUp["data"]:
-                    missingWords.append(missingWord)
-
                 continue    
 
 
@@ -112,14 +105,9 @@ def analyseAdjective(token, lexicon):
                 
                 for child in adjChildChildren:
                     childLookUp = lookUpWordAndLemmaInLexicon(child,lexicon)
-
-                    if not childLookUp["success"]:
-                        for missingWord in childLookUp["data"]:
-                            missingWords.append(missingWord)
-                            continue
-                            
+     
                     # child is found
-                    else: 
+                    if childLookUp["success"]:
                         childType = childLookUp["data"]["wordFunction"]
                         
                         # INTs multiply each other
@@ -178,10 +166,6 @@ def analyseAdjective(token, lexicon):
                 if childLookUp["data"]["wordFunction"] == "SHI":
                     adjIsShifted = not adjIsShifted
 
-            else:
-                for missingWord in childLookUp["data"]:
-                    missingWords.append(missingWord)
-
     result = dict()
     result["type"] = adjType
 
@@ -196,14 +180,6 @@ def analyseAdjective(token, lexicon):
     else:
         result["value"] = adjValue
 
-    # cleanUp missing words
-    cleanedUpMissingWords = []
-
-    for word in missingWords:
-        if word not in cleanedUpMissingWords:
-            cleanedUpMissingWords.append(word)
-
-    result["missingWords"] = cleanedUpMissingWords
 
     return result          
 
@@ -229,8 +205,6 @@ def getNextConjuctedAdjectiveResult(token,lex):
                     UNC -> the word itself is not in lexicon
                 "value"
                     float, can be positive or negative for VAL, positive for INT
-                "missingWords"
-                    list of words, that are uncovered by lexicon
             "token" : token
                 the child, that is an adjective and is conjuncted
     """
@@ -272,9 +246,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
         Returns
         -------
     
-        dict[aspect] -> dict(missingWords, sentimentDetails)
-            missingWords : list(string)
-                list of words, that are uncovered by lexicon
+        dict[aspect] -> sentimentDetails
 
             sentimentDetails : list of dict()
                 sentimentDetails["aspectWord"]  : float
@@ -292,8 +264,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
     doc = nlp(msg)
     
     subSentenceRootTokens = []
-    cleanedUpMissingWords = []
-    missingWords = []
 
     #get the tokens, that are a root of a sentence part
     for token in doc:
@@ -357,10 +327,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
             if "NOUN" in lookUpResult["data"]["pos"] and lookUpResult["data"]["wordFunction"] == "VAL":
                 aspectWordSentiment = lookUpResult["data"]["value"]
 
-        else:
-            for missingWord in lookUpResult["data"]:
-                missingWords.append(missingWord)
-
         ###############################################################################################################
 
         # get the attributes that belong to the aspect word and negations
@@ -382,9 +348,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
                     if attributeAnalyseResult["type"] == "VAL":
                         attributes.append(attributeAnalyseResult["value"])
 
-                    for missingWord in attributeAnalyseResult["missingWords"]:
-                        missingWords.append(missingWord)
-
                 # direct aspect word negation detection
                 elif awChild.pos_ in ["PART","DET"]:
 
@@ -396,10 +359,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
                         if negLookUp["data"]["wordFunction"] == "INT":
                             aspectWordIntensifier *= negLookUp["data"]["value"]
-
-                    else:
-                        for missingWord in negLookUp["data"]:
-                            missingWords.append(missingWord)
 
                 # check for conjunctions and Commas (","), that chains multiple attributes
                 conjChilds = awChild.children
@@ -421,10 +380,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
                         if result["result"]["type"] == "VAL":
                             attributes.append(result["result"]["value"])
-
-                        if result["result"]["type"] == "UNC":
-                            missingWords.append(result["token"].text)
-                            missingWords.append(result["token"].lemma_)
                         
                         awChild = result["token"]
 
@@ -474,9 +429,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
                                 if adjResult["type"] == "VAL":
                                     nounSentiment = adjResult["value"]
 
-                                for missingWord in adjResult["missingWords"]:
-                                    missingWords.append(missingWord)
-                    
                     if nounSentiment:
                         adverbials.append(nounSentiment)
 
@@ -486,9 +438,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
                     if adverbialAnalysisResult["type"] == "VAL":
                         adverbials.append(adverbialAnalysisResult["value"])
-
-                    for missingWord in adverbialAnalysisResult["missingWords"]:
-                        missingWords.append(missingWord)
 
                 # check for conjunctions and Commas (","), that chains multiple adverbs 
                 # similar to attributes chaining
@@ -506,10 +455,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
                         if result["result"]["type"] == "VAL":
                             adverbials.append(result["result"]["value"])
-
-                        if result["result"]["type"] == "UNC":
-                            missingWords.append(result["token"].text)
-                            missingWords.append(result["token"].lemma_)
                         
                         child = result["token"]
 
@@ -549,11 +494,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
 
                 else:
                     verbSentiment = 0
-                    
-                    
-            else:
-                for missingWord in verbLookUpResult["data"]:
-                        missingWords.append(missingWord)
 
             verbChildren = rootToken.children
 
@@ -577,10 +517,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
                             elif verbType == "VAL":
                                 verbSentiment *= verbLookUpResult["data"]["value"]
 
-                        else:
-                            for missingWord in verbLookUpResult["data"]:
-                                missingWords.append(missingWord)
-
                     # SHI can also be Adverb or Pronome, than spacy will not list them as negation e. G. "niemals"
                     else:
                         adverbLookUpResult = lookUpWordAndLemmaInLexicon(child,lex)
@@ -603,15 +539,6 @@ def getAspectSentimentDetails(msg,lex,nlp):
         
     result = dict()
     result["sentimentDetails"] = aspectSentimentDetails
-
-        # cleanUp missing words
-
-    for word in missingWords:
-        if word not in cleanedUpMissingWords:
-            cleanedUpMissingWords.append(word)
-
-    result["missingWords"] = cleanedUpMissingWords
-    
 
     return result
 
@@ -744,16 +671,17 @@ def getMissingWords(msg,lex,nlp):
 
     for sen in doc.sents:
         sen = nlp(sen.text)
-        aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
+        
+        for token in sen:
+            if token.pos_ not in ["ADJ","ADV","NOUN","VERB"]:
+                continue
+            
+            lookUpResult = lookUpWordAndLemmaInLexicon(token,lex)
 
-        missingWordsInAspect = None
-        if aspectSentimentDetails:
-            missingWordsInAspect = aspectSentimentDetails["missingWords"]
+            if not lookUpResult["success"]:
+                if token.lemma_ not in missingWords:
+                    missingWords.append(token.lemma_)
 
-            # to prevent duplicates        
-            for missingWord in missingWordsInAspect:
-                if str.lower(missingWord) not in missingWords:
-                    missingWords.append(str.lower(missingWord))
 
     return missingWords
 
