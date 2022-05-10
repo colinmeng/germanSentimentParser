@@ -25,12 +25,12 @@ ENABLE_WEIGHTS = False
 
 # the best Threshold is shown at the end, and it is where this value (OPTIMIZE) has its maximum
 # in scientific research we always want to maximum f1
-OPTIMIZE = "f1" #f1, precision, accuracy, recall
+OPTIMIZE = "accuracy" #f1, precision, accuracy, recall
 RESULTS_PATH = "test//analysisResults//"
 
 #        CHANGE THIS
 ############################################
-RESULT_JSON = "1200_no neutral_result.json"#
+RESULT_JSON = "12000_max_result.json"#
 ############################################
 
 # non binary classification is always using weights
@@ -73,14 +73,14 @@ def classify(sentiments,negativeThreshold,positiveThreshold):
 
         for value in sentiments[i]:
 
-            if value >= positiveThreshold:
-                entry["positiv"] += 1
+            if value == 0.0:
+                entry["neutral"] += 1
 
             elif value <= negativeThreshold:
                 entry["negativ"] += 1
 
             else:
-                entry["neutral"] += 1
+                entry["positiv"] += 1
 
         result.append(entry)
     

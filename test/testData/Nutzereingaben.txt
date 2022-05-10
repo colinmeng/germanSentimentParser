@@ -127,7 +127,7 @@ Eigentlich ist das ja ganz einfach.	1
 Irgendwie hat es jetzt bei mir klick gemacht.	1
 Ok, die Erklärung hat mir auf jeden Fall besser geholfen.	1
 Ich freue mich sehr!	1
-Ich bin extrem aufgeregt wegen der Prüfung.	1
+Ich bin extrem aufgeregt wegen der Prüfung.	-1
 Thi fasziniert mich.	1
 Tausend Dank.	1
 Vielen Dank.	1

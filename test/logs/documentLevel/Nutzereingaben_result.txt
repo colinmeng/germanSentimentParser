@@ -1,725 +1,1420 @@
 Ergebnisse für Lexikon-Modus: min
 
 pol	actual		correct	missingWords	message
--1	-1	True	['akzeptoren', 'akzeptor']	Ich verstehe Akzeptoren nicht.
--1	-1	True	[]	Ich verstehe diese Aufgabe nicht.
-0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']	Was bringt mir das hier überhaupt?
--1	-1	True	['noch']	Ich glaube ich verzweifle noch an dieser Aufgabe.
--1	-1	True	['denn', 'gibt']	Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
-0	-1	False	['merken']	Wie soll ich mir das alles merken?
--1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']	Warum ist das denn so kompliziert?
-0	-1	False	['denn', 'damit', 'soll']	Was soll ich denn damit?
--1	-1	True	[]	Ich werde das niemals verstehen.
--1	-1	True	['wirklich', 'bist', 'sein']	Du bist wirklich nicht hilfreich.
--1	-1	True	[]	Du hilfst mir nicht weiter.
--1	-1	True	['warum', 'denn']	Warum kannst du mir denn nicht helfen?
--1	-1	True	['bist', 'sein']	Du bist keine große Hilfe.
-1	-1	False	['brauche']	Ich brauche dringend Hilfe.
-1	-1	False	[]	Warum kann mir denn niemand helfen?
-1	-1	False	['denn', 'je']	Wie soll ich dass denn je verstehen?
-0	-1	False	['soll']	Was soll der Scheiß?
--1	-1	True	[]	Ich kann nichts.
--1	-1	True	['genauso', 'bist', 'sein']	Du bist genauso unverständlich wie unser Dozent.
--1	-1	True	[]	Ich mag thi nicht.
-0	-1	False	['hasse']	Ich hasse thi.
--1	-1	True	['aufgabenstellung', 'zu']	Ich finde die Aufgabenstellung zu kompliziert.
--1	-1	True	[]	Mich belastet das extrem.
-1	-1	False	['am']	Ich würde am liebsten Aufgeben.
-0	-1	False	['manchmal']	Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
--1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']	Die Aufgabenstellung ist viel zu kompliziert.
-0	-1	False	['denn', 'da', 'durchblicken']	Wie soll man denn da durchblicken?
--1	-1	True	['mehr', 'habe']	Ich habe keine Lust mehr.
-0	-1	False	['habe']	Ich habe Angst durchzufallen.
--1	-1	True	[]	Ich befürchte die Prüfung wird unschaffbar.
-1	-1	False	['jetzt']	Es ist zu spät das jetzt noch alles zu lernen.
-0	-1	False	['aufwand', 'zu', 'ist', 'sein']	Der Aufwand ist zu groß.
-1	-1	False	[]	Warum will das nicht in mein Gehirn gehen?
--1	-1	True	['bin', 'sein']	Ich bin müde.
-0	-1	False	[]	Thi regt mich extrem auf.
--1	-1	True	['bin', 'sein']	Ich bin wütend.
-1	-1	False	['sag']	Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
--1	-1	True	['denn', 'ausgedacht', 'ausdenken']	Wer hat sich diesen Dreck denn ausgedacht?
-0	-1	False	['bringt', 'bringen']	Was bringt mir das alles?
-1	-1	False	['ist', 'sein']	Unser Professor ist ein Sadist.
--1	-1	True	['pure', 'pur', 'ist', 'sein']	Thi ist die pure Hölle für mich.
-0	-1	False	['da', 'versuche']	Ich versuche mich da durch zu quälen.
--1	-1	True	['wann', 'hat', 'haben']	Wann hat diese Qual ein Ende?
-0	-1	False	['wieso', 'tun']	Wieso tun Sie mir das an?
-1	-1	False	['bot']	Da kann mir auch kein Bot mehr helfen.
-0	-1	False	['aufgeschmissen', 'aufschmeißen']	Ich bin aufgeschmissen!
-0	-1	False	['hier', 'eigentlich', 'noch', 'mach']	Was mach ich hier eigentlich noch?
-1	-1	False	['nur']	Ich verstehe nur Bahnhof.
-0	-1	False	['spanisch', 'klingt', 'klingen']	Das klingt alles spanisch.
-1	-1	False	['jetzt', 'wäre', 'sein']	Ich wäre jetzt lieber in meinem Bett.
--1	-1	True	[]	Ich verstehe das nicht.
-1	-1	False	['vergiss']	Vergiss es einfach, du kannst mir nicht helfen.
--1	-1	True	['doch']	Das kann doch nicht dein Ernst sein?
-0	-1	False	['geschissen', 'scheißen']	Wer hat dir ins Gehirn geschissen?
--1	-1	True	['ist', 'sein']	Das ist alles unlogisch.
-1	-1	False	['bringt', 'bringen']	Thi bringt mich regelmäßig zur Frustration.
--1	-1	True	[]	Ich verstehe es immer noch nicht.
-1	-1	False	['wieder', 'raus']	Zum einen Ohr geht es rein und zum anderen wieder raus.
--1	-1	True	['ist', 'sein']	Thi ist ein schreckliche Qual für jeden, den ich kenne.
-0	-1	False	[]	Thi stinkt.
-1	-1	False	[]	Niemand mag dich!
-0	-1	False	[]	Geh dich vergraben.
-0	-1	False	[]	Lösch dich!
-0	-1	False	[]	Thi zu verstehen, ist unmöglich.
--1	-1	True	[]	Ich bezweifle, dass ich das schaffen kann.
-1	-1	False	[]	Ich fürchte, dass ich durch die Prüfung falle.
-0	-1	False	['denke', 'denken']	Ich denke das war es für mich.
-1	-1	False	[]	Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
--1	-1	True	['bot', 'ist', 'sein']	Dieser Bot ist der letzte Dreck.
-0	-1	False	['gleich', 'gleichen', 'höre', 'hören']	Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
-1	-1	False	['ist', 'sein']	Meine Motivation ist gleich null.
--1	-1	True	['so']	So demotiviert war ich noch nie.
--1	-1	True	[]	Ich könnte heulen.
--1	-1	True	['habe']	Ich habe Hunger.
-1	0	False	['endlich']	Ich möchte endlich verstehen, was ein Akzeptor ist!
--1	0	False	['ist', 'sein']	Diese Antwort ist nicht hilfreich.
--1	0	False	['auch']	Das hilft mir auch nicht weiter.
-0	0	True	['akzeptor', 'ist', 'sein']	Was ist ein Akzeptor?
-1	0	False	['ist', 'sein', 'erkläre']	Erkläre mir bitte, was ein Akzeptor ist.
-1	0	False	[]	Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
-1	0	False	['brauche']	Ich brauche Hilfe bei einem Thema.
-0	0	True	['rechtslinear']	Was bedeutet rechtslinear?
--1	0	False	['informatik', 'theoretische']	Wieso  braucht man theoretische Informatik?
-1	0	False	[]	Warum muss ich das wissen?
-0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']	Theoretische Informatik ist nichts für mich.
-0	0	True	[]	Warum ist thi so schwer?
-1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']	Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
-0	0	True	['verstehst']	Verstehst du das?
-0	0	True	['bringen']	Ich möchte diese Sache hinter mich bringen.
-1	0	False	['letztes', 'letzt']	Ich bin letztes Semester durch die Prüfung gefallen.
-1	0	False	['ist', 'sein']	Und zu was ist das alles gut?
-1	0	False	['erklären']	Kannst du mir das noch mal erklären?
-1	0	False	['lösungsansatz']	Ich finde keinen Lösungsansatz.
-1	0	False	['habe']	Ich habe keine weitere Chance. Entweder jetzt oder nie!
-0	0	True	['ok']	Ok.
-0	0	True	[]	Ja.
-0	0	True	[]	Ja, aber kannst du es mir nochmal erklären?
-1	0	False	[]	Danke, aber das hat mir nicht geholfen.
-1	0	False	['zu']	Es ist interessant zu sehen, wie ein Chatbot antwortet.
-1	0	False	['zufällig']	Danke, weißt du auch zufällig etwas über Akzeptoren?
-0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']	Wie ist das Wetter heute?
-0	0	True	['draußen', 'ist', 'sein']	Draußen ist es sehr dunkel.
-1	1	True	[]	Vielen Dank für deine Antwort.
-1	1	True	[]	Mir geht es gut, und dir?
-1	1	True	['ist', 'sein']	Das ist eine gute Nachricht.
-1	1	True	[]	Bald ist es geschafft.
-0	1	False	['morgen', 'schon', 'schaff']	Morgen schaff ich das schon.
-1	1	True	[]	Danke für die Antwort.
-1	1	True	[]	Ich glaube, das habe ich jetzt verstanden.
--1	1	False	[]	Langsam verstehe ich es.
-1	1	True	[]	Ja, das hat mir weiter geholfen.
-1	1	True	[]	Super, vielen Dank!
-0	1	False	[]	Perfekt.
-1	1	True	['bin', 'sein']	Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
-1	1	True	[]	Ich mag thi.
-1	1	True	[]	Ich liebe thi.
-1	1	True	['ist', 'sein']	Unser Professor ist ein guter Lehrer.
-1	1	True	['bot', 'ist', 'sein']	Dieser Bot ist einfach genial!
-1	1	True	['wirklich']	Es macht wirklich Spaß mit dir zu chatten.
-1	1	True	[]	Cool, kannst du mir auch bei den Hausaufgaben helfen?
--1	1	False	[]	Wahnsinn, was du alles kannst.
-0	1	False	['beste', 'bist', 'sein']	Du bist der Beste.
-1	1	True	['schon']	Ich freue mich schon auf die Prüfung.
-1	1	True	['erste', 'sind', 'sein']	Deine Antworten sind echt erste Klasse!
-1	1	True	['erklärung']	Die Erklärung finde ich gut.
-1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']	Eigentlich ist das ja ganz einfach.
-1	1	True	['irgendwie', 'jetzt']	Irgendwie hat es jetzt bei mir klick gemacht.
-1	1	True	['erklärung']	Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
-1	1	True	[]	Ich freue mich sehr!
--1	1	False	['bin', 'sein']	Ich bin extrem aufgeregt wegen der Prüfung.
-1	1	True	[]	Thi fasziniert mich.
-1	1	True	[]	Tausend Dank.
-1	1	True	[]	Vielen Dank.
-1	1	True	['herzlichen', 'herzliche']	Herzlichen Dank.
-1	1	True	[]	Ohne dich hätte ich das niemals verstanden.
-1	1	True	['so', 'bin', 'sein']	Ich bin so froh, dass es dich gibt!
-72 von 136 korrekt klassifiziert.
+-1	-1	True	['akzeptoren', 'akzeptor']
+Nachricht: Ich verstehe Akzeptoren nicht.
+-1	-1	True	[]
+Nachricht: Ich verstehe diese Aufgabe nicht.
+0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']
+Nachricht: Was bringt mir das hier überhaupt?
+-1	-1	True	['noch']
+Nachricht: Ich glaube ich verzweifle noch an dieser Aufgabe.
+-1	-1	True	['denn', 'gibt']
+Nachricht: Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
+0	-1	False	['merken']
+Nachricht: Wie soll ich mir das alles merken?
+-1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']
+Nachricht: Warum ist das denn so kompliziert?
+0	-1	False	['denn', 'damit', 'soll']
+Nachricht: Was soll ich denn damit?
+-1	-1	True	[]
+Nachricht: Ich werde das niemals verstehen.
+-1	-1	True	['wirklich', 'bist', 'sein']
+Nachricht: Du bist wirklich nicht hilfreich.
+-1	-1	True	[]
+Nachricht: Du hilfst mir nicht weiter.
+-1	-1	True	['warum', 'denn']
+Nachricht: Warum kannst du mir denn nicht helfen?
+-1	-1	True	['bist', 'sein']
+Nachricht: Du bist keine große Hilfe.
+1	-1	False	['brauche']
+Nachricht: Ich brauche dringend Hilfe.
+1	-1	False	[]
+Nachricht: Warum kann mir denn niemand helfen?
+1	-1	False	['denn', 'je']
+Nachricht: Wie soll ich dass denn je verstehen?
+0	-1	False	['soll']
+Nachricht: Was soll der Scheiß?
+-1	-1	True	[]
+Nachricht: Ich kann nichts.
+-1	-1	True	['genauso', 'bist', 'sein']
+Nachricht: Du bist genauso unverständlich wie unser Dozent.
+-1	-1	True	[]
+Nachricht: Ich mag thi nicht.
+0	-1	False	['hasse']
+Nachricht: Ich hasse thi.
+-1	-1	True	['aufgabenstellung', 'zu']
+Nachricht: Ich finde die Aufgabenstellung zu kompliziert.
+-1	-1	True	[]
+Nachricht: Mich belastet das extrem.
+1	-1	False	['am']
+Nachricht: Ich würde am liebsten Aufgeben.
+0	-1	False	['manchmal']
+Nachricht: Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
+-1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']
+Nachricht: Die Aufgabenstellung ist viel zu kompliziert.
+0	-1	False	['denn', 'da', 'durchblicken']
+Nachricht: Wie soll man denn da durchblicken?
+-1	-1	True	['mehr', 'habe']
+Nachricht: Ich habe keine Lust mehr.
+0	-1	False	['habe']
+Nachricht: Ich habe Angst durchzufallen.
+-1	-1	True	[]
+Nachricht: Ich befürchte die Prüfung wird unschaffbar.
+1	-1	False	['jetzt']
+Nachricht: Es ist zu spät das jetzt noch alles zu lernen.
+0	-1	False	['aufwand', 'zu', 'ist', 'sein']
+Nachricht: Der Aufwand ist zu groß.
+1	-1	False	[]
+Nachricht: Warum will das nicht in mein Gehirn gehen?
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin müde.
+0	-1	False	[]
+Nachricht: Thi regt mich extrem auf.
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin wütend.
+1	-1	False	['sag']
+Nachricht: Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
+-1	-1	True	['denn', 'ausgedacht', 'ausdenken']
+Nachricht: Wer hat sich diesen Dreck denn ausgedacht?
+0	-1	False	['bringt', 'bringen']
+Nachricht: Was bringt mir das alles?
+1	-1	False	['ist', 'sein']
+Nachricht: Unser Professor ist ein Sadist.
+-1	-1	True	['pure', 'pur', 'ist', 'sein']
+Nachricht: Thi ist die pure Hölle für mich.
+0	-1	False	['da', 'versuche']
+Nachricht: Ich versuche mich da durch zu quälen.
+-1	-1	True	['wann', 'hat', 'haben']
+Nachricht: Wann hat diese Qual ein Ende?
+0	-1	False	['wieso', 'tun']
+Nachricht: Wieso tun Sie mir das an?
+1	-1	False	['bot']
+Nachricht: Da kann mir auch kein Bot mehr helfen.
+0	-1	False	['aufgeschmissen', 'aufschmeißen']
+Nachricht: Ich bin aufgeschmissen!
+0	-1	False	['hier', 'eigentlich', 'noch', 'mach']
+Nachricht: Was mach ich hier eigentlich noch?
+1	-1	False	['nur']
+Nachricht: Ich verstehe nur Bahnhof.
+0	-1	False	['spanisch', 'klingt', 'klingen']
+Nachricht: Das klingt alles spanisch.
+1	-1	False	['jetzt', 'wäre', 'sein']
+Nachricht: Ich wäre jetzt lieber in meinem Bett.
+-1	-1	True	[]
+Nachricht: Ich verstehe das nicht.
+1	-1	False	['vergiss']
+Nachricht: Vergiss es einfach, du kannst mir nicht helfen.
+-1	-1	True	['doch']
+Nachricht: Das kann doch nicht dein Ernst sein?
+0	-1	False	['geschissen', 'scheißen']
+Nachricht: Wer hat dir ins Gehirn geschissen?
+-1	-1	True	['ist', 'sein']
+Nachricht: Das ist alles unlogisch.
+1	-1	False	['bringt', 'bringen']
+Nachricht: Thi bringt mich regelmäßig zur Frustration.
+-1	-1	True	[]
+Nachricht: Ich verstehe es immer noch nicht.
+1	-1	False	['wieder', 'raus']
+Nachricht: Zum einen Ohr geht es rein und zum anderen wieder raus.
+-1	-1	True	['ist', 'sein']
+Nachricht: Thi ist ein schreckliche Qual für jeden, den ich kenne.
+0	-1	False	[]
+Nachricht: Thi stinkt.
+1	-1	False	[]
+Nachricht: Niemand mag dich!
+0	-1	False	[]
+Nachricht: Geh dich vergraben.
+0	-1	False	[]
+Nachricht: Lösch dich!
+0	-1	False	[]
+Nachricht: Thi zu verstehen, ist unmöglich.
+-1	-1	True	[]
+Nachricht: Ich bezweifle, dass ich das schaffen kann.
+1	-1	False	[]
+Nachricht: Ich fürchte, dass ich durch die Prüfung falle.
+0	-1	False	['denke', 'denken']
+Nachricht: Ich denke das war es für mich.
+1	-1	False	[]
+Nachricht: Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
+-1	-1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist der letzte Dreck.
+0	-1	False	['gleich', 'gleichen', 'höre', 'hören']
+Nachricht: Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
+1	-1	False	['ist', 'sein']
+Nachricht: Meine Motivation ist gleich null.
+-1	-1	True	['so']
+Nachricht: So demotiviert war ich noch nie.
+-1	-1	True	[]
+Nachricht: Ich könnte heulen.
+-1	-1	True	['habe']
+Nachricht: Ich habe Hunger.
+1	0	False	['endlich']
+Nachricht: Ich möchte endlich verstehen, was ein Akzeptor ist!
+-1	0	False	['ist', 'sein']
+Nachricht: Diese Antwort ist nicht hilfreich.
+-1	0	False	['auch']
+Nachricht: Das hilft mir auch nicht weiter.
+0	0	True	['akzeptor', 'ist', 'sein']
+Nachricht: Was ist ein Akzeptor?
+1	0	False	['ist', 'sein', 'erkläre']
+Nachricht: Erkläre mir bitte, was ein Akzeptor ist.
+1	0	False	[]
+Nachricht: Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
+1	0	False	['brauche']
+Nachricht: Ich brauche Hilfe bei einem Thema.
+0	0	True	['rechtslinear']
+Nachricht: Was bedeutet rechtslinear?
+-1	0	False	['informatik', 'theoretische']
+Nachricht: Wieso  braucht man theoretische Informatik?
+1	0	False	[]
+Nachricht: Warum muss ich das wissen?
+0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']
+Nachricht: Theoretische Informatik ist nichts für mich.
+0	0	True	[]
+Nachricht: Warum ist thi so schwer?
+1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']
+Nachricht: Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
+0	0	True	['verstehst']
+Nachricht: Verstehst du das?
+0	0	True	['bringen']
+Nachricht: Ich möchte diese Sache hinter mich bringen.
+1	0	False	['letztes', 'letzt']
+Nachricht: Ich bin letztes Semester durch die Prüfung gefallen.
+1	0	False	['ist', 'sein']
+Nachricht: Und zu was ist das alles gut?
+1	0	False	['erklären']
+Nachricht: Kannst du mir das noch mal erklären?
+1	0	False	['lösungsansatz']
+Nachricht: Ich finde keinen Lösungsansatz.
+1	0	False	['habe']
+Nachricht: Ich habe keine weitere Chance. Entweder jetzt oder nie!
+0	0	True	['ok']
+Nachricht: Ok.
+0	0	True	[]
+Nachricht: Ja.
+0	0	True	[]
+Nachricht: Ja, aber kannst du es mir nochmal erklären?
+1	0	False	[]
+Nachricht: Danke, aber das hat mir nicht geholfen.
+1	0	False	['zu']
+Nachricht: Es ist interessant zu sehen, wie ein Chatbot antwortet.
+1	0	False	['zufällig']
+Nachricht: Danke, weißt du auch zufällig etwas über Akzeptoren?
+0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']
+Nachricht: Wie ist das Wetter heute?
+0	0	True	['draußen', 'ist', 'sein']
+Nachricht: Draußen ist es sehr dunkel.
+1	1	True	[]
+Nachricht: Vielen Dank für deine Antwort.
+1	1	True	[]
+Nachricht: Mir geht es gut, und dir?
+1	1	True	['ist', 'sein']
+Nachricht: Das ist eine gute Nachricht.
+1	1	True	[]
+Nachricht: Bald ist es geschafft.
+0	1	False	['morgen', 'schon', 'schaff']
+Nachricht: Morgen schaff ich das schon.
+1	1	True	[]
+Nachricht: Danke für die Antwort.
+1	1	True	[]
+Nachricht: Ich glaube, das habe ich jetzt verstanden.
+-1	1	False	[]
+Nachricht: Langsam verstehe ich es.
+1	1	True	[]
+Nachricht: Ja, das hat mir weiter geholfen.
+1	1	True	[]
+Nachricht: Super, vielen Dank!
+0	1	False	[]
+Nachricht: Perfekt.
+1	1	True	['bin', 'sein']
+Nachricht: Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
+1	1	True	[]
+Nachricht: Ich mag thi.
+1	1	True	[]
+Nachricht: Ich liebe thi.
+1	1	True	['ist', 'sein']
+Nachricht: Unser Professor ist ein guter Lehrer.
+1	1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist einfach genial!
+1	1	True	['wirklich']
+Nachricht: Es macht wirklich Spaß mit dir zu chatten.
+1	1	True	[]
+Nachricht: Cool, kannst du mir auch bei den Hausaufgaben helfen?
+-1	1	False	[]
+Nachricht: Wahnsinn, was du alles kannst.
+0	1	False	['beste', 'bist', 'sein']
+Nachricht: Du bist der Beste.
+1	1	True	['schon']
+Nachricht: Ich freue mich schon auf die Prüfung.
+1	1	True	['erste', 'sind', 'sein']
+Nachricht: Deine Antworten sind echt erste Klasse!
+1	1	True	['erklärung']
+Nachricht: Die Erklärung finde ich gut.
+1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']
+Nachricht: Eigentlich ist das ja ganz einfach.
+1	1	True	['irgendwie', 'jetzt']
+Nachricht: Irgendwie hat es jetzt bei mir klick gemacht.
+1	1	True	['erklärung']
+Nachricht: Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
+1	1	True	[]
+Nachricht: Ich freue mich sehr!
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin extrem aufgeregt wegen der Prüfung.
+1	1	True	[]
+Nachricht: Thi fasziniert mich.
+1	1	True	[]
+Nachricht: Tausend Dank.
+1	1	True	[]
+Nachricht: Vielen Dank.
+1	1	True	['herzlichen', 'herzliche']
+Nachricht: Herzlichen Dank.
+1	1	True	[]
+Nachricht: Ohne dich hätte ich das niemals verstanden.
+1	1	True	['so', 'bin', 'sein']
+Nachricht: Ich bin so froh, dass es dich gibt!
+73 von 136 korrekt klassifiziert.
 
-Confusion Matrix
-_______________________________________________________
-FP	41	FN	6	TP	28	TN	33	accuracy	0.5648148148148148	precision	0.4057971014492754	recall	0.8235294117647058	f1	0.5436893203883495
+Nicht analysierbare Nachrichten: 37
+FP	18	FN	2	TP	28	TN	34
+accuracy	0.7560975609756098
+precision	0.6086956521739131
+recall	0.9333333333333333
+f1	0.7368421052631579
 
 Ergebnisse für Lexikon-Modus: max
 
 pol	actual		correct	missingWords	message
--1	-1	True	['akzeptoren', 'akzeptor']	Ich verstehe Akzeptoren nicht.
--1	-1	True	[]	Ich verstehe diese Aufgabe nicht.
-0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']	Was bringt mir das hier überhaupt?
-0	-1	False	['noch']	Ich glaube ich verzweifle noch an dieser Aufgabe.
--1	-1	True	['denn', 'gibt']	Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
-0	-1	False	['merken']	Wie soll ich mir das alles merken?
--1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']	Warum ist das denn so kompliziert?
-0	-1	False	['denn', 'damit', 'soll']	Was soll ich denn damit?
--1	-1	True	[]	Ich werde das niemals verstehen.
--1	-1	True	['wirklich', 'bist', 'sein']	Du bist wirklich nicht hilfreich.
-0	-1	False	[]	Du hilfst mir nicht weiter.
--1	-1	True	['warum', 'denn']	Warum kannst du mir denn nicht helfen?
--1	-1	True	['bist', 'sein']	Du bist keine große Hilfe.
--1	-1	True	['brauche']	Ich brauche dringend Hilfe.
-1	-1	False	[]	Warum kann mir denn niemand helfen?
-1	-1	False	['denn', 'je']	Wie soll ich dass denn je verstehen?
-0	-1	False	['soll']	Was soll der Scheiß?
--1	-1	True	[]	Ich kann nichts.
--1	-1	True	['genauso', 'bist', 'sein']	Du bist genauso unverständlich wie unser Dozent.
-0	-1	False	[]	Ich mag thi nicht.
-0	-1	False	['hasse']	Ich hasse thi.
--1	-1	True	['aufgabenstellung', 'zu']	Ich finde die Aufgabenstellung zu kompliziert.
--1	-1	True	[]	Mich belastet das extrem.
-1	-1	False	['am']	Ich würde am liebsten Aufgeben.
-1	-1	False	['manchmal']	Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
--1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']	Die Aufgabenstellung ist viel zu kompliziert.
-0	-1	False	['denn', 'da', 'durchblicken']	Wie soll man denn da durchblicken?
--1	-1	True	['mehr', 'habe']	Ich habe keine Lust mehr.
-0	-1	False	['habe']	Ich habe Angst durchzufallen.
-0	-1	False	[]	Ich befürchte die Prüfung wird unschaffbar.
-1	-1	False	['jetzt']	Es ist zu spät das jetzt noch alles zu lernen.
-0	-1	False	['aufwand', 'zu', 'ist', 'sein']	Der Aufwand ist zu groß.
-1	-1	False	[]	Warum will das nicht in mein Gehirn gehen?
--1	-1	True	['bin', 'sein']	Ich bin müde.
-1	-1	False	[]	Thi regt mich extrem auf.
--1	-1	True	['bin', 'sein']	Ich bin wütend.
-1	-1	False	['sag']	Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
--1	-1	True	['denn', 'ausgedacht', 'ausdenken']	Wer hat sich diesen Dreck denn ausgedacht?
-0	-1	False	['bringt', 'bringen']	Was bringt mir das alles?
-1	-1	False	['ist', 'sein']	Unser Professor ist ein Sadist.
--1	-1	True	['pure', 'pur', 'ist', 'sein']	Thi ist die pure Hölle für mich.
-0	-1	False	['da', 'versuche']	Ich versuche mich da durch zu quälen.
--1	-1	True	['wann', 'hat', 'haben']	Wann hat diese Qual ein Ende?
-0	-1	False	['wieso', 'tun']	Wieso tun Sie mir das an?
-1	-1	False	['bot']	Da kann mir auch kein Bot mehr helfen.
-0	-1	False	['aufgeschmissen', 'aufschmeißen']	Ich bin aufgeschmissen!
-0	-1	False	['hier', 'eigentlich', 'noch', 'mach']	Was mach ich hier eigentlich noch?
-1	-1	False	['nur']	Ich verstehe nur Bahnhof.
-0	-1	False	['spanisch', 'klingt', 'klingen']	Das klingt alles spanisch.
-1	-1	False	['jetzt', 'wäre', 'sein']	Ich wäre jetzt lieber in meinem Bett.
--1	-1	True	[]	Ich verstehe das nicht.
-1	-1	False	['vergiss']	Vergiss es einfach, du kannst mir nicht helfen.
--1	-1	True	['doch']	Das kann doch nicht dein Ernst sein?
-0	-1	False	['geschissen', 'scheißen']	Wer hat dir ins Gehirn geschissen?
--1	-1	True	['ist', 'sein']	Das ist alles unlogisch.
-1	-1	False	['bringt', 'bringen']	Thi bringt mich regelmäßig zur Frustration.
--1	-1	True	[]	Ich verstehe es immer noch nicht.
-1	-1	False	['wieder', 'raus']	Zum einen Ohr geht es rein und zum anderen wieder raus.
--1	-1	True	['ist', 'sein']	Thi ist ein schreckliche Qual für jeden, den ich kenne.
-0	-1	False	[]	Thi stinkt.
-1	-1	False	[]	Niemand mag dich!
-0	-1	False	[]	Geh dich vergraben.
-0	-1	False	[]	Lösch dich!
-0	-1	False	[]	Thi zu verstehen, ist unmöglich.
-0	-1	False	[]	Ich bezweifle, dass ich das schaffen kann.
-1	-1	False	[]	Ich fürchte, dass ich durch die Prüfung falle.
-0	-1	False	['denke', 'denken']	Ich denke das war es für mich.
-1	-1	False	[]	Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
--1	-1	True	['bot', 'ist', 'sein']	Dieser Bot ist der letzte Dreck.
-0	-1	False	['gleich', 'gleichen', 'höre', 'hören']	Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
-1	-1	False	['ist', 'sein']	Meine Motivation ist gleich null.
--1	-1	True	['so']	So demotiviert war ich noch nie.
-0	-1	False	[]	Ich könnte heulen.
--1	-1	True	['habe']	Ich habe Hunger.
-1	0	False	['endlich']	Ich möchte endlich verstehen, was ein Akzeptor ist!
--1	0	False	['ist', 'sein']	Diese Antwort ist nicht hilfreich.
-0	0	True	['auch']	Das hilft mir auch nicht weiter.
-0	0	True	['akzeptor', 'ist', 'sein']	Was ist ein Akzeptor?
-1	0	False	['ist', 'sein', 'erkläre']	Erkläre mir bitte, was ein Akzeptor ist.
-1	0	False	[]	Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
-1	0	False	['brauche']	Ich brauche Hilfe bei einem Thema.
-1	0	False	['rechtslinear']	Was bedeutet rechtslinear?
--1	0	False	['informatik', 'theoretische']	Wieso  braucht man theoretische Informatik?
-1	0	False	[]	Warum muss ich das wissen?
-0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']	Theoretische Informatik ist nichts für mich.
-0	0	True	[]	Warum ist thi so schwer?
-1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']	Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
-0	0	True	['verstehst']	Verstehst du das?
-1	0	False	['bringen']	Ich möchte diese Sache hinter mich bringen.
-1	0	False	['letztes', 'letzt']	Ich bin letztes Semester durch die Prüfung gefallen.
-1	0	False	['ist', 'sein']	Und zu was ist das alles gut?
-1	0	False	['erklären']	Kannst du mir das noch mal erklären?
-1	0	False	['lösungsansatz']	Ich finde keinen Lösungsansatz.
-1	0	False	['habe']	Ich habe keine weitere Chance. Entweder jetzt oder nie!
-0	0	True	['ok']	Ok.
-0	0	True	[]	Ja.
-0	0	True	[]	Ja, aber kannst du es mir nochmal erklären?
-1	0	False	[]	Danke, aber das hat mir nicht geholfen.
-1	0	False	['zu']	Es ist interessant zu sehen, wie ein Chatbot antwortet.
-1	0	False	['zufällig']	Danke, weißt du auch zufällig etwas über Akzeptoren?
-0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']	Wie ist das Wetter heute?
--1	0	False	['draußen', 'ist', 'sein']	Draußen ist es sehr dunkel.
-1	1	True	[]	Vielen Dank für deine Antwort.
-1	1	True	[]	Mir geht es gut, und dir?
-1	1	True	['ist', 'sein']	Das ist eine gute Nachricht.
-1	1	True	[]	Bald ist es geschafft.
-0	1	False	['morgen', 'schon', 'schaff']	Morgen schaff ich das schon.
-1	1	True	[]	Danke für die Antwort.
-1	1	True	[]	Ich glaube, das habe ich jetzt verstanden.
--1	1	False	[]	Langsam verstehe ich es.
-1	1	True	[]	Ja, das hat mir weiter geholfen.
-1	1	True	[]	Super, vielen Dank!
-0	1	False	[]	Perfekt.
-1	1	True	['bin', 'sein']	Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
-1	1	True	[]	Ich mag thi.
-1	1	True	[]	Ich liebe thi.
-1	1	True	['ist', 'sein']	Unser Professor ist ein guter Lehrer.
-1	1	True	['bot', 'ist', 'sein']	Dieser Bot ist einfach genial!
-1	1	True	['wirklich']	Es macht wirklich Spaß mit dir zu chatten.
-1	1	True	[]	Cool, kannst du mir auch bei den Hausaufgaben helfen?
--1	1	False	[]	Wahnsinn, was du alles kannst.
-0	1	False	['beste', 'bist', 'sein']	Du bist der Beste.
-1	1	True	['schon']	Ich freue mich schon auf die Prüfung.
-1	1	True	['erste', 'sind', 'sein']	Deine Antworten sind echt erste Klasse!
-1	1	True	['erklärung']	Die Erklärung finde ich gut.
-1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']	Eigentlich ist das ja ganz einfach.
-1	1	True	['irgendwie', 'jetzt']	Irgendwie hat es jetzt bei mir klick gemacht.
-1	1	True	['erklärung']	Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
-1	1	True	[]	Ich freue mich sehr!
--1	1	False	['bin', 'sein']	Ich bin extrem aufgeregt wegen der Prüfung.
-1	1	True	[]	Thi fasziniert mich.
-1	1	True	[]	Tausend Dank.
-1	1	True	[]	Vielen Dank.
-1	1	True	['herzlichen', 'herzliche']	Herzlichen Dank.
-1	1	True	[]	Ohne dich hätte ich das niemals verstanden.
-1	1	True	['so', 'bin', 'sein']	Ich bin so froh, dass es dich gibt!
-65 von 136 korrekt klassifiziert.
+-1	-1	True	['akzeptoren', 'akzeptor']
+Nachricht: Ich verstehe Akzeptoren nicht.
+-1	-1	True	[]
+Nachricht: Ich verstehe diese Aufgabe nicht.
+0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']
+Nachricht: Was bringt mir das hier überhaupt?
+0	-1	False	['noch']
+Nachricht: Ich glaube ich verzweifle noch an dieser Aufgabe.
+-1	-1	True	['denn', 'gibt']
+Nachricht: Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
+0	-1	False	['merken']
+Nachricht: Wie soll ich mir das alles merken?
+-1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']
+Nachricht: Warum ist das denn so kompliziert?
+0	-1	False	['denn', 'damit', 'soll']
+Nachricht: Was soll ich denn damit?
+-1	-1	True	[]
+Nachricht: Ich werde das niemals verstehen.
+-1	-1	True	['wirklich', 'bist', 'sein']
+Nachricht: Du bist wirklich nicht hilfreich.
+0	-1	False	[]
+Nachricht: Du hilfst mir nicht weiter.
+-1	-1	True	['warum', 'denn']
+Nachricht: Warum kannst du mir denn nicht helfen?
+-1	-1	True	['bist', 'sein']
+Nachricht: Du bist keine große Hilfe.
+-1	-1	True	['brauche']
+Nachricht: Ich brauche dringend Hilfe.
+1	-1	False	[]
+Nachricht: Warum kann mir denn niemand helfen?
+1	-1	False	['denn', 'je']
+Nachricht: Wie soll ich dass denn je verstehen?
+0	-1	False	['soll']
+Nachricht: Was soll der Scheiß?
+-1	-1	True	[]
+Nachricht: Ich kann nichts.
+-1	-1	True	['genauso', 'bist', 'sein']
+Nachricht: Du bist genauso unverständlich wie unser Dozent.
+0	-1	False	[]
+Nachricht: Ich mag thi nicht.
+0	-1	False	['hasse']
+Nachricht: Ich hasse thi.
+-1	-1	True	['aufgabenstellung', 'zu']
+Nachricht: Ich finde die Aufgabenstellung zu kompliziert.
+-1	-1	True	[]
+Nachricht: Mich belastet das extrem.
+1	-1	False	['am']
+Nachricht: Ich würde am liebsten Aufgeben.
+1	-1	False	['manchmal']
+Nachricht: Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
+-1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']
+Nachricht: Die Aufgabenstellung ist viel zu kompliziert.
+0	-1	False	['denn', 'da', 'durchblicken']
+Nachricht: Wie soll man denn da durchblicken?
+-1	-1	True	['mehr', 'habe']
+Nachricht: Ich habe keine Lust mehr.
+0	-1	False	['habe']
+Nachricht: Ich habe Angst durchzufallen.
+0	-1	False	[]
+Nachricht: Ich befürchte die Prüfung wird unschaffbar.
+1	-1	False	['jetzt']
+Nachricht: Es ist zu spät das jetzt noch alles zu lernen.
+0	-1	False	['aufwand', 'zu', 'ist', 'sein']
+Nachricht: Der Aufwand ist zu groß.
+1	-1	False	[]
+Nachricht: Warum will das nicht in mein Gehirn gehen?
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin müde.
+1	-1	False	[]
+Nachricht: Thi regt mich extrem auf.
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin wütend.
+1	-1	False	['sag']
+Nachricht: Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
+-1	-1	True	['denn', 'ausgedacht', 'ausdenken']
+Nachricht: Wer hat sich diesen Dreck denn ausgedacht?
+0	-1	False	['bringt', 'bringen']
+Nachricht: Was bringt mir das alles?
+1	-1	False	['ist', 'sein']
+Nachricht: Unser Professor ist ein Sadist.
+-1	-1	True	['pure', 'pur', 'ist', 'sein']
+Nachricht: Thi ist die pure Hölle für mich.
+0	-1	False	['da', 'versuche']
+Nachricht: Ich versuche mich da durch zu quälen.
+-1	-1	True	['wann', 'hat', 'haben']
+Nachricht: Wann hat diese Qual ein Ende?
+0	-1	False	['wieso', 'tun']
+Nachricht: Wieso tun Sie mir das an?
+1	-1	False	['bot']
+Nachricht: Da kann mir auch kein Bot mehr helfen.
+0	-1	False	['aufgeschmissen', 'aufschmeißen']
+Nachricht: Ich bin aufgeschmissen!
+0	-1	False	['hier', 'eigentlich', 'noch', 'mach']
+Nachricht: Was mach ich hier eigentlich noch?
+1	-1	False	['nur']
+Nachricht: Ich verstehe nur Bahnhof.
+0	-1	False	['spanisch', 'klingt', 'klingen']
+Nachricht: Das klingt alles spanisch.
+1	-1	False	['jetzt', 'wäre', 'sein']
+Nachricht: Ich wäre jetzt lieber in meinem Bett.
+-1	-1	True	[]
+Nachricht: Ich verstehe das nicht.
+1	-1	False	['vergiss']
+Nachricht: Vergiss es einfach, du kannst mir nicht helfen.
+-1	-1	True	['doch']
+Nachricht: Das kann doch nicht dein Ernst sein?
+0	-1	False	['geschissen', 'scheißen']
+Nachricht: Wer hat dir ins Gehirn geschissen?
+-1	-1	True	['ist', 'sein']
+Nachricht: Das ist alles unlogisch.
+1	-1	False	['bringt', 'bringen']
+Nachricht: Thi bringt mich regelmäßig zur Frustration.
+-1	-1	True	[]
+Nachricht: Ich verstehe es immer noch nicht.
+1	-1	False	['wieder', 'raus']
+Nachricht: Zum einen Ohr geht es rein und zum anderen wieder raus.
+-1	-1	True	['ist', 'sein']
+Nachricht: Thi ist ein schreckliche Qual für jeden, den ich kenne.
+0	-1	False	[]
+Nachricht: Thi stinkt.
+1	-1	False	[]
+Nachricht: Niemand mag dich!
+0	-1	False	[]
+Nachricht: Geh dich vergraben.
+0	-1	False	[]
+Nachricht: Lösch dich!
+0	-1	False	[]
+Nachricht: Thi zu verstehen, ist unmöglich.
+0	-1	False	[]
+Nachricht: Ich bezweifle, dass ich das schaffen kann.
+1	-1	False	[]
+Nachricht: Ich fürchte, dass ich durch die Prüfung falle.
+0	-1	False	['denke', 'denken']
+Nachricht: Ich denke das war es für mich.
+1	-1	False	[]
+Nachricht: Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
+-1	-1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist der letzte Dreck.
+0	-1	False	['gleich', 'gleichen', 'höre', 'hören']
+Nachricht: Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
+1	-1	False	['ist', 'sein']
+Nachricht: Meine Motivation ist gleich null.
+-1	-1	True	['so']
+Nachricht: So demotiviert war ich noch nie.
+0	-1	False	[]
+Nachricht: Ich könnte heulen.
+-1	-1	True	['habe']
+Nachricht: Ich habe Hunger.
+1	0	False	['endlich']
+Nachricht: Ich möchte endlich verstehen, was ein Akzeptor ist!
+-1	0	False	['ist', 'sein']
+Nachricht: Diese Antwort ist nicht hilfreich.
+0	0	True	['auch']
+Nachricht: Das hilft mir auch nicht weiter.
+0	0	True	['akzeptor', 'ist', 'sein']
+Nachricht: Was ist ein Akzeptor?
+1	0	False	['ist', 'sein', 'erkläre']
+Nachricht: Erkläre mir bitte, was ein Akzeptor ist.
+1	0	False	[]
+Nachricht: Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
+1	0	False	['brauche']
+Nachricht: Ich brauche Hilfe bei einem Thema.
+1	0	False	['rechtslinear']
+Nachricht: Was bedeutet rechtslinear?
+-1	0	False	['informatik', 'theoretische']
+Nachricht: Wieso  braucht man theoretische Informatik?
+1	0	False	[]
+Nachricht: Warum muss ich das wissen?
+0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']
+Nachricht: Theoretische Informatik ist nichts für mich.
+0	0	True	[]
+Nachricht: Warum ist thi so schwer?
+1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']
+Nachricht: Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
+0	0	True	['verstehst']
+Nachricht: Verstehst du das?
+1	0	False	['bringen']
+Nachricht: Ich möchte diese Sache hinter mich bringen.
+1	0	False	['letztes', 'letzt']
+Nachricht: Ich bin letztes Semester durch die Prüfung gefallen.
+1	0	False	['ist', 'sein']
+Nachricht: Und zu was ist das alles gut?
+1	0	False	['erklären']
+Nachricht: Kannst du mir das noch mal erklären?
+1	0	False	['lösungsansatz']
+Nachricht: Ich finde keinen Lösungsansatz.
+1	0	False	['habe']
+Nachricht: Ich habe keine weitere Chance. Entweder jetzt oder nie!
+0	0	True	['ok']
+Nachricht: Ok.
+0	0	True	[]
+Nachricht: Ja.
+0	0	True	[]
+Nachricht: Ja, aber kannst du es mir nochmal erklären?
+1	0	False	[]
+Nachricht: Danke, aber das hat mir nicht geholfen.
+1	0	False	['zu']
+Nachricht: Es ist interessant zu sehen, wie ein Chatbot antwortet.
+1	0	False	['zufällig']
+Nachricht: Danke, weißt du auch zufällig etwas über Akzeptoren?
+0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']
+Nachricht: Wie ist das Wetter heute?
+-1	0	False	['draußen', 'ist', 'sein']
+Nachricht: Draußen ist es sehr dunkel.
+1	1	True	[]
+Nachricht: Vielen Dank für deine Antwort.
+1	1	True	[]
+Nachricht: Mir geht es gut, und dir?
+1	1	True	['ist', 'sein']
+Nachricht: Das ist eine gute Nachricht.
+1	1	True	[]
+Nachricht: Bald ist es geschafft.
+0	1	False	['morgen', 'schon', 'schaff']
+Nachricht: Morgen schaff ich das schon.
+1	1	True	[]
+Nachricht: Danke für die Antwort.
+1	1	True	[]
+Nachricht: Ich glaube, das habe ich jetzt verstanden.
+-1	1	False	[]
+Nachricht: Langsam verstehe ich es.
+1	1	True	[]
+Nachricht: Ja, das hat mir weiter geholfen.
+1	1	True	[]
+Nachricht: Super, vielen Dank!
+0	1	False	[]
+Nachricht: Perfekt.
+1	1	True	['bin', 'sein']
+Nachricht: Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
+1	1	True	[]
+Nachricht: Ich mag thi.
+1	1	True	[]
+Nachricht: Ich liebe thi.
+1	1	True	['ist', 'sein']
+Nachricht: Unser Professor ist ein guter Lehrer.
+1	1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist einfach genial!
+1	1	True	['wirklich']
+Nachricht: Es macht wirklich Spaß mit dir zu chatten.
+1	1	True	[]
+Nachricht: Cool, kannst du mir auch bei den Hausaufgaben helfen?
+-1	1	False	[]
+Nachricht: Wahnsinn, was du alles kannst.
+0	1	False	['beste', 'bist', 'sein']
+Nachricht: Du bist der Beste.
+1	1	True	['schon']
+Nachricht: Ich freue mich schon auf die Prüfung.
+1	1	True	['erste', 'sind', 'sein']
+Nachricht: Deine Antworten sind echt erste Klasse!
+1	1	True	['erklärung']
+Nachricht: Die Erklärung finde ich gut.
+1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']
+Nachricht: Eigentlich ist das ja ganz einfach.
+1	1	True	['irgendwie', 'jetzt']
+Nachricht: Irgendwie hat es jetzt bei mir klick gemacht.
+1	1	True	['erklärung']
+Nachricht: Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
+1	1	True	[]
+Nachricht: Ich freue mich sehr!
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin extrem aufgeregt wegen der Prüfung.
+1	1	True	[]
+Nachricht: Thi fasziniert mich.
+1	1	True	[]
+Nachricht: Tausend Dank.
+1	1	True	[]
+Nachricht: Vielen Dank.
+1	1	True	['herzlichen', 'herzliche']
+Nachricht: Herzlichen Dank.
+1	1	True	[]
+Nachricht: Ohne dich hätte ich das niemals verstanden.
+1	1	True	['so', 'bin', 'sein']
+Nachricht: Ich bin so froh, dass es dich gibt!
+66 von 136 korrekt klassifiziert.
 
-Confusion Matrix
-_______________________________________________________
-FP	46	FN	6	TP	28	TN	28	accuracy	0.5185185185185185	precision	0.3783783783783784	recall	0.8235294117647058	f1	0.5185185185185186
+Nicht analysierbare Nachrichten: 39
+FP	19	FN	2	TP	28	TN	29
+accuracy	0.7307692307692307
+precision	0.5957446808510638
+recall	0.9333333333333333
+f1	0.7272727272727273
 
 Ergebnisse für Lexikon-Modus: mean
 
 pol	actual		correct	missingWords	message
--1	-1	True	['akzeptoren', 'akzeptor']	Ich verstehe Akzeptoren nicht.
--1	-1	True	[]	Ich verstehe diese Aufgabe nicht.
-0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']	Was bringt mir das hier überhaupt?
--1	-1	True	['noch']	Ich glaube ich verzweifle noch an dieser Aufgabe.
--1	-1	True	['denn', 'gibt']	Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
-0	-1	False	['merken']	Wie soll ich mir das alles merken?
--1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']	Warum ist das denn so kompliziert?
-0	-1	False	['denn', 'damit', 'soll']	Was soll ich denn damit?
--1	-1	True	[]	Ich werde das niemals verstehen.
--1	-1	True	['wirklich', 'bist', 'sein']	Du bist wirklich nicht hilfreich.
--1	-1	True	[]	Du hilfst mir nicht weiter.
--1	-1	True	['warum', 'denn']	Warum kannst du mir denn nicht helfen?
--1	-1	True	['bist', 'sein']	Du bist keine große Hilfe.
--1	-1	True	['brauche']	Ich brauche dringend Hilfe.
-1	-1	False	[]	Warum kann mir denn niemand helfen?
-1	-1	False	['denn', 'je']	Wie soll ich dass denn je verstehen?
-0	-1	False	['soll']	Was soll der Scheiß?
--1	-1	True	[]	Ich kann nichts.
--1	-1	True	['genauso', 'bist', 'sein']	Du bist genauso unverständlich wie unser Dozent.
--1	-1	True	[]	Ich mag thi nicht.
-0	-1	False	['hasse']	Ich hasse thi.
--1	-1	True	['aufgabenstellung', 'zu']	Ich finde die Aufgabenstellung zu kompliziert.
--1	-1	True	[]	Mich belastet das extrem.
-1	-1	False	['am']	Ich würde am liebsten Aufgeben.
-1	-1	False	['manchmal']	Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
--1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']	Die Aufgabenstellung ist viel zu kompliziert.
-0	-1	False	['denn', 'da', 'durchblicken']	Wie soll man denn da durchblicken?
--1	-1	True	['mehr', 'habe']	Ich habe keine Lust mehr.
-0	-1	False	['habe']	Ich habe Angst durchzufallen.
--1	-1	True	[]	Ich befürchte die Prüfung wird unschaffbar.
-1	-1	False	['jetzt']	Es ist zu spät das jetzt noch alles zu lernen.
-0	-1	False	['aufwand', 'zu', 'ist', 'sein']	Der Aufwand ist zu groß.
-1	-1	False	[]	Warum will das nicht in mein Gehirn gehen?
--1	-1	True	['bin', 'sein']	Ich bin müde.
-1	-1	False	[]	Thi regt mich extrem auf.
--1	-1	True	['bin', 'sein']	Ich bin wütend.
-1	-1	False	['sag']	Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
--1	-1	True	['denn', 'ausgedacht', 'ausdenken']	Wer hat sich diesen Dreck denn ausgedacht?
-0	-1	False	['bringt', 'bringen']	Was bringt mir das alles?
-1	-1	False	['ist', 'sein']	Unser Professor ist ein Sadist.
--1	-1	True	['pure', 'pur', 'ist', 'sein']	Thi ist die pure Hölle für mich.
-0	-1	False	['da', 'versuche']	Ich versuche mich da durch zu quälen.
--1	-1	True	['wann', 'hat', 'haben']	Wann hat diese Qual ein Ende?
-0	-1	False	['wieso', 'tun']	Wieso tun Sie mir das an?
-1	-1	False	['bot']	Da kann mir auch kein Bot mehr helfen.
-0	-1	False	['aufgeschmissen', 'aufschmeißen']	Ich bin aufgeschmissen!
-0	-1	False	['hier', 'eigentlich', 'noch', 'mach']	Was mach ich hier eigentlich noch?
-1	-1	False	['nur']	Ich verstehe nur Bahnhof.
-0	-1	False	['spanisch', 'klingt', 'klingen']	Das klingt alles spanisch.
-1	-1	False	['jetzt', 'wäre', 'sein']	Ich wäre jetzt lieber in meinem Bett.
--1	-1	True	[]	Ich verstehe das nicht.
-1	-1	False	['vergiss']	Vergiss es einfach, du kannst mir nicht helfen.
--1	-1	True	['doch']	Das kann doch nicht dein Ernst sein?
-0	-1	False	['geschissen', 'scheißen']	Wer hat dir ins Gehirn geschissen?
--1	-1	True	['ist', 'sein']	Das ist alles unlogisch.
-1	-1	False	['bringt', 'bringen']	Thi bringt mich regelmäßig zur Frustration.
--1	-1	True	[]	Ich verstehe es immer noch nicht.
-1	-1	False	['wieder', 'raus']	Zum einen Ohr geht es rein und zum anderen wieder raus.
--1	-1	True	['ist', 'sein']	Thi ist ein schreckliche Qual für jeden, den ich kenne.
-0	-1	False	[]	Thi stinkt.
-1	-1	False	[]	Niemand mag dich!
-0	-1	False	[]	Geh dich vergraben.
-0	-1	False	[]	Lösch dich!
-0	-1	False	[]	Thi zu verstehen, ist unmöglich.
--1	-1	True	[]	Ich bezweifle, dass ich das schaffen kann.
-1	-1	False	[]	Ich fürchte, dass ich durch die Prüfung falle.
-0	-1	False	['denke', 'denken']	Ich denke das war es für mich.
-1	-1	False	[]	Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
--1	-1	True	['bot', 'ist', 'sein']	Dieser Bot ist der letzte Dreck.
-0	-1	False	['gleich', 'gleichen', 'höre', 'hören']	Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
-1	-1	False	['ist', 'sein']	Meine Motivation ist gleich null.
--1	-1	True	['so']	So demotiviert war ich noch nie.
--1	-1	True	[]	Ich könnte heulen.
--1	-1	True	['habe']	Ich habe Hunger.
-1	0	False	['endlich']	Ich möchte endlich verstehen, was ein Akzeptor ist!
--1	0	False	['ist', 'sein']	Diese Antwort ist nicht hilfreich.
--1	0	False	['auch']	Das hilft mir auch nicht weiter.
-0	0	True	['akzeptor', 'ist', 'sein']	Was ist ein Akzeptor?
-1	0	False	['ist', 'sein', 'erkläre']	Erkläre mir bitte, was ein Akzeptor ist.
-1	0	False	[]	Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
-1	0	False	['brauche']	Ich brauche Hilfe bei einem Thema.
-1	0	False	['rechtslinear']	Was bedeutet rechtslinear?
--1	0	False	['informatik', 'theoretische']	Wieso  braucht man theoretische Informatik?
-1	0	False	[]	Warum muss ich das wissen?
-0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']	Theoretische Informatik ist nichts für mich.
-0	0	True	[]	Warum ist thi so schwer?
-1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']	Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
-0	0	True	['verstehst']	Verstehst du das?
-1	0	False	['bringen']	Ich möchte diese Sache hinter mich bringen.
-1	0	False	['letztes', 'letzt']	Ich bin letztes Semester durch die Prüfung gefallen.
-1	0	False	['ist', 'sein']	Und zu was ist das alles gut?
-1	0	False	['erklären']	Kannst du mir das noch mal erklären?
-1	0	False	['lösungsansatz']	Ich finde keinen Lösungsansatz.
-1	0	False	['habe']	Ich habe keine weitere Chance. Entweder jetzt oder nie!
-0	0	True	['ok']	Ok.
-0	0	True	[]	Ja.
-0	0	True	[]	Ja, aber kannst du es mir nochmal erklären?
-1	0	False	[]	Danke, aber das hat mir nicht geholfen.
-1	0	False	['zu']	Es ist interessant zu sehen, wie ein Chatbot antwortet.
-1	0	False	['zufällig']	Danke, weißt du auch zufällig etwas über Akzeptoren?
-0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']	Wie ist das Wetter heute?
--1	0	False	['draußen', 'ist', 'sein']	Draußen ist es sehr dunkel.
-1	1	True	[]	Vielen Dank für deine Antwort.
-1	1	True	[]	Mir geht es gut, und dir?
-1	1	True	['ist', 'sein']	Das ist eine gute Nachricht.
-1	1	True	[]	Bald ist es geschafft.
-0	1	False	['morgen', 'schon', 'schaff']	Morgen schaff ich das schon.
-1	1	True	[]	Danke für die Antwort.
-1	1	True	[]	Ich glaube, das habe ich jetzt verstanden.
--1	1	False	[]	Langsam verstehe ich es.
-1	1	True	[]	Ja, das hat mir weiter geholfen.
-1	1	True	[]	Super, vielen Dank!
-0	1	False	[]	Perfekt.
-1	1	True	['bin', 'sein']	Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
-1	1	True	[]	Ich mag thi.
-1	1	True	[]	Ich liebe thi.
-1	1	True	['ist', 'sein']	Unser Professor ist ein guter Lehrer.
-1	1	True	['bot', 'ist', 'sein']	Dieser Bot ist einfach genial!
-1	1	True	['wirklich']	Es macht wirklich Spaß mit dir zu chatten.
-1	1	True	[]	Cool, kannst du mir auch bei den Hausaufgaben helfen?
--1	1	False	[]	Wahnsinn, was du alles kannst.
-0	1	False	['beste', 'bist', 'sein']	Du bist der Beste.
-1	1	True	['schon']	Ich freue mich schon auf die Prüfung.
-1	1	True	['erste', 'sind', 'sein']	Deine Antworten sind echt erste Klasse!
-1	1	True	['erklärung']	Die Erklärung finde ich gut.
-1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']	Eigentlich ist das ja ganz einfach.
-1	1	True	['irgendwie', 'jetzt']	Irgendwie hat es jetzt bei mir klick gemacht.
-1	1	True	['erklärung']	Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
-1	1	True	[]	Ich freue mich sehr!
--1	1	False	['bin', 'sein']	Ich bin extrem aufgeregt wegen der Prüfung.
-1	1	True	[]	Thi fasziniert mich.
-1	1	True	[]	Tausend Dank.
-1	1	True	[]	Vielen Dank.
-1	1	True	['herzlichen', 'herzliche']	Herzlichen Dank.
-1	1	True	[]	Ohne dich hätte ich das niemals verstanden.
-1	1	True	['so', 'bin', 'sein']	Ich bin so froh, dass es dich gibt!
-70 von 136 korrekt klassifiziert.
+-1	-1	True	['akzeptoren', 'akzeptor']
+Nachricht: Ich verstehe Akzeptoren nicht.
+-1	-1	True	[]
+Nachricht: Ich verstehe diese Aufgabe nicht.
+0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']
+Nachricht: Was bringt mir das hier überhaupt?
+-1	-1	True	['noch']
+Nachricht: Ich glaube ich verzweifle noch an dieser Aufgabe.
+-1	-1	True	['denn', 'gibt']
+Nachricht: Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
+0	-1	False	['merken']
+Nachricht: Wie soll ich mir das alles merken?
+-1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']
+Nachricht: Warum ist das denn so kompliziert?
+0	-1	False	['denn', 'damit', 'soll']
+Nachricht: Was soll ich denn damit?
+-1	-1	True	[]
+Nachricht: Ich werde das niemals verstehen.
+-1	-1	True	['wirklich', 'bist', 'sein']
+Nachricht: Du bist wirklich nicht hilfreich.
+-1	-1	True	[]
+Nachricht: Du hilfst mir nicht weiter.
+-1	-1	True	['warum', 'denn']
+Nachricht: Warum kannst du mir denn nicht helfen?
+-1	-1	True	['bist', 'sein']
+Nachricht: Du bist keine große Hilfe.
+-1	-1	True	['brauche']
+Nachricht: Ich brauche dringend Hilfe.
+1	-1	False	[]
+Nachricht: Warum kann mir denn niemand helfen?
+1	-1	False	['denn', 'je']
+Nachricht: Wie soll ich dass denn je verstehen?
+0	-1	False	['soll']
+Nachricht: Was soll der Scheiß?
+-1	-1	True	[]
+Nachricht: Ich kann nichts.
+-1	-1	True	['genauso', 'bist', 'sein']
+Nachricht: Du bist genauso unverständlich wie unser Dozent.
+-1	-1	True	[]
+Nachricht: Ich mag thi nicht.
+0	-1	False	['hasse']
+Nachricht: Ich hasse thi.
+-1	-1	True	['aufgabenstellung', 'zu']
+Nachricht: Ich finde die Aufgabenstellung zu kompliziert.
+-1	-1	True	[]
+Nachricht: Mich belastet das extrem.
+1	-1	False	['am']
+Nachricht: Ich würde am liebsten Aufgeben.
+1	-1	False	['manchmal']
+Nachricht: Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
+-1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']
+Nachricht: Die Aufgabenstellung ist viel zu kompliziert.
+0	-1	False	['denn', 'da', 'durchblicken']
+Nachricht: Wie soll man denn da durchblicken?
+-1	-1	True	['mehr', 'habe']
+Nachricht: Ich habe keine Lust mehr.
+0	-1	False	['habe']
+Nachricht: Ich habe Angst durchzufallen.
+-1	-1	True	[]
+Nachricht: Ich befürchte die Prüfung wird unschaffbar.
+1	-1	False	['jetzt']
+Nachricht: Es ist zu spät das jetzt noch alles zu lernen.
+0	-1	False	['aufwand', 'zu', 'ist', 'sein']
+Nachricht: Der Aufwand ist zu groß.
+1	-1	False	[]
+Nachricht: Warum will das nicht in mein Gehirn gehen?
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin müde.
+1	-1	False	[]
+Nachricht: Thi regt mich extrem auf.
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin wütend.
+1	-1	False	['sag']
+Nachricht: Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
+-1	-1	True	['denn', 'ausgedacht', 'ausdenken']
+Nachricht: Wer hat sich diesen Dreck denn ausgedacht?
+0	-1	False	['bringt', 'bringen']
+Nachricht: Was bringt mir das alles?
+1	-1	False	['ist', 'sein']
+Nachricht: Unser Professor ist ein Sadist.
+-1	-1	True	['pure', 'pur', 'ist', 'sein']
+Nachricht: Thi ist die pure Hölle für mich.
+0	-1	False	['da', 'versuche']
+Nachricht: Ich versuche mich da durch zu quälen.
+-1	-1	True	['wann', 'hat', 'haben']
+Nachricht: Wann hat diese Qual ein Ende?
+0	-1	False	['wieso', 'tun']
+Nachricht: Wieso tun Sie mir das an?
+1	-1	False	['bot']
+Nachricht: Da kann mir auch kein Bot mehr helfen.
+0	-1	False	['aufgeschmissen', 'aufschmeißen']
+Nachricht: Ich bin aufgeschmissen!
+0	-1	False	['hier', 'eigentlich', 'noch', 'mach']
+Nachricht: Was mach ich hier eigentlich noch?
+1	-1	False	['nur']
+Nachricht: Ich verstehe nur Bahnhof.
+0	-1	False	['spanisch', 'klingt', 'klingen']
+Nachricht: Das klingt alles spanisch.
+1	-1	False	['jetzt', 'wäre', 'sein']
+Nachricht: Ich wäre jetzt lieber in meinem Bett.
+-1	-1	True	[]
+Nachricht: Ich verstehe das nicht.
+1	-1	False	['vergiss']
+Nachricht: Vergiss es einfach, du kannst mir nicht helfen.
+-1	-1	True	['doch']
+Nachricht: Das kann doch nicht dein Ernst sein?
+0	-1	False	['geschissen', 'scheißen']
+Nachricht: Wer hat dir ins Gehirn geschissen?
+-1	-1	True	['ist', 'sein']
+Nachricht: Das ist alles unlogisch.
+1	-1	False	['bringt', 'bringen']
+Nachricht: Thi bringt mich regelmäßig zur Frustration.
+-1	-1	True	[]
+Nachricht: Ich verstehe es immer noch nicht.
+1	-1	False	['wieder', 'raus']
+Nachricht: Zum einen Ohr geht es rein und zum anderen wieder raus.
+-1	-1	True	['ist', 'sein']
+Nachricht: Thi ist ein schreckliche Qual für jeden, den ich kenne.
+0	-1	False	[]
+Nachricht: Thi stinkt.
+1	-1	False	[]
+Nachricht: Niemand mag dich!
+0	-1	False	[]
+Nachricht: Geh dich vergraben.
+0	-1	False	[]
+Nachricht: Lösch dich!
+0	-1	False	[]
+Nachricht: Thi zu verstehen, ist unmöglich.
+-1	-1	True	[]
+Nachricht: Ich bezweifle, dass ich das schaffen kann.
+1	-1	False	[]
+Nachricht: Ich fürchte, dass ich durch die Prüfung falle.
+0	-1	False	['denke', 'denken']
+Nachricht: Ich denke das war es für mich.
+1	-1	False	[]
+Nachricht: Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
+-1	-1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist der letzte Dreck.
+0	-1	False	['gleich', 'gleichen', 'höre', 'hören']
+Nachricht: Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
+1	-1	False	['ist', 'sein']
+Nachricht: Meine Motivation ist gleich null.
+-1	-1	True	['so']
+Nachricht: So demotiviert war ich noch nie.
+-1	-1	True	[]
+Nachricht: Ich könnte heulen.
+-1	-1	True	['habe']
+Nachricht: Ich habe Hunger.
+1	0	False	['endlich']
+Nachricht: Ich möchte endlich verstehen, was ein Akzeptor ist!
+-1	0	False	['ist', 'sein']
+Nachricht: Diese Antwort ist nicht hilfreich.
+-1	0	False	['auch']
+Nachricht: Das hilft mir auch nicht weiter.
+0	0	True	['akzeptor', 'ist', 'sein']
+Nachricht: Was ist ein Akzeptor?
+1	0	False	['ist', 'sein', 'erkläre']
+Nachricht: Erkläre mir bitte, was ein Akzeptor ist.
+1	0	False	[]
+Nachricht: Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
+1	0	False	['brauche']
+Nachricht: Ich brauche Hilfe bei einem Thema.
+1	0	False	['rechtslinear']
+Nachricht: Was bedeutet rechtslinear?
+-1	0	False	['informatik', 'theoretische']
+Nachricht: Wieso  braucht man theoretische Informatik?
+1	0	False	[]
+Nachricht: Warum muss ich das wissen?
+0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']
+Nachricht: Theoretische Informatik ist nichts für mich.
+0	0	True	[]
+Nachricht: Warum ist thi so schwer?
+1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']
+Nachricht: Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
+0	0	True	['verstehst']
+Nachricht: Verstehst du das?
+1	0	False	['bringen']
+Nachricht: Ich möchte diese Sache hinter mich bringen.
+1	0	False	['letztes', 'letzt']
+Nachricht: Ich bin letztes Semester durch die Prüfung gefallen.
+1	0	False	['ist', 'sein']
+Nachricht: Und zu was ist das alles gut?
+1	0	False	['erklären']
+Nachricht: Kannst du mir das noch mal erklären?
+1	0	False	['lösungsansatz']
+Nachricht: Ich finde keinen Lösungsansatz.
+1	0	False	['habe']
+Nachricht: Ich habe keine weitere Chance. Entweder jetzt oder nie!
+0	0	True	['ok']
+Nachricht: Ok.
+0	0	True	[]
+Nachricht: Ja.
+0	0	True	[]
+Nachricht: Ja, aber kannst du es mir nochmal erklären?
+1	0	False	[]
+Nachricht: Danke, aber das hat mir nicht geholfen.
+1	0	False	['zu']
+Nachricht: Es ist interessant zu sehen, wie ein Chatbot antwortet.
+1	0	False	['zufällig']
+Nachricht: Danke, weißt du auch zufällig etwas über Akzeptoren?
+0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']
+Nachricht: Wie ist das Wetter heute?
+-1	0	False	['draußen', 'ist', 'sein']
+Nachricht: Draußen ist es sehr dunkel.
+1	1	True	[]
+Nachricht: Vielen Dank für deine Antwort.
+1	1	True	[]
+Nachricht: Mir geht es gut, und dir?
+1	1	True	['ist', 'sein']
+Nachricht: Das ist eine gute Nachricht.
+1	1	True	[]
+Nachricht: Bald ist es geschafft.
+0	1	False	['morgen', 'schon', 'schaff']
+Nachricht: Morgen schaff ich das schon.
+1	1	True	[]
+Nachricht: Danke für die Antwort.
+1	1	True	[]
+Nachricht: Ich glaube, das habe ich jetzt verstanden.
+-1	1	False	[]
+Nachricht: Langsam verstehe ich es.
+1	1	True	[]
+Nachricht: Ja, das hat mir weiter geholfen.
+1	1	True	[]
+Nachricht: Super, vielen Dank!
+0	1	False	[]
+Nachricht: Perfekt.
+1	1	True	['bin', 'sein']
+Nachricht: Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
+1	1	True	[]
+Nachricht: Ich mag thi.
+1	1	True	[]
+Nachricht: Ich liebe thi.
+1	1	True	['ist', 'sein']
+Nachricht: Unser Professor ist ein guter Lehrer.
+1	1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist einfach genial!
+1	1	True	['wirklich']
+Nachricht: Es macht wirklich Spaß mit dir zu chatten.
+1	1	True	[]
+Nachricht: Cool, kannst du mir auch bei den Hausaufgaben helfen?
+-1	1	False	[]
+Nachricht: Wahnsinn, was du alles kannst.
+0	1	False	['beste', 'bist', 'sein']
+Nachricht: Du bist der Beste.
+1	1	True	['schon']
+Nachricht: Ich freue mich schon auf die Prüfung.
+1	1	True	['erste', 'sind', 'sein']
+Nachricht: Deine Antworten sind echt erste Klasse!
+1	1	True	['erklärung']
+Nachricht: Die Erklärung finde ich gut.
+1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']
+Nachricht: Eigentlich ist das ja ganz einfach.
+1	1	True	['irgendwie', 'jetzt']
+Nachricht: Irgendwie hat es jetzt bei mir klick gemacht.
+1	1	True	['erklärung']
+Nachricht: Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
+1	1	True	[]
+Nachricht: Ich freue mich sehr!
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin extrem aufgeregt wegen der Prüfung.
+1	1	True	[]
+Nachricht: Thi fasziniert mich.
+1	1	True	[]
+Nachricht: Tausend Dank.
+1	1	True	[]
+Nachricht: Vielen Dank.
+1	1	True	['herzlichen', 'herzliche']
+Nachricht: Herzlichen Dank.
+1	1	True	[]
+Nachricht: Ohne dich hätte ich das niemals verstanden.
+1	1	True	['so', 'bin', 'sein']
+Nachricht: Ich bin so froh, dass es dich gibt!
+71 von 136 korrekt klassifiziert.
 
-Confusion Matrix
-_______________________________________________________
-FP	40	FN	6	TP	28	TN	34	accuracy	0.5740740740740741	precision	0.4117647058823529	recall	0.8235294117647058	f1	0.5490196078431372
+Nicht analysierbare Nachrichten: 32
+FP	19	FN	2	TP	28	TN	35
+accuracy	0.75
+precision	0.5957446808510638
+recall	0.9333333333333333
+f1	0.7272727272727273
 
 Ergebnisse für Lexikon-Modus: no neutral
 
 pol	actual		correct	missingWords	message
--1	-1	True	['akzeptoren', 'akzeptor']	Ich verstehe Akzeptoren nicht.
--1	-1	True	[]	Ich verstehe diese Aufgabe nicht.
-0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']	Was bringt mir das hier überhaupt?
--1	-1	True	['noch']	Ich glaube ich verzweifle noch an dieser Aufgabe.
--1	-1	True	['denn', 'gibt']	Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
-0	-1	False	['merken']	Wie soll ich mir das alles merken?
--1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']	Warum ist das denn so kompliziert?
-0	-1	False	['denn', 'damit', 'soll']	Was soll ich denn damit?
--1	-1	True	[]	Ich werde das niemals verstehen.
--1	-1	True	['wirklich', 'bist', 'sein']	Du bist wirklich nicht hilfreich.
--1	-1	True	[]	Du hilfst mir nicht weiter.
--1	-1	True	['warum', 'denn']	Warum kannst du mir denn nicht helfen?
--1	-1	True	['bist', 'sein']	Du bist keine große Hilfe.
--1	-1	True	['brauche']	Ich brauche dringend Hilfe.
-1	-1	False	[]	Warum kann mir denn niemand helfen?
-1	-1	False	['denn', 'je']	Wie soll ich dass denn je verstehen?
-0	-1	False	['soll']	Was soll der Scheiß?
--1	-1	True	[]	Ich kann nichts.
--1	-1	True	['genauso', 'bist', 'sein']	Du bist genauso unverständlich wie unser Dozent.
--1	-1	True	[]	Ich mag thi nicht.
-0	-1	False	['hasse']	Ich hasse thi.
--1	-1	True	['aufgabenstellung', 'zu']	Ich finde die Aufgabenstellung zu kompliziert.
--1	-1	True	[]	Mich belastet das extrem.
-1	-1	False	['am']	Ich würde am liebsten Aufgeben.
-1	-1	False	['manchmal']	Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
--1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']	Die Aufgabenstellung ist viel zu kompliziert.
-0	-1	False	['denn', 'da', 'durchblicken']	Wie soll man denn da durchblicken?
--1	-1	True	['mehr', 'habe']	Ich habe keine Lust mehr.
-0	-1	False	['habe']	Ich habe Angst durchzufallen.
--1	-1	True	[]	Ich befürchte die Prüfung wird unschaffbar.
-1	-1	False	['jetzt']	Es ist zu spät das jetzt noch alles zu lernen.
-0	-1	False	['aufwand', 'zu', 'ist', 'sein']	Der Aufwand ist zu groß.
-1	-1	False	[]	Warum will das nicht in mein Gehirn gehen?
--1	-1	True	['bin', 'sein']	Ich bin müde.
-1	-1	False	[]	Thi regt mich extrem auf.
--1	-1	True	['bin', 'sein']	Ich bin wütend.
-1	-1	False	['sag']	Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
--1	-1	True	['denn', 'ausgedacht', 'ausdenken']	Wer hat sich diesen Dreck denn ausgedacht?
-0	-1	False	['bringt', 'bringen']	Was bringt mir das alles?
-1	-1	False	['ist', 'sein']	Unser Professor ist ein Sadist.
--1	-1	True	['pure', 'pur', 'ist', 'sein']	Thi ist die pure Hölle für mich.
-0	-1	False	['da', 'versuche']	Ich versuche mich da durch zu quälen.
--1	-1	True	['wann', 'hat', 'haben']	Wann hat diese Qual ein Ende?
-0	-1	False	['wieso', 'tun']	Wieso tun Sie mir das an?
-1	-1	False	['bot']	Da kann mir auch kein Bot mehr helfen.
-0	-1	False	['aufgeschmissen', 'aufschmeißen']	Ich bin aufgeschmissen!
-0	-1	False	['hier', 'eigentlich', 'noch', 'mach']	Was mach ich hier eigentlich noch?
-1	-1	False	['nur']	Ich verstehe nur Bahnhof.
-0	-1	False	['spanisch', 'klingt', 'klingen']	Das klingt alles spanisch.
-1	-1	False	['jetzt', 'wäre', 'sein']	Ich wäre jetzt lieber in meinem Bett.
--1	-1	True	[]	Ich verstehe das nicht.
-1	-1	False	['vergiss']	Vergiss es einfach, du kannst mir nicht helfen.
--1	-1	True	['doch']	Das kann doch nicht dein Ernst sein?
-0	-1	False	['geschissen', 'scheißen']	Wer hat dir ins Gehirn geschissen?
--1	-1	True	['ist', 'sein']	Das ist alles unlogisch.
-1	-1	False	['bringt', 'bringen']	Thi bringt mich regelmäßig zur Frustration.
--1	-1	True	[]	Ich verstehe es immer noch nicht.
-1	-1	False	['wieder', 'raus']	Zum einen Ohr geht es rein und zum anderen wieder raus.
--1	-1	True	['ist', 'sein']	Thi ist ein schreckliche Qual für jeden, den ich kenne.
-0	-1	False	[]	Thi stinkt.
-1	-1	False	[]	Niemand mag dich!
-0	-1	False	[]	Geh dich vergraben.
-0	-1	False	[]	Lösch dich!
-0	-1	False	[]	Thi zu verstehen, ist unmöglich.
--1	-1	True	[]	Ich bezweifle, dass ich das schaffen kann.
-1	-1	False	[]	Ich fürchte, dass ich durch die Prüfung falle.
-0	-1	False	['denke', 'denken']	Ich denke das war es für mich.
-1	-1	False	[]	Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
--1	-1	True	['bot', 'ist', 'sein']	Dieser Bot ist der letzte Dreck.
-0	-1	False	['gleich', 'gleichen', 'höre', 'hören']	Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
-1	-1	False	['ist', 'sein']	Meine Motivation ist gleich null.
--1	-1	True	['so']	So demotiviert war ich noch nie.
--1	-1	True	[]	Ich könnte heulen.
--1	-1	True	['habe']	Ich habe Hunger.
-1	0	False	['endlich']	Ich möchte endlich verstehen, was ein Akzeptor ist!
--1	0	False	['ist', 'sein']	Diese Antwort ist nicht hilfreich.
--1	0	False	['auch']	Das hilft mir auch nicht weiter.
-0	0	True	['akzeptor', 'ist', 'sein']	Was ist ein Akzeptor?
-1	0	False	['ist', 'sein', 'erkläre']	Erkläre mir bitte, was ein Akzeptor ist.
-1	0	False	[]	Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
-1	0	False	['brauche']	Ich brauche Hilfe bei einem Thema.
-1	0	False	['rechtslinear']	Was bedeutet rechtslinear?
--1	0	False	['informatik', 'theoretische']	Wieso  braucht man theoretische Informatik?
-1	0	False	[]	Warum muss ich das wissen?
-0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']	Theoretische Informatik ist nichts für mich.
-0	0	True	[]	Warum ist thi so schwer?
-1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']	Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
-0	0	True	['verstehst']	Verstehst du das?
-1	0	False	['bringen']	Ich möchte diese Sache hinter mich bringen.
-1	0	False	['letztes', 'letzt']	Ich bin letztes Semester durch die Prüfung gefallen.
-1	0	False	['ist', 'sein']	Und zu was ist das alles gut?
-1	0	False	['erklären']	Kannst du mir das noch mal erklären?
-1	0	False	['lösungsansatz']	Ich finde keinen Lösungsansatz.
-1	0	False	['habe']	Ich habe keine weitere Chance. Entweder jetzt oder nie!
-0	0	True	['ok']	Ok.
-0	0	True	[]	Ja.
-0	0	True	[]	Ja, aber kannst du es mir nochmal erklären?
-1	0	False	[]	Danke, aber das hat mir nicht geholfen.
-1	0	False	['zu']	Es ist interessant zu sehen, wie ein Chatbot antwortet.
-1	0	False	['zufällig']	Danke, weißt du auch zufällig etwas über Akzeptoren?
-0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']	Wie ist das Wetter heute?
--1	0	False	['draußen', 'ist', 'sein']	Draußen ist es sehr dunkel.
-1	1	True	[]	Vielen Dank für deine Antwort.
-1	1	True	[]	Mir geht es gut, und dir?
-1	1	True	['ist', 'sein']	Das ist eine gute Nachricht.
-1	1	True	[]	Bald ist es geschafft.
-0	1	False	['morgen', 'schon', 'schaff']	Morgen schaff ich das schon.
-1	1	True	[]	Danke für die Antwort.
-1	1	True	[]	Ich glaube, das habe ich jetzt verstanden.
--1	1	False	[]	Langsam verstehe ich es.
-1	1	True	[]	Ja, das hat mir weiter geholfen.
-1	1	True	[]	Super, vielen Dank!
-0	1	False	[]	Perfekt.
-1	1	True	['bin', 'sein']	Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
-1	1	True	[]	Ich mag thi.
-1	1	True	[]	Ich liebe thi.
-1	1	True	['ist', 'sein']	Unser Professor ist ein guter Lehrer.
-1	1	True	['bot', 'ist', 'sein']	Dieser Bot ist einfach genial!
-1	1	True	['wirklich']	Es macht wirklich Spaß mit dir zu chatten.
-1	1	True	[]	Cool, kannst du mir auch bei den Hausaufgaben helfen?
--1	1	False	[]	Wahnsinn, was du alles kannst.
-0	1	False	['beste', 'bist', 'sein']	Du bist der Beste.
-1	1	True	['schon']	Ich freue mich schon auf die Prüfung.
-1	1	True	['erste', 'sind', 'sein']	Deine Antworten sind echt erste Klasse!
-1	1	True	['erklärung']	Die Erklärung finde ich gut.
-1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']	Eigentlich ist das ja ganz einfach.
-1	1	True	['irgendwie', 'jetzt']	Irgendwie hat es jetzt bei mir klick gemacht.
-1	1	True	['erklärung']	Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
-1	1	True	[]	Ich freue mich sehr!
--1	1	False	['bin', 'sein']	Ich bin extrem aufgeregt wegen der Prüfung.
-1	1	True	[]	Thi fasziniert mich.
-1	1	True	[]	Tausend Dank.
-1	1	True	[]	Vielen Dank.
-1	1	True	['herzlichen', 'herzliche']	Herzlichen Dank.
-1	1	True	[]	Ohne dich hätte ich das niemals verstanden.
-1	1	True	['so', 'bin', 'sein']	Ich bin so froh, dass es dich gibt!
-70 von 136 korrekt klassifiziert.
+-1	-1	True	['akzeptoren', 'akzeptor']
+Nachricht: Ich verstehe Akzeptoren nicht.
+-1	-1	True	[]
+Nachricht: Ich verstehe diese Aufgabe nicht.
+0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']
+Nachricht: Was bringt mir das hier überhaupt?
+-1	-1	True	['noch']
+Nachricht: Ich glaube ich verzweifle noch an dieser Aufgabe.
+-1	-1	True	['denn', 'gibt']
+Nachricht: Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
+0	-1	False	['merken']
+Nachricht: Wie soll ich mir das alles merken?
+-1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']
+Nachricht: Warum ist das denn so kompliziert?
+0	-1	False	['denn', 'damit', 'soll']
+Nachricht: Was soll ich denn damit?
+-1	-1	True	[]
+Nachricht: Ich werde das niemals verstehen.
+-1	-1	True	['wirklich', 'bist', 'sein']
+Nachricht: Du bist wirklich nicht hilfreich.
+-1	-1	True	[]
+Nachricht: Du hilfst mir nicht weiter.
+-1	-1	True	['warum', 'denn']
+Nachricht: Warum kannst du mir denn nicht helfen?
+-1	-1	True	['bist', 'sein']
+Nachricht: Du bist keine große Hilfe.
+-1	-1	True	['brauche']
+Nachricht: Ich brauche dringend Hilfe.
+1	-1	False	[]
+Nachricht: Warum kann mir denn niemand helfen?
+1	-1	False	['denn', 'je']
+Nachricht: Wie soll ich dass denn je verstehen?
+0	-1	False	['soll']
+Nachricht: Was soll der Scheiß?
+-1	-1	True	[]
+Nachricht: Ich kann nichts.
+-1	-1	True	['genauso', 'bist', 'sein']
+Nachricht: Du bist genauso unverständlich wie unser Dozent.
+-1	-1	True	[]
+Nachricht: Ich mag thi nicht.
+0	-1	False	['hasse']
+Nachricht: Ich hasse thi.
+-1	-1	True	['aufgabenstellung', 'zu']
+Nachricht: Ich finde die Aufgabenstellung zu kompliziert.
+-1	-1	True	[]
+Nachricht: Mich belastet das extrem.
+1	-1	False	['am']
+Nachricht: Ich würde am liebsten Aufgeben.
+1	-1	False	['manchmal']
+Nachricht: Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
+-1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']
+Nachricht: Die Aufgabenstellung ist viel zu kompliziert.
+0	-1	False	['denn', 'da', 'durchblicken']
+Nachricht: Wie soll man denn da durchblicken?
+-1	-1	True	['mehr', 'habe']
+Nachricht: Ich habe keine Lust mehr.
+0	-1	False	['habe']
+Nachricht: Ich habe Angst durchzufallen.
+-1	-1	True	[]
+Nachricht: Ich befürchte die Prüfung wird unschaffbar.
+1	-1	False	['jetzt']
+Nachricht: Es ist zu spät das jetzt noch alles zu lernen.
+0	-1	False	['aufwand', 'zu', 'ist', 'sein']
+Nachricht: Der Aufwand ist zu groß.
+1	-1	False	[]
+Nachricht: Warum will das nicht in mein Gehirn gehen?
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin müde.
+1	-1	False	[]
+Nachricht: Thi regt mich extrem auf.
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin wütend.
+1	-1	False	['sag']
+Nachricht: Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
+-1	-1	True	['denn', 'ausgedacht', 'ausdenken']
+Nachricht: Wer hat sich diesen Dreck denn ausgedacht?
+0	-1	False	['bringt', 'bringen']
+Nachricht: Was bringt mir das alles?
+1	-1	False	['ist', 'sein']
+Nachricht: Unser Professor ist ein Sadist.
+-1	-1	True	['pure', 'pur', 'ist', 'sein']
+Nachricht: Thi ist die pure Hölle für mich.
+0	-1	False	['da', 'versuche']
+Nachricht: Ich versuche mich da durch zu quälen.
+-1	-1	True	['wann', 'hat', 'haben']
+Nachricht: Wann hat diese Qual ein Ende?
+0	-1	False	['wieso', 'tun']
+Nachricht: Wieso tun Sie mir das an?
+1	-1	False	['bot']
+Nachricht: Da kann mir auch kein Bot mehr helfen.
+0	-1	False	['aufgeschmissen', 'aufschmeißen']
+Nachricht: Ich bin aufgeschmissen!
+0	-1	False	['hier', 'eigentlich', 'noch', 'mach']
+Nachricht: Was mach ich hier eigentlich noch?
+1	-1	False	['nur']
+Nachricht: Ich verstehe nur Bahnhof.
+0	-1	False	['spanisch', 'klingt', 'klingen']
+Nachricht: Das klingt alles spanisch.
+1	-1	False	['jetzt', 'wäre', 'sein']
+Nachricht: Ich wäre jetzt lieber in meinem Bett.
+-1	-1	True	[]
+Nachricht: Ich verstehe das nicht.
+1	-1	False	['vergiss']
+Nachricht: Vergiss es einfach, du kannst mir nicht helfen.
+-1	-1	True	['doch']
+Nachricht: Das kann doch nicht dein Ernst sein?
+0	-1	False	['geschissen', 'scheißen']
+Nachricht: Wer hat dir ins Gehirn geschissen?
+-1	-1	True	['ist', 'sein']
+Nachricht: Das ist alles unlogisch.
+1	-1	False	['bringt', 'bringen']
+Nachricht: Thi bringt mich regelmäßig zur Frustration.
+-1	-1	True	[]
+Nachricht: Ich verstehe es immer noch nicht.
+1	-1	False	['wieder', 'raus']
+Nachricht: Zum einen Ohr geht es rein und zum anderen wieder raus.
+-1	-1	True	['ist', 'sein']
+Nachricht: Thi ist ein schreckliche Qual für jeden, den ich kenne.
+0	-1	False	[]
+Nachricht: Thi stinkt.
+1	-1	False	[]
+Nachricht: Niemand mag dich!
+0	-1	False	[]
+Nachricht: Geh dich vergraben.
+0	-1	False	[]
+Nachricht: Lösch dich!
+0	-1	False	[]
+Nachricht: Thi zu verstehen, ist unmöglich.
+-1	-1	True	[]
+Nachricht: Ich bezweifle, dass ich das schaffen kann.
+1	-1	False	[]
+Nachricht: Ich fürchte, dass ich durch die Prüfung falle.
+0	-1	False	['denke', 'denken']
+Nachricht: Ich denke das war es für mich.
+1	-1	False	[]
+Nachricht: Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
+-1	-1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist der letzte Dreck.
+0	-1	False	['gleich', 'gleichen', 'höre', 'hören']
+Nachricht: Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
+1	-1	False	['ist', 'sein']
+Nachricht: Meine Motivation ist gleich null.
+-1	-1	True	['so']
+Nachricht: So demotiviert war ich noch nie.
+-1	-1	True	[]
+Nachricht: Ich könnte heulen.
+-1	-1	True	['habe']
+Nachricht: Ich habe Hunger.
+1	0	False	['endlich']
+Nachricht: Ich möchte endlich verstehen, was ein Akzeptor ist!
+-1	0	False	['ist', 'sein']
+Nachricht: Diese Antwort ist nicht hilfreich.
+-1	0	False	['auch']
+Nachricht: Das hilft mir auch nicht weiter.
+0	0	True	['akzeptor', 'ist', 'sein']
+Nachricht: Was ist ein Akzeptor?
+1	0	False	['ist', 'sein', 'erkläre']
+Nachricht: Erkläre mir bitte, was ein Akzeptor ist.
+1	0	False	[]
+Nachricht: Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
+1	0	False	['brauche']
+Nachricht: Ich brauche Hilfe bei einem Thema.
+1	0	False	['rechtslinear']
+Nachricht: Was bedeutet rechtslinear?
+-1	0	False	['informatik', 'theoretische']
+Nachricht: Wieso  braucht man theoretische Informatik?
+1	0	False	[]
+Nachricht: Warum muss ich das wissen?
+0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']
+Nachricht: Theoretische Informatik ist nichts für mich.
+0	0	True	[]
+Nachricht: Warum ist thi so schwer?
+1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']
+Nachricht: Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
+0	0	True	['verstehst']
+Nachricht: Verstehst du das?
+1	0	False	['bringen']
+Nachricht: Ich möchte diese Sache hinter mich bringen.
+1	0	False	['letztes', 'letzt']
+Nachricht: Ich bin letztes Semester durch die Prüfung gefallen.
+1	0	False	['ist', 'sein']
+Nachricht: Und zu was ist das alles gut?
+1	0	False	['erklären']
+Nachricht: Kannst du mir das noch mal erklären?
+1	0	False	['lösungsansatz']
+Nachricht: Ich finde keinen Lösungsansatz.
+1	0	False	['habe']
+Nachricht: Ich habe keine weitere Chance. Entweder jetzt oder nie!
+0	0	True	['ok']
+Nachricht: Ok.
+0	0	True	[]
+Nachricht: Ja.
+0	0	True	[]
+Nachricht: Ja, aber kannst du es mir nochmal erklären?
+1	0	False	[]
+Nachricht: Danke, aber das hat mir nicht geholfen.
+1	0	False	['zu']
+Nachricht: Es ist interessant zu sehen, wie ein Chatbot antwortet.
+1	0	False	['zufällig']
+Nachricht: Danke, weißt du auch zufällig etwas über Akzeptoren?
+0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']
+Nachricht: Wie ist das Wetter heute?
+-1	0	False	['draußen', 'ist', 'sein']
+Nachricht: Draußen ist es sehr dunkel.
+1	1	True	[]
+Nachricht: Vielen Dank für deine Antwort.
+1	1	True	[]
+Nachricht: Mir geht es gut, und dir?
+1	1	True	['ist', 'sein']
+Nachricht: Das ist eine gute Nachricht.
+1	1	True	[]
+Nachricht: Bald ist es geschafft.
+0	1	False	['morgen', 'schon', 'schaff']
+Nachricht: Morgen schaff ich das schon.
+1	1	True	[]
+Nachricht: Danke für die Antwort.
+1	1	True	[]
+Nachricht: Ich glaube, das habe ich jetzt verstanden.
+-1	1	False	[]
+Nachricht: Langsam verstehe ich es.
+1	1	True	[]
+Nachricht: Ja, das hat mir weiter geholfen.
+1	1	True	[]
+Nachricht: Super, vielen Dank!
+0	1	False	[]
+Nachricht: Perfekt.
+1	1	True	['bin', 'sein']
+Nachricht: Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
+1	1	True	[]
+Nachricht: Ich mag thi.
+1	1	True	[]
+Nachricht: Ich liebe thi.
+1	1	True	['ist', 'sein']
+Nachricht: Unser Professor ist ein guter Lehrer.
+1	1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist einfach genial!
+1	1	True	['wirklich']
+Nachricht: Es macht wirklich Spaß mit dir zu chatten.
+1	1	True	[]
+Nachricht: Cool, kannst du mir auch bei den Hausaufgaben helfen?
+-1	1	False	[]
+Nachricht: Wahnsinn, was du alles kannst.
+0	1	False	['beste', 'bist', 'sein']
+Nachricht: Du bist der Beste.
+1	1	True	['schon']
+Nachricht: Ich freue mich schon auf die Prüfung.
+1	1	True	['erste', 'sind', 'sein']
+Nachricht: Deine Antworten sind echt erste Klasse!
+1	1	True	['erklärung']
+Nachricht: Die Erklärung finde ich gut.
+1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']
+Nachricht: Eigentlich ist das ja ganz einfach.
+1	1	True	['irgendwie', 'jetzt']
+Nachricht: Irgendwie hat es jetzt bei mir klick gemacht.
+1	1	True	['erklärung']
+Nachricht: Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
+1	1	True	[]
+Nachricht: Ich freue mich sehr!
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin extrem aufgeregt wegen der Prüfung.
+1	1	True	[]
+Nachricht: Thi fasziniert mich.
+1	1	True	[]
+Nachricht: Tausend Dank.
+1	1	True	[]
+Nachricht: Vielen Dank.
+1	1	True	['herzlichen', 'herzliche']
+Nachricht: Herzlichen Dank.
+1	1	True	[]
+Nachricht: Ohne dich hätte ich das niemals verstanden.
+1	1	True	['so', 'bin', 'sein']
+Nachricht: Ich bin so froh, dass es dich gibt!
+71 von 136 korrekt klassifiziert.
 
-Confusion Matrix
-_______________________________________________________
-FP	40	FN	6	TP	28	TN	34	accuracy	0.5740740740740741	precision	0.4117647058823529	recall	0.8235294117647058	f1	0.5490196078431372
+Nicht analysierbare Nachrichten: 32
+FP	19	FN	2	TP	28	TN	35
+accuracy	0.75
+precision	0.5957446808510638
+recall	0.9333333333333333
+f1	0.7272727272727273
 
 Ergebnisse für Lexikon-Modus: polarity
 
 pol	actual		correct	missingWords	message
-0	-1	False	['akzeptoren', 'akzeptor']	Ich verstehe Akzeptoren nicht.
-0	-1	False	[]	Ich verstehe diese Aufgabe nicht.
-0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']	Was bringt mir das hier überhaupt?
-0	-1	False	['noch']	Ich glaube ich verzweifle noch an dieser Aufgabe.
--1	-1	True	['denn', 'gibt']	Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
-0	-1	False	['merken']	Wie soll ich mir das alles merken?
--1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']	Warum ist das denn so kompliziert?
-0	-1	False	['denn', 'damit', 'soll']	Was soll ich denn damit?
-0	-1	False	[]	Ich werde das niemals verstehen.
--1	-1	True	['wirklich', 'bist', 'sein']	Du bist wirklich nicht hilfreich.
-0	-1	False	[]	Du hilfst mir nicht weiter.
-0	-1	False	['warum', 'denn']	Warum kannst du mir denn nicht helfen?
--1	-1	True	['bist', 'sein']	Du bist keine große Hilfe.
--1	-1	True	['brauche']	Ich brauche dringend Hilfe.
-1	-1	False	[]	Warum kann mir denn niemand helfen?
-1	-1	False	['denn', 'je']	Wie soll ich dass denn je verstehen?
-0	-1	False	['soll']	Was soll der Scheiß?
-0	-1	False	[]	Ich kann nichts.
--1	-1	True	['genauso', 'bist', 'sein']	Du bist genauso unverständlich wie unser Dozent.
-0	-1	False	[]	Ich mag thi nicht.
-0	-1	False	['hasse']	Ich hasse thi.
--1	-1	True	['aufgabenstellung', 'zu']	Ich finde die Aufgabenstellung zu kompliziert.
-0	-1	False	[]	Mich belastet das extrem.
-0	-1	False	['am']	Ich würde am liebsten Aufgeben.
-1	-1	False	['manchmal']	Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
--1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']	Die Aufgabenstellung ist viel zu kompliziert.
-0	-1	False	['denn', 'da', 'durchblicken']	Wie soll man denn da durchblicken?
--1	-1	True	['mehr', 'habe']	Ich habe keine Lust mehr.
-0	-1	False	['habe']	Ich habe Angst durchzufallen.
-0	-1	False	[]	Ich befürchte die Prüfung wird unschaffbar.
-1	-1	False	['jetzt']	Es ist zu spät das jetzt noch alles zu lernen.
-0	-1	False	['aufwand', 'zu', 'ist', 'sein']	Der Aufwand ist zu groß.
-1	-1	False	[]	Warum will das nicht in mein Gehirn gehen?
--1	-1	True	['bin', 'sein']	Ich bin müde.
-1	-1	False	[]	Thi regt mich extrem auf.
--1	-1	True	['bin', 'sein']	Ich bin wütend.
-1	-1	False	['sag']	Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
--1	-1	True	['denn', 'ausgedacht', 'ausdenken']	Wer hat sich diesen Dreck denn ausgedacht?
-0	-1	False	['bringt', 'bringen']	Was bringt mir das alles?
-1	-1	False	['ist', 'sein']	Unser Professor ist ein Sadist.
--1	-1	True	['pure', 'pur', 'ist', 'sein']	Thi ist die pure Hölle für mich.
-0	-1	False	['da', 'versuche']	Ich versuche mich da durch zu quälen.
--1	-1	True	['wann', 'hat', 'haben']	Wann hat diese Qual ein Ende?
-0	-1	False	['wieso', 'tun']	Wieso tun Sie mir das an?
-1	-1	False	['bot']	Da kann mir auch kein Bot mehr helfen.
-0	-1	False	['aufgeschmissen', 'aufschmeißen']	Ich bin aufgeschmissen!
-0	-1	False	['hier', 'eigentlich', 'noch', 'mach']	Was mach ich hier eigentlich noch?
-1	-1	False	['nur']	Ich verstehe nur Bahnhof.
-0	-1	False	['spanisch', 'klingt', 'klingen']	Das klingt alles spanisch.
-1	-1	False	['jetzt', 'wäre', 'sein']	Ich wäre jetzt lieber in meinem Bett.
-0	-1	False	[]	Ich verstehe das nicht.
-1	-1	False	['vergiss']	Vergiss es einfach, du kannst mir nicht helfen.
-0	-1	False	['doch']	Das kann doch nicht dein Ernst sein?
-0	-1	False	['geschissen', 'scheißen']	Wer hat dir ins Gehirn geschissen?
--1	-1	True	['ist', 'sein']	Das ist alles unlogisch.
-1	-1	False	['bringt', 'bringen']	Thi bringt mich regelmäßig zur Frustration.
-0	-1	False	[]	Ich verstehe es immer noch nicht.
-1	-1	False	['wieder', 'raus']	Zum einen Ohr geht es rein und zum anderen wieder raus.
--1	-1	True	['ist', 'sein']	Thi ist ein schreckliche Qual für jeden, den ich kenne.
-0	-1	False	[]	Thi stinkt.
-1	-1	False	[]	Niemand mag dich!
-0	-1	False	[]	Geh dich vergraben.
-0	-1	False	[]	Lösch dich!
-0	-1	False	[]	Thi zu verstehen, ist unmöglich.
-0	-1	False	[]	Ich bezweifle, dass ich das schaffen kann.
-1	-1	False	[]	Ich fürchte, dass ich durch die Prüfung falle.
-0	-1	False	['denke', 'denken']	Ich denke das war es für mich.
-1	-1	False	[]	Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
--1	-1	True	['bot', 'ist', 'sein']	Dieser Bot ist der letzte Dreck.
-0	-1	False	['gleich', 'gleichen', 'höre', 'hören']	Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
-1	-1	False	['ist', 'sein']	Meine Motivation ist gleich null.
-0	-1	False	['so']	So demotiviert war ich noch nie.
-0	-1	False	[]	Ich könnte heulen.
--1	-1	True	['habe']	Ich habe Hunger.
-1	0	False	['endlich']	Ich möchte endlich verstehen, was ein Akzeptor ist!
--1	0	False	['ist', 'sein']	Diese Antwort ist nicht hilfreich.
-0	0	True	['auch']	Das hilft mir auch nicht weiter.
-0	0	True	['akzeptor', 'ist', 'sein']	Was ist ein Akzeptor?
-1	0	False	['ist', 'sein', 'erkläre']	Erkläre mir bitte, was ein Akzeptor ist.
-1	0	False	[]	Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
-1	0	False	['brauche']	Ich brauche Hilfe bei einem Thema.
-1	0	False	['rechtslinear']	Was bedeutet rechtslinear?
-0	0	True	['informatik', 'theoretische']	Wieso  braucht man theoretische Informatik?
-1	0	False	[]	Warum muss ich das wissen?
-0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']	Theoretische Informatik ist nichts für mich.
-0	0	True	[]	Warum ist thi so schwer?
-1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']	Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
-0	0	True	['verstehst']	Verstehst du das?
-1	0	False	['bringen']	Ich möchte diese Sache hinter mich bringen.
-1	0	False	['letztes', 'letzt']	Ich bin letztes Semester durch die Prüfung gefallen.
-1	0	False	['ist', 'sein']	Und zu was ist das alles gut?
-1	0	False	['erklären']	Kannst du mir das noch mal erklären?
-1	0	False	['lösungsansatz']	Ich finde keinen Lösungsansatz.
-1	0	False	['habe']	Ich habe keine weitere Chance. Entweder jetzt oder nie!
-0	0	True	['ok']	Ok.
-0	0	True	[]	Ja.
-0	0	True	[]	Ja, aber kannst du es mir nochmal erklären?
-1	0	False	[]	Danke, aber das hat mir nicht geholfen.
-1	0	False	['zu']	Es ist interessant zu sehen, wie ein Chatbot antwortet.
-1	0	False	['zufällig']	Danke, weißt du auch zufällig etwas über Akzeptoren?
-0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']	Wie ist das Wetter heute?
--1	0	False	['draußen', 'ist', 'sein']	Draußen ist es sehr dunkel.
-1	1	True	[]	Vielen Dank für deine Antwort.
-1	1	True	[]	Mir geht es gut, und dir?
-1	1	True	['ist', 'sein']	Das ist eine gute Nachricht.
-1	1	True	[]	Bald ist es geschafft.
-0	1	False	['morgen', 'schon', 'schaff']	Morgen schaff ich das schon.
-1	1	True	[]	Danke für die Antwort.
-1	1	True	[]	Ich glaube, das habe ich jetzt verstanden.
--1	1	False	[]	Langsam verstehe ich es.
-1	1	True	[]	Ja, das hat mir weiter geholfen.
-1	1	True	[]	Super, vielen Dank!
-0	1	False	[]	Perfekt.
-1	1	True	['bin', 'sein']	Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
-1	1	True	[]	Ich mag thi.
-1	1	True	[]	Ich liebe thi.
-1	1	True	['ist', 'sein']	Unser Professor ist ein guter Lehrer.
-1	1	True	['bot', 'ist', 'sein']	Dieser Bot ist einfach genial!
-1	1	True	['wirklich']	Es macht wirklich Spaß mit dir zu chatten.
-1	1	True	[]	Cool, kannst du mir auch bei den Hausaufgaben helfen?
--1	1	False	[]	Wahnsinn, was du alles kannst.
-0	1	False	['beste', 'bist', 'sein']	Du bist der Beste.
-1	1	True	['schon']	Ich freue mich schon auf die Prüfung.
-1	1	True	['erste', 'sind', 'sein']	Deine Antworten sind echt erste Klasse!
-1	1	True	['erklärung']	Die Erklärung finde ich gut.
-1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']	Eigentlich ist das ja ganz einfach.
-1	1	True	['irgendwie', 'jetzt']	Irgendwie hat es jetzt bei mir klick gemacht.
-1	1	True	['erklärung']	Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
-1	1	True	[]	Ich freue mich sehr!
--1	1	False	['bin', 'sein']	Ich bin extrem aufgeregt wegen der Prüfung.
-1	1	True	[]	Thi fasziniert mich.
-1	1	True	[]	Tausend Dank.
-1	1	True	[]	Vielen Dank.
-1	1	True	['herzlichen', 'herzliche']	Herzlichen Dank.
-1	1	True	[]	Ohne dich hätte ich das niemals verstanden.
-1	1	True	['so', 'bin', 'sein']	Ich bin so froh, dass es dich gibt!
-56 von 136 korrekt klassifiziert.
+0	-1	False	['akzeptoren', 'akzeptor']
+Nachricht: Ich verstehe Akzeptoren nicht.
+0	-1	False	[]
+Nachricht: Ich verstehe diese Aufgabe nicht.
+0	-1	False	['hier', 'überhaupt', 'bringt', 'bringen']
+Nachricht: Was bringt mir das hier überhaupt?
+0	-1	False	['noch']
+Nachricht: Ich glaube ich verzweifle noch an dieser Aufgabe.
+-1	-1	True	['denn', 'gibt']
+Nachricht: Gibt es denn keine Möglichkeit diesen Mist hier endlich zu verstehen?
+0	-1	False	['merken']
+Nachricht: Wie soll ich mir das alles merken?
+-1	-1	True	['warum', 'denn', 'so', 'ist', 'sein']
+Nachricht: Warum ist das denn so kompliziert?
+0	-1	False	['denn', 'damit', 'soll']
+Nachricht: Was soll ich denn damit?
+0	-1	False	[]
+Nachricht: Ich werde das niemals verstehen.
+-1	-1	True	['wirklich', 'bist', 'sein']
+Nachricht: Du bist wirklich nicht hilfreich.
+0	-1	False	[]
+Nachricht: Du hilfst mir nicht weiter.
+0	-1	False	['warum', 'denn']
+Nachricht: Warum kannst du mir denn nicht helfen?
+-1	-1	True	['bist', 'sein']
+Nachricht: Du bist keine große Hilfe.
+-1	-1	True	['brauche']
+Nachricht: Ich brauche dringend Hilfe.
+1	-1	False	[]
+Nachricht: Warum kann mir denn niemand helfen?
+1	-1	False	['denn', 'je']
+Nachricht: Wie soll ich dass denn je verstehen?
+0	-1	False	['soll']
+Nachricht: Was soll der Scheiß?
+0	-1	False	[]
+Nachricht: Ich kann nichts.
+-1	-1	True	['genauso', 'bist', 'sein']
+Nachricht: Du bist genauso unverständlich wie unser Dozent.
+0	-1	False	[]
+Nachricht: Ich mag thi nicht.
+0	-1	False	['hasse']
+Nachricht: Ich hasse thi.
+-1	-1	True	['aufgabenstellung', 'zu']
+Nachricht: Ich finde die Aufgabenstellung zu kompliziert.
+0	-1	False	[]
+Nachricht: Mich belastet das extrem.
+0	-1	False	['am']
+Nachricht: Ich würde am liebsten Aufgeben.
+1	-1	False	['manchmal']
+Nachricht: Manchmal frage ich mich, warum ich überhaupt Informatik studiere.
+-1	-1	True	['aufgabenstellung', 'zu', 'ist', 'sein']
+Nachricht: Die Aufgabenstellung ist viel zu kompliziert.
+0	-1	False	['denn', 'da', 'durchblicken']
+Nachricht: Wie soll man denn da durchblicken?
+-1	-1	True	['mehr', 'habe']
+Nachricht: Ich habe keine Lust mehr.
+0	-1	False	['habe']
+Nachricht: Ich habe Angst durchzufallen.
+0	-1	False	[]
+Nachricht: Ich befürchte die Prüfung wird unschaffbar.
+1	-1	False	['jetzt']
+Nachricht: Es ist zu spät das jetzt noch alles zu lernen.
+0	-1	False	['aufwand', 'zu', 'ist', 'sein']
+Nachricht: Der Aufwand ist zu groß.
+1	-1	False	[]
+Nachricht: Warum will das nicht in mein Gehirn gehen?
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin müde.
+1	-1	False	[]
+Nachricht: Thi regt mich extrem auf.
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin wütend.
+1	-1	False	['sag']
+Nachricht: Sag dem Professor, dass ich diese Aufgabe schwachsinnig finde.
+-1	-1	True	['denn', 'ausgedacht', 'ausdenken']
+Nachricht: Wer hat sich diesen Dreck denn ausgedacht?
+0	-1	False	['bringt', 'bringen']
+Nachricht: Was bringt mir das alles?
+1	-1	False	['ist', 'sein']
+Nachricht: Unser Professor ist ein Sadist.
+-1	-1	True	['pure', 'pur', 'ist', 'sein']
+Nachricht: Thi ist die pure Hölle für mich.
+0	-1	False	['da', 'versuche']
+Nachricht: Ich versuche mich da durch zu quälen.
+-1	-1	True	['wann', 'hat', 'haben']
+Nachricht: Wann hat diese Qual ein Ende?
+0	-1	False	['wieso', 'tun']
+Nachricht: Wieso tun Sie mir das an?
+1	-1	False	['bot']
+Nachricht: Da kann mir auch kein Bot mehr helfen.
+0	-1	False	['aufgeschmissen', 'aufschmeißen']
+Nachricht: Ich bin aufgeschmissen!
+0	-1	False	['hier', 'eigentlich', 'noch', 'mach']
+Nachricht: Was mach ich hier eigentlich noch?
+1	-1	False	['nur']
+Nachricht: Ich verstehe nur Bahnhof.
+0	-1	False	['spanisch', 'klingt', 'klingen']
+Nachricht: Das klingt alles spanisch.
+1	-1	False	['jetzt', 'wäre', 'sein']
+Nachricht: Ich wäre jetzt lieber in meinem Bett.
+0	-1	False	[]
+Nachricht: Ich verstehe das nicht.
+1	-1	False	['vergiss']
+Nachricht: Vergiss es einfach, du kannst mir nicht helfen.
+0	-1	False	['doch']
+Nachricht: Das kann doch nicht dein Ernst sein?
+0	-1	False	['geschissen', 'scheißen']
+Nachricht: Wer hat dir ins Gehirn geschissen?
+-1	-1	True	['ist', 'sein']
+Nachricht: Das ist alles unlogisch.
+1	-1	False	['bringt', 'bringen']
+Nachricht: Thi bringt mich regelmäßig zur Frustration.
+0	-1	False	[]
+Nachricht: Ich verstehe es immer noch nicht.
+1	-1	False	['wieder', 'raus']
+Nachricht: Zum einen Ohr geht es rein und zum anderen wieder raus.
+-1	-1	True	['ist', 'sein']
+Nachricht: Thi ist ein schreckliche Qual für jeden, den ich kenne.
+0	-1	False	[]
+Nachricht: Thi stinkt.
+1	-1	False	[]
+Nachricht: Niemand mag dich!
+0	-1	False	[]
+Nachricht: Geh dich vergraben.
+0	-1	False	[]
+Nachricht: Lösch dich!
+0	-1	False	[]
+Nachricht: Thi zu verstehen, ist unmöglich.
+0	-1	False	[]
+Nachricht: Ich bezweifle, dass ich das schaffen kann.
+1	-1	False	[]
+Nachricht: Ich fürchte, dass ich durch die Prüfung falle.
+0	-1	False	['denke', 'denken']
+Nachricht: Ich denke das war es für mich.
+1	-1	False	[]
+Nachricht: Jeden morgen mache ich mir Sorgen um die bevorstehende Prüfung.
+-1	-1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist der letzte Dreck.
+0	-1	False	['gleich', 'gleichen', 'höre', 'hören']
+Nachricht: Mein Kopf platzt gleich, wenn ich noch einmal Akzeptor höre.
+1	-1	False	['ist', 'sein']
+Nachricht: Meine Motivation ist gleich null.
+0	-1	False	['so']
+Nachricht: So demotiviert war ich noch nie.
+0	-1	False	[]
+Nachricht: Ich könnte heulen.
+-1	-1	True	['habe']
+Nachricht: Ich habe Hunger.
+1	0	False	['endlich']
+Nachricht: Ich möchte endlich verstehen, was ein Akzeptor ist!
+-1	0	False	['ist', 'sein']
+Nachricht: Diese Antwort ist nicht hilfreich.
+0	0	True	['auch']
+Nachricht: Das hilft mir auch nicht weiter.
+0	0	True	['akzeptor', 'ist', 'sein']
+Nachricht: Was ist ein Akzeptor?
+1	0	False	['ist', 'sein', 'erkläre']
+Nachricht: Erkläre mir bitte, was ein Akzeptor ist.
+1	0	False	[]
+Nachricht: Kannst du mir helfen zu verstehen, was ein Akzeptor ist?
+1	0	False	['brauche']
+Nachricht: Ich brauche Hilfe bei einem Thema.
+1	0	False	['rechtslinear']
+Nachricht: Was bedeutet rechtslinear?
+0	0	True	['informatik', 'theoretische']
+Nachricht: Wieso  braucht man theoretische Informatik?
+1	0	False	[]
+Nachricht: Warum muss ich das wissen?
+0	0	True	['informatik', 'theoretische', 'theoretisch', 'ist', 'sein']
+Nachricht: Theoretische Informatik ist nichts für mich.
+0	0	True	[]
+Nachricht: Warum ist thi so schwer?
+1	0	False	['prüfung', 'sonst', 'vorbei', 'ist', 'sein']
+Nachricht: Ich muss die Prüfung unbedingt bestehen, sonst ist es vorbei.
+0	0	True	['verstehst']
+Nachricht: Verstehst du das?
+1	0	False	['bringen']
+Nachricht: Ich möchte diese Sache hinter mich bringen.
+1	0	False	['letztes', 'letzt']
+Nachricht: Ich bin letztes Semester durch die Prüfung gefallen.
+1	0	False	['ist', 'sein']
+Nachricht: Und zu was ist das alles gut?
+1	0	False	['erklären']
+Nachricht: Kannst du mir das noch mal erklären?
+1	0	False	['lösungsansatz']
+Nachricht: Ich finde keinen Lösungsansatz.
+1	0	False	['habe']
+Nachricht: Ich habe keine weitere Chance. Entweder jetzt oder nie!
+0	0	True	['ok']
+Nachricht: Ok.
+0	0	True	[]
+Nachricht: Ja.
+0	0	True	[]
+Nachricht: Ja, aber kannst du es mir nochmal erklären?
+1	0	False	[]
+Nachricht: Danke, aber das hat mir nicht geholfen.
+1	0	False	['zu']
+Nachricht: Es ist interessant zu sehen, wie ein Chatbot antwortet.
+1	0	False	['zufällig']
+Nachricht: Danke, weißt du auch zufällig etwas über Akzeptoren?
+0	0	True	['wetter', 'wie', 'heute', 'ist', 'sein']
+Nachricht: Wie ist das Wetter heute?
+-1	0	False	['draußen', 'ist', 'sein']
+Nachricht: Draußen ist es sehr dunkel.
+1	1	True	[]
+Nachricht: Vielen Dank für deine Antwort.
+1	1	True	[]
+Nachricht: Mir geht es gut, und dir?
+1	1	True	['ist', 'sein']
+Nachricht: Das ist eine gute Nachricht.
+1	1	True	[]
+Nachricht: Bald ist es geschafft.
+0	1	False	['morgen', 'schon', 'schaff']
+Nachricht: Morgen schaff ich das schon.
+1	1	True	[]
+Nachricht: Danke für die Antwort.
+1	1	True	[]
+Nachricht: Ich glaube, das habe ich jetzt verstanden.
+-1	1	False	[]
+Nachricht: Langsam verstehe ich es.
+1	1	True	[]
+Nachricht: Ja, das hat mir weiter geholfen.
+1	1	True	[]
+Nachricht: Super, vielen Dank!
+0	1	False	[]
+Nachricht: Perfekt.
+1	1	True	['bin', 'sein']
+Nachricht: Ich bin sicher, dass ich die Prüfung jetzt bestehen werde.
+1	1	True	[]
+Nachricht: Ich mag thi.
+1	1	True	[]
+Nachricht: Ich liebe thi.
+1	1	True	['ist', 'sein']
+Nachricht: Unser Professor ist ein guter Lehrer.
+1	1	True	['bot', 'ist', 'sein']
+Nachricht: Dieser Bot ist einfach genial!
+1	1	True	['wirklich']
+Nachricht: Es macht wirklich Spaß mit dir zu chatten.
+1	1	True	[]
+Nachricht: Cool, kannst du mir auch bei den Hausaufgaben helfen?
+-1	1	False	[]
+Nachricht: Wahnsinn, was du alles kannst.
+0	1	False	['beste', 'bist', 'sein']
+Nachricht: Du bist der Beste.
+1	1	True	['schon']
+Nachricht: Ich freue mich schon auf die Prüfung.
+1	1	True	['erste', 'sind', 'sein']
+Nachricht: Deine Antworten sind echt erste Klasse!
+1	1	True	['erklärung']
+Nachricht: Die Erklärung finde ich gut.
+1	1	True	['eigentlich', 'ja', 'ganz', 'ist', 'sein']
+Nachricht: Eigentlich ist das ja ganz einfach.
+1	1	True	['irgendwie', 'jetzt']
+Nachricht: Irgendwie hat es jetzt bei mir klick gemacht.
+1	1	True	['erklärung']
+Nachricht: Ok, die Erklärung hat mir auf jeden Fall besser geholfen.
+1	1	True	[]
+Nachricht: Ich freue mich sehr!
+-1	-1	True	['bin', 'sein']
+Nachricht: Ich bin extrem aufgeregt wegen der Prüfung.
+1	1	True	[]
+Nachricht: Thi fasziniert mich.
+1	1	True	[]
+Nachricht: Tausend Dank.
+1	1	True	[]
+Nachricht: Vielen Dank.
+1	1	True	['herzlichen', 'herzliche']
+Nachricht: Herzlichen Dank.
+1	1	True	[]
+Nachricht: Ohne dich hätte ich das niemals verstanden.
+1	1	True	['so', 'bin', 'sein']
+Nachricht: Ich bin so froh, dass es dich gibt!
+57 von 136 korrekt klassifiziert.
 
-Confusion Matrix
-_______________________________________________________
-FP	56	FN	6	TP	28	TN	18	accuracy	0.42592592592592593	precision	0.3333333333333333	recall	0.8235294117647058	f1	0.4745762711864407
+Nicht analysierbare Nachrichten: 51
+FP	18	FN	2	TP	28	TN	19
+accuracy	0.7014925373134329
+precision	0.6086956521739131
+recall	0.9333333333333333
+f1	0.7368421052631579
 

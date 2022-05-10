@@ -14,16 +14,22 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 import sentimentParser.sentimentAnalysis as sa
 import sentimentParser.lexicon as lexicon
 import spacy
+import time
 
 
 SAMPLE_SIZE = 0
-LEXICON_MODE = "no neutral"
+LEXICON_MODE = "mean"
 LEXICON_PATH = "lexicon//sentimentLexicon.json"
 SPACY_MODEL = "de_core_news_lg"
 
 TEST_DATA_PATH = "test//testData//hcTunesia//balancedDataSets"
-TEST_DATASET= "balancedHolidayCheck200.tsv"
-LOGS_PATH = "test//logs//documentLevel"
+TEST_DATASET= "balancedHolidayCheck2k.tsv"
+LOGS_PATH = "test//analysisResults"
+
+#logging message and sentiment if set to True
+LOG_MESSAGES = True
+MESSAGE_LOG_PATH = "test//logs//documentLevel//messageLogs"
+
 
 #decides if the sentiment is per aspect or per sentence
 PER_SENTENCE = False
@@ -35,10 +41,13 @@ lex = lexicon.Lexicon(LEXICON_PATH,LEXICON_MODE)
 holidayCheckFile = open(f"{TEST_DATA_PATH}//{TEST_DATASET}","r",encoding="UTF-8")
 lines = holidayCheckFile.readlines()
 
-# error log
-errorLogName = TEST_DATASET.split(".")[0]
+#messageLogs
 
-errorLog = open(f"{LOGS_PATH}//{errorLogName}.txt","w",encoding="UTF-8")
+if LOG_MESSAGES:
+    messageLogPath = f"{MESSAGE_LOG_PATH}//{TEST_DATASET.split('.')[0]}.csv"
+    messageLog = open(messageLogPath,"w",encoding="UTF-8")
+    messageLog.write("stars;sentiment;message\n")
+
 # create result container
 sentiments = []
 
@@ -56,6 +65,8 @@ invalidLinesCount = 0
 errorLinesCount = 0
 
 print(f"{totalLineCount} lines to analyze.")
+
+start = time.time()
 
 for line in lines:
 
@@ -84,6 +95,10 @@ for line in lines:
     lineCount += 1
 
     sentiments[stars].append(docSentiment)
+
+    #logs message with stars and sentiment in an extra file
+    if LOG_MESSAGES:
+        messageLog.write(f"{stars};{docSentiment};{message.strip()}\n")
     
     #progress Bar
     percentageDone = "{:.0f}".format(float((lineCount+invalidLinesCount+errorLinesCount) * 100) / totalLineCount)
@@ -112,3 +127,7 @@ file = open(fullLogFilePath,"w",encoding="UTF-8")
 json.dump(data,file)
 
 file.close()
+
+end = time.time()
+
+print(end-start)

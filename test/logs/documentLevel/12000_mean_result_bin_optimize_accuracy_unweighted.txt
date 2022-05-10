@@ -1,0 +1,105 @@
+Analysiertes Dokument: test//analysisResults//12000_mean_result.json
+12000 Einträge wurden analysiert, davon sind 0 ungültig und bei 0 Einträgen kam es zu Fehlern.
+Ergebnisse nach Sternen sortiert: 
+
+0 Sterne: 2000 Einträge 
+	mean:	0.007
+	median:	0.009
+	std: 0.346
+
+1 Sterne: 2000 Einträge 
+	mean:	0.059
+	median:	0.053
+	std: 0.284
+
+2 Sterne: 2000 Einträge 
+	mean:	0.114
+	median:	0.100
+	std: 0.283
+
+3 Sterne: 2000 Einträge 
+	mean:	0.263
+	median:	0.207
+	std: 0.338
+
+4 Sterne: 2000 Einträge 
+	mean:	0.351
+	median:	0.283
+	std: 0.381
+
+5 Sterne: 2000 Einträge 
+	mean:	0.402
+	median:	0.298
+	std: 0.491
+
+Optimierung nach: accuracy
+
+Schrittgröße: 0.01
+
+FP	1532	FN	36	TP	1865	TN	289	accuracy	 0.579	precision	 0.549	recall	 0.981	f1	 0.704	Tresh	-0.19
+FP	1521	FN	37	TP	1864	TN	300	accuracy	 0.581	precision	 0.551	recall	 0.981	f1	 0.705	Tresh	-0.18
+FP	1509	FN	38	TP	1863	TN	312	accuracy	 0.584	precision	 0.552	recall	 0.980	f1	 0.707	Tresh	-0.17
+FP	1495	FN	40	TP	1861	TN	326	accuracy	 0.588	precision	 0.555	recall	 0.979	f1	 0.708	Tresh	-0.16
+FP	1473	FN	44	TP	1857	TN	348	accuracy	 0.592	precision	 0.558	recall	 0.977	f1	 0.710	Tresh	-0.15
+FP	1454	FN	49	TP	1852	TN	367	accuracy	 0.596	precision	 0.560	recall	 0.974	f1	 0.711	Tresh	-0.14
+FP	1430	FN	50	TP	1851	TN	391	accuracy	 0.602	precision	 0.564	recall	 0.974	f1	 0.714	Tresh	-0.13
+FP	1410	FN	53	TP	1848	TN	411	accuracy	 0.607	precision	 0.567	recall	 0.972	f1	 0.716	Tresh	-0.12
+FP	1385	FN	62	TP	1839	TN	436	accuracy	 0.611	precision	 0.570	recall	 0.967	f1	 0.718	Tresh	-0.11
+FP	1371	FN	67	TP	1834	TN	450	accuracy	 0.614	precision	 0.572	recall	 0.965	f1	 0.718	Tresh	-0.10
+FP	1350	FN	70	TP	1831	TN	471	accuracy	 0.618	precision	 0.576	recall	 0.963	f1	 0.721	Tresh	-0.09
+FP	1322	FN	74	TP	1827	TN	499	accuracy	 0.625	precision	 0.580	recall	 0.961	f1	 0.724	Tresh	-0.08
+FP	1293	FN	77	TP	1824	TN	528	accuracy	 0.632	precision	 0.585	recall	 0.959	f1	 0.727	Tresh	-0.07
+FP	1253	FN	84	TP	1817	TN	568	accuracy	 0.641	precision	 0.592	recall	 0.956	f1	 0.731	Tresh	-0.06
+FP	1226	FN	89	TP	1812	TN	595	accuracy	 0.647	precision	 0.596	recall	 0.953	f1	 0.734	Tresh	-0.05
+FP	1191	FN	96	TP	1805	TN	630	accuracy	 0.654	precision	 0.602	recall	 0.950	f1	 0.737	Tresh	-0.04
+FP	1162	FN	99	TP	1802	TN	659	accuracy	 0.661	precision	 0.608	recall	 0.948	f1	 0.741	Tresh	-0.03
+FP	1125	FN	109	TP	1792	TN	696	accuracy	 0.668	precision	 0.614	recall	 0.943	f1	 0.744	Tresh	-0.02
+FP	1092	FN	126	TP	1775	TN	729	accuracy	 0.673	precision	 0.619	recall	 0.934	f1	 0.745	Tresh	-0.01
+FP	1042	FN	137	TP	1764	TN	779	accuracy	 0.683	precision	 0.629	recall	 0.928	f1	 0.750	Tresh	0.00
+FP	993	FN	160	TP	1741	TN	828	accuracy	 0.690	precision	 0.637	recall	 0.916	f1	 0.751	Tresh	0.01
+FP	950	FN	167	TP	1734	TN	871	accuracy	 0.700	precision	 0.646	recall	 0.912	f1	 0.756	Tresh	0.02
+FP	919	FN	183	TP	1718	TN	902	accuracy	 0.704	precision	 0.651	recall	 0.904	f1	 0.757	Tresh	0.03
+FP	874	FN	199	TP	1702	TN	947	accuracy	 0.712	precision	 0.661	recall	 0.895	f1	 0.760	Tresh	0.04
+FP	833	FN	217	TP	1684	TN	988	accuracy	 0.718	precision	 0.669	recall	 0.886	f1	 0.762	Tresh	0.05
+FP	799	FN	239	TP	1662	TN	1022	accuracy	 0.721	precision	 0.675	recall	 0.874	f1	 0.762	Tresh	0.06
+FP	752	FN	267	TP	1634	TN	1069	accuracy	 0.726	precision	 0.685	recall	 0.860	f1	 0.762	Tresh	0.07
+FP	716	FN	288	TP	1613	TN	1105	accuracy	 0.730	precision	 0.693	recall	 0.849	f1	 0.763	Tresh	0.08
+FP	680	FN	310	TP	1591	TN	1141	accuracy	 0.734	precision	 0.701	recall	 0.837	f1	 0.763	Tresh	0.09
+FP	649	FN	332	TP	1569	TN	1172	accuracy	 0.736	precision	 0.707	recall	 0.825	f1	 0.762	Tresh	0.10
+FP	603	FN	357	TP	1544	TN	1218	accuracy	 0.742	precision	 0.719	recall	 0.812	f1	 0.763	Tresh	0.11
+FP	557	FN	384	TP	1517	TN	1264	accuracy	 0.747	precision	 0.731	recall	 0.798	f1	 0.763	Tresh	0.12
+FP	513	FN	408	TP	1493	TN	1308	accuracy	 0.753	precision	 0.744	recall	 0.785	f1	 0.764	Tresh	0.13
+FP	486	FN	433	TP	1468	TN	1335	accuracy	 0.753	precision	 0.751	recall	 0.772	f1	 0.762	Tresh	0.14
+FP	459	FN	458	TP	1443	TN	1362	accuracy	 0.754	precision	 0.759	recall	 0.759	f1	 0.759	Tresh	0.15
+Einträge werden ab:  0.150 als positiv und ab  0.150 als negativ klassifiziert.
+
+0 Sterne: 2000 Einträge 
+	459 positiv(22.9%) 
+	1362 negativ(68.1%) 
+	179 neutral(8.9%)
+
+1 Sterne: 2000 Einträge 
+	592 positiv(29.6%) 
+	1310 negativ(65.5%) 
+	98 neutral(4.9%)
+
+2 Sterne: 2000 Einträge 
+	786 positiv(39.3%) 
+	1123 negativ(56.1%) 
+	91 neutral(4.5%)
+
+3 Sterne: 2000 Einträge 
+	1229 positiv(61.5%) 
+	709 negativ(35.4%) 
+	62 neutral(3.1%)
+
+4 Sterne: 2000 Einträge 
+	1443 positiv(72.2%) 
+	505 negativ(25.2%) 
+	52 neutral(2.6%)
+
+5 Sterne: 2000 Einträge 
+	1443 positiv(72.2%) 
+	458 negativ(22.9%) 
+	99 neutral(5.0%)
+

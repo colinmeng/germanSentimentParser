@@ -1,0 +1,101 @@
+Analysiertes Dokument: test//analysisResults//12000_no neutral_result_ps.json
+12000 Einträge wurden analysiert, davon sind 0 ungültig und bei 0 Einträgen kam es zu Fehlern.
+Ergebnisse nach Sternen sortiert: 
+
+0 Sterne: 2000 Einträge 
+	mean:	0.014
+	median:	0.009
+	std: 0.254
+
+1 Sterne: 2000 Einträge 
+	mean:	0.052
+	median:	0.051
+	std: 0.223
+
+2 Sterne: 2000 Einträge 
+	mean:	0.100
+	median:	0.087
+	std: 0.204
+
+3 Sterne: 2000 Einträge 
+	mean:	0.213
+	median:	0.171
+	std: 0.277
+
+4 Sterne: 2000 Einträge 
+	mean:	0.284
+	median:	0.228
+	std: 0.293
+
+5 Sterne: 2000 Einträge 
+	mean:	0.315
+	median:	0.231
+	std: 0.410
+
+Optimierung nach: accuracy
+
+Schrittgröße: 0.01
+
+FP	1629	FN	24	TP	1877	TN	192	accuracy	 0.556	precision	 0.535	recall	 0.987	f1	 0.694	Tresh	-0.19
+FP	1616	FN	25	TP	1876	TN	205	accuracy	 0.559	precision	 0.537	recall	 0.987	f1	 0.696	Tresh	-0.18
+FP	1596	FN	28	TP	1873	TN	225	accuracy	 0.564	precision	 0.540	recall	 0.985	f1	 0.698	Tresh	-0.17
+FP	1580	FN	31	TP	1870	TN	241	accuracy	 0.567	precision	 0.542	recall	 0.984	f1	 0.699	Tresh	-0.16
+FP	1551	FN	33	TP	1868	TN	270	accuracy	 0.574	precision	 0.546	recall	 0.983	f1	 0.702	Tresh	-0.15
+FP	1533	FN	39	TP	1862	TN	288	accuracy	 0.578	precision	 0.548	recall	 0.979	f1	 0.703	Tresh	-0.14
+FP	1520	FN	41	TP	1860	TN	301	accuracy	 0.581	precision	 0.550	recall	 0.978	f1	 0.704	Tresh	-0.13
+FP	1495	FN	50	TP	1851	TN	326	accuracy	 0.585	precision	 0.553	recall	 0.974	f1	 0.706	Tresh	-0.12
+FP	1463	FN	58	TP	1843	TN	358	accuracy	 0.591	precision	 0.557	recall	 0.969	f1	 0.708	Tresh	-0.11
+FP	1433	FN	59	TP	1842	TN	388	accuracy	 0.599	precision	 0.562	recall	 0.969	f1	 0.712	Tresh	-0.10
+FP	1394	FN	66	TP	1835	TN	427	accuracy	 0.608	precision	 0.568	recall	 0.965	f1	 0.715	Tresh	-0.09
+FP	1364	FN	73	TP	1828	TN	457	accuracy	 0.614	precision	 0.573	recall	 0.962	f1	 0.718	Tresh	-0.08
+FP	1336	FN	78	TP	1823	TN	485	accuracy	 0.620	precision	 0.577	recall	 0.959	f1	 0.721	Tresh	-0.07
+FP	1302	FN	82	TP	1819	TN	519	accuracy	 0.628	precision	 0.583	recall	 0.957	f1	 0.724	Tresh	-0.06
+FP	1261	FN	93	TP	1808	TN	560	accuracy	 0.636	precision	 0.589	recall	 0.951	f1	 0.728	Tresh	-0.05
+FP	1218	FN	97	TP	1804	TN	603	accuracy	 0.647	precision	 0.597	recall	 0.949	f1	 0.733	Tresh	-0.04
+FP	1182	FN	106	TP	1795	TN	639	accuracy	 0.654	precision	 0.603	recall	 0.944	f1	 0.736	Tresh	-0.03
+FP	1141	FN	112	TP	1789	TN	680	accuracy	 0.663	precision	 0.611	recall	 0.941	f1	 0.741	Tresh	-0.02
+FP	1103	FN	124	TP	1777	TN	718	accuracy	 0.670	precision	 0.617	recall	 0.935	f1	 0.743	Tresh	-0.01
+FP	1047	FN	142	TP	1759	TN	774	accuracy	 0.681	precision	 0.627	recall	 0.925	f1	 0.747	Tresh	0.00
+FP	998	FN	166	TP	1735	TN	823	accuracy	 0.687	precision	 0.635	recall	 0.913	f1	 0.749	Tresh	0.01
+FP	940	FN	185	TP	1716	TN	881	accuracy	 0.698	precision	 0.646	recall	 0.903	f1	 0.753	Tresh	0.02
+FP	910	FN	204	TP	1697	TN	911	accuracy	 0.701	precision	 0.651	recall	 0.893	f1	 0.753	Tresh	0.03
+FP	864	FN	226	TP	1675	TN	957	accuracy	 0.707	precision	 0.660	recall	 0.881	f1	 0.755	Tresh	0.04
+FP	810	FN	249	TP	1652	TN	1011	accuracy	 0.715	precision	 0.671	recall	 0.869	f1	 0.757	Tresh	0.05
+FP	757	FN	276	TP	1625	TN	1064	accuracy	 0.722	precision	 0.682	recall	 0.855	f1	 0.759	Tresh	0.06
+FP	703	FN	305	TP	1596	TN	1118	accuracy	 0.729	precision	 0.694	recall	 0.840	f1	 0.760	Tresh	0.07
+FP	654	FN	342	TP	1559	TN	1167	accuracy	 0.732	precision	 0.704	recall	 0.820	f1	 0.758	Tresh	0.08
+FP	600	FN	375	TP	1526	TN	1221	accuracy	 0.738	precision	 0.718	recall	 0.803	f1	 0.758	Tresh	0.09
+FP	523	FN	439	TP	1462	TN	1298	accuracy	 0.742	precision	 0.737	recall	 0.769	f1	 0.752	Tresh	0.11
+FP	483	FN	473	TP	1428	TN	1338	accuracy	 0.743	precision	 0.747	recall	 0.751	f1	 0.749	Tresh	0.12
+Einträge werden ab:  0.120 als positiv und ab  0.120 als negativ klassifiziert.
+
+0 Sterne: 2000 Einträge 
+	483 positiv(24.1%) 
+	1338 negativ(66.9%) 
+	179 neutral(8.9%)
+
+1 Sterne: 2000 Einträge 
+	609 positiv(30.4%) 
+	1293 negativ(64.6%) 
+	98 neutral(4.9%)
+
+2 Sterne: 2000 Einträge 
+	833 positiv(41.6%) 
+	1076 negativ(53.8%) 
+	91 neutral(4.5%)
+
+3 Sterne: 2000 Einträge 
+	1241 positiv(62.1%) 
+	696 negativ(34.8%) 
+	63 neutral(3.1%)
+
+4 Sterne: 2000 Einträge 
+	1435 positiv(71.8%) 
+	513 negativ(25.7%) 
+	52 neutral(2.6%)
+
+5 Sterne: 2000 Einträge 
+	1428 positiv(71.4%) 
+	473 negativ(23.6%) 
+	99 neutral(5.0%)
+
