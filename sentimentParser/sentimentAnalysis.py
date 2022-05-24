@@ -230,7 +230,7 @@ def getNextConjuctedAdjectiveResult(token,lex):
     return -1
 
 #we assume this function  only gets sentences (could also be very large one), so it's computing sentence sentiment
-def getAspectSentimentDetails(msg,lex,nlp):
+def getAspectSentimentDetails(sen,lex):
     """
     Analyses a message, with the help of a sentiment lexicon and a spacy language model.
 
@@ -260,8 +260,8 @@ def getAspectSentimentDetails(msg,lex,nlp):
                 sentimentDetails["int"]         : float
                     a factor that states, how much the aspect words sentiment is intensified
     """
-    # creates the doc -> executes nlp pipeline
-    doc = nlp(msg)
+    # the doc is one sentence
+    doc = sen
     
     subSentenceRootTokens = []
 
@@ -270,7 +270,7 @@ def getAspectSentimentDetails(msg,lex,nlp):
         if token.dep_ == "ROOT":
             subSentenceRootTokens.append(token)
 
-        elif token.dep_ == "cj" and token.pos_ in ["AUX","VERB"]:
+        elif token.dep_ in ["cj","oc"] and token.pos_ in ["AUX","VERB"]:
             subSentenceRootTokens.append(token)
     
     # no root -> no message -> nothing to analyse
@@ -285,33 +285,44 @@ def getAspectSentimentDetails(msg,lex,nlp):
         
         subSentenceAspectToken = None
 
-        # get aspect word of subsentence (direct children)
-        rootChildren = rootToken.children
-
-        #gives back empty dict as result for the sentencePart -> no information can be extracted
-        if not rootChildren:
-            break
-        
-        # obvious aspect word candidates are always nouns
-        for rootChild in rootChildren:
-            if rootChild.pos_ == "NOUN":
-                subSentenceAspectToken = rootChild
-                break
-        
-        # only if there are no nouns in first grade childrens of root verb, look if there is a pronome, that can be the aspect token 
-        if not subSentenceAspectToken:
-            for rootChild in rootToken.children:
-                if rootChild.pos_ == "PRON":
-                    subSentenceAspectToken = rootChild
-                    break
-        
-        # sentence with NOUN as root is not a sentence but can still contain a sentiment
         if rootToken.pos_ == "NOUN":
             subSentenceAspectToken = rootToken
 
-        # no aspect found --> empty result for subsentence
-        if not subSentenceAspectToken:
-            break
+        else:
+            #gives back empty dict as result for the sentencePart -> no information can be extracted
+
+            if not rootToken.children:
+                break
+        
+            # obvious aspect word candidates are always nouns
+            for rootChild in rootToken.children:
+                if rootChild.pos_ == "NOUN":
+                    subSentenceAspectToken = rootChild
+                    break
+        
+
+            # obvious aspect word candidates are always nouns (also PROPN are real nouns)
+            for rootChild in rootToken.children:
+                if subSentenceAspectToken:
+                    break
+
+                if rootChild.pos_ == "PROPN":
+                    subSentenceAspectToken = rootChild
+                    break     
+
+            # only if there are no nouns in first grade childrens of root verb, look if there is a pronome, that can be the aspect token 
+            #if not subSentenceAspectToken:
+                for rootChild in rootToken.children:
+                    if subSentenceAspectToken:
+                        break
+
+                    if rootChild.pos_ == "PRON":
+                        subSentenceAspectToken = rootChild
+                        break
+
+            # no aspect found --> empty result for subsentence
+            if not subSentenceAspectToken:
+                continue
             
         ###############################################################################################################
 
@@ -708,8 +719,7 @@ def getAspectSentiments(msg,lex,nlp):
 
     # getAspectSentimentDetails can only take on sentence, so we use sentence splitting
     for sen in doc.sents:
-        sen = nlp(sen.text)
-        aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
+        aspectSentimentDetails = getAspectSentimentDetails(sen,lex)
         aspectSentiments = calculateAspectSentiments(aspectSentimentDetails)
 
         if aspectSentiments:
@@ -727,9 +737,8 @@ def getAspectPolarities(msg,lex,nlp):
 
     # getAspectSentimentDetails can only take on sentence, so we use sentence splitting 
     for sen in doc.sents:
-        sen = nlp(sen.text)
-
-        aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
+        
+        aspectSentimentDetails = getAspectSentimentDetails(sen,lex)
         aspectSentiments = calculateAspectSentiments(aspectSentimentDetails)
 
         if aspectSentiments:
@@ -754,9 +763,7 @@ def getSentenceSentiments(msg,lex,nlp):
     sentenceSentiments = []
 
     for sen in doc.sents:
-        sen = nlp(sen.text)
-
-        aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
+        aspectSentimentDetails = getAspectSentimentDetails(sen,lex)
         aspectSentiments = calculateAspectSentiments(aspectSentimentDetails)
         sentenceSentiments.append(calcSenSentiment(aspectSentiments))
     
@@ -769,9 +776,7 @@ def getSentencePolarities(msg,lex,nlp):
     sentencePolarities = []
 
     for sen in doc.sents:
-        sen = nlp(sen.text)
-
-        aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
+        aspectSentimentDetails = getAspectSentimentDetails(sen,lex)
         aspectSentiments = calculateAspectSentiments(aspectSentimentDetails)
         sentenceSentiment = calcSenSentiment(aspectSentiments)
 
@@ -810,8 +815,7 @@ def getDocumentSentiment(msg,lex,nlp, perSentence = False):
     sentimentSum = 0
 
     for sen in doc.sents:
-        sen = nlp(sen.text)
-        aspectSentimentDetails = getAspectSentimentDetails(sen,lex,nlp)
+        aspectSentimentDetails = getAspectSentimentDetails(sen,lex)
         aspectSentiments = calculateAspectSentiments(aspectSentimentDetails)
         
         if perSentence:
